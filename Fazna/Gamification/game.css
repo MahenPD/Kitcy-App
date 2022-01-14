@@ -20,6 +20,22 @@
     margin: auto;
 }
 
+#challenges-ip {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px ;
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 450px;
+    margin: auto;
+    color: #585858;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
 #leaderboard-view{
    margin: auto;
    overflow:hidden;
@@ -73,14 +89,22 @@
     margin-top: 10px !important;
     align-content: center !important;
     margin: center !important;
-    
     border-radius: 10px !important;
     border: 1px solid #E2E2E2 !important;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     min-height: 80px !important;
     padding: 30px !important;
+}
 
-
+.chal-item-ip {
+    margin-top: 10px !important;
+    align-content: center !important;
+    margin: center !important;
+    border-radius: 10px !important;
+    border: 1px solid #E2E2E2 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 20px !important;
+    min-height: 65px !important;
 }
 
 
@@ -165,6 +189,17 @@ hr{
     margin:  10px;
 }
 
+.dp-ip{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-position:center;
+    background-size: cover;
+    border: 10px solid  #065f34 !important;
+    margin:  10px;
+    outline: 5px solid white;
+}
+
 
 .name {
     font-size: 22px;
@@ -240,6 +275,7 @@ hr .new1 {
     font-size: 18px;
     width: 350px !important;
     padding: 20px !important;
+    margin: auto;
 }
 
 #complete-task-title{
@@ -249,6 +285,19 @@ hr .new1 {
     
 }
 
+#complete-task-title-ip{
+    font-size: 16px;
+    margin-top: 15px;
+    padding-left: 10px ;
+    
+}
+
 .details{
     text-align: center;
+}
+
+.details-ip{
+    text-align: left;
+    left: 10px;
+    top:20px
 }

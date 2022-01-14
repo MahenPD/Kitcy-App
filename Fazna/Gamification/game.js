@@ -1,6 +1,7 @@
 $(document).ready(function () {
     listChallenges();
     listLeaderboard();
+    listChallengesip();
 
 
 
@@ -45,6 +46,45 @@ function listChallenges() {
     
     `
     $('#challenges').html(challenges).listview('refresh');
+}
+
+function listChallengesip() {
+    let challenges = `
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+        <li class="chal-item-ip list-group-item-action">
+            <span class="chal-name">Order a Desert</span>
+            <span class="chal-points">200 coins</span>
+        </li>
+      
+    `
+    $('#challenges-ip').html(challenges).listview('refresh');
 }
 
 function listLeaderboard() {
