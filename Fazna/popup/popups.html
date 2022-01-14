@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="popups.css" />
+    <script src="popups.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- This is page 2-->
+    <!-- jQuery Mobile page content goes here -->
+    <div data-role="page" id="Page1">
+
+        <a href=#popup-area data-rel="popup" data-transition="pop">Verify</a>
+        <br>
+        <a href="#popup-location" data-rel="popup" data-transition="pop">Add Location</a>
+        <br>
+        <a href="#popup-remove" data-rel="popup" data-transition="pop">Remove</a>
+
+
+        <div data-role="popup" id="popup-area" data-overlay-theme="b" class="rectangle ui-content"
+            data-position-to="window">
+            <img src="icons8-ok.svg" alt="" class="popup-img" />
+            <span class="popup-title">Verified!</span>
+            <span class="popup-content">Voila! You have successfully verified your account</span>
+            <a href="#" data-rel="back" data-role="button" class="popup-submit-btn"> Next </a>
+        </div>
+
+
+        <div data-role="popup" id="popup-location" data-overlay-theme="b" class="rectangle ui-content"
+            data-position-to="window">
+            <span class="popup-title">Thank you !</span>
+            <span class="popup-content">Your location has been added successfully</span>
+            <a href="#" data-rel="back" data-role="button" class="popup-submit-btn">Okay</a>
+        </div>
+
+
+        <div data-role="popup" id="popup-remove" data-overlay-theme="b" class="rectangle ui-content"
+            data-position-to="window">
+            <span class="popup-confirm">Are you sure you want to remove this item?</span>
+            <a href="#" data-rel="button" class="popup-confirm-btn ui-btn" onclick="popupConfirm()">Remove</a>
+            <a href="#" data-rel="back" data-role="button" class="popup-cancel-btn">Cancel</a>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

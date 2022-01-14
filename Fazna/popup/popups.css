@@ -1,0 +1,84 @@
+.rectangle {
+    width: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center !important;
+    box-shadow: none;
+}
+
+.popup-title {
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    /* identical to box height */
+    line-height: 36px;
+
+    color: #585858;
+
+}
+
+.popup-content {
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #585858;
+
+}
+
+
+.popup-submit-btn {
+
+    text-shadow: none !important;
+    color: #fff !important;
+    background-color: #069C54 !important;
+    border-radius: 10px;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.popup-img {
+    display: inline-block;
+}
+
+.popup-confirm{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #585858;
+    padding: 20px;
+
+}
+
+.popup-confirm-btn{
+    text-shadow: none !important;
+    color: #fff !important;
+    background-color: #069C54 !important;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: inline-block;
+    width: auto;
+
+
+}
+
+.popup-cancel-btn{
+    text-shadow: none !important;
+    color:#069C54  !important;
+    border: 2px solid #069C54 !important;
+    border-radius: 10px !important;
+    margin: 0 auto;
+    display: inline;
+    display: inline-block;
+    width: auto;
+
+
+    
+}

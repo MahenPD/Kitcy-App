@@ -1,0 +1,12 @@
+.toast-close{
+    color: #FFCF27 !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    margin-left: 50px;
+}
+
+.toast{
+    background: #585858;
+    border-radius: 10px;
+    box-shadow: none;
+}

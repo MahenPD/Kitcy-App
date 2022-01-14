@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detailed POI</title>
+
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="qty.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="qty.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="item-qty">
+        <button type="button" class="minus" data-quantity="minus" data-field="quantity" data-inline="true"
+            data-mini="true">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </button>
+
+        <input data-wrapper-class="input-group-field" type="number" name="quantity" value="1">
+
+        <button type="button" class="plus" data-quantity="plus" data-field="quantity" data-inline="true"
+            data-mini="true">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+</body>
+
+</html>

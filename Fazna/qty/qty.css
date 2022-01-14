@@ -1,0 +1,39 @@
+
+/* Quantity adjuster */
+
+.input-group-field {
+    float: left;
+    width: 20%;
+
+}
+
+.minus {
+    float: left;
+    width: 30%;
+    background-color: #069C54 !important;
+    color: white !important;
+    border: none !important;
+    text-shadow: none !important;
+}
+
+.plus {
+    float: left;
+    width: 28%;
+    background-color: #069C54 !important;
+    color: white !important;
+    border: none !important;
+
+    text-shadow: none !important;
+
+}
+
+
+.item-qty {
+    position: relative;
+    /* border: black 2px solid;  */
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}

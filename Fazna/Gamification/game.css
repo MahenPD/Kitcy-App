@@ -1,0 +1,254 @@
+.chal-name {
+    text-align: right;
+    padding-right: 20px !important;
+}
+
+.chal-points {
+    float: right;
+
+}
+
+#challenges {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px ;
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 450px;
+    width: 500px;
+    margin: auto;
+}
+
+#leaderboard-view{
+   margin: auto;
+   overflow:hidden;
+    overflow-y: scroll;
+    height: 580px;
+}
+
+.lead-item{
+
+    align-items: center;
+    min-height: 80px;
+    padding: 0 !important;
+    margin: 10px !important;
+    border-radius: 10px !important;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    font-size: 18px;
+    color: #585858;
+}
+
+.lead-item-self{
+    align-items: center;
+    min-height: 80px;
+    padding: 0 !important;
+    margin: 10px !important;
+    border-radius: 10px !important;
+    background-color: #FFCF27;
+    text-shadow: none;
+    font-size: 18px;
+    color: #585858;
+    font-weight: bold;
+
+}
+
+.my-score{
+    text-shadow: none;
+    color: white;
+}
+
+.lead-img{
+    background-position: center ;
+    background-size: cover;
+    border-radius: 50%;
+    height: 71px;
+    width: 71px;
+    
+}
+
+
+.chal-item {
+    margin-top: 10px !important;
+    align-content: center !important;
+    margin: center !important;
+    
+    border-radius: 10px !important;
+    border: 1px solid #E2E2E2 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    min-height: 80px !important;
+    padding: 30px !important;
+
+
+}
+
+
+
+body,html {
+    height:100% !important; 
+    color: #2D3B47 !important;
+
+   
+
+}
+
+
+.total-winnings{
+    background-color: #FFCF27;
+    height: 117px;
+    padding-top:40px;
+    font-size: 20px;
+    color: white;
+    text-shadow: none;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.my-rank{
+    font-size: 18px;
+    font-weight: 700;
+    color: #069C54;
+    text-shadow: none;
+    align-self: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.image img {
+    transition: all 0.5s;
+    
+}
+
+hr{
+    width: 90%;
+    background-color: #069C54;
+    height: 2px;
+    margin-top: 0%;
+}
+
+.image{
+    margin-top: 100px;
+}
+
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+
+.dp {
+    height: 194px !important;
+    width: 194px !important;
+    border-radius: 50% !important;
+    box-shadow: green !important;
+    border: 10px solid  #065f34 !important;
+    align-content: center !important;
+    background-position:center;
+    background-size: cover;
+}
+
+.dp-2{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-position:center;
+    background-size: cover;
+    border: 10px solid  #065f34 !important;
+    margin:  10px;
+}
+
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-shadow: none !important;
+
+}
+
+.idd {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-shadow: none !important;
+}
+
+.idd1 {
+    font-size: 16px;
+    color: white;
+    text-shadow: none !important;
+
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+.btn-game{
+    background-color: #069C54 !important;
+    color: white !important;
+    text-shadow: none !important;
+    border-radius: 16px !important;
+    font-size: 18px;
+    width: 350px !important;
+    padding: 20px !important;
+}
+
+#complete-task-title{
+    font-size: 18px;
+    margin-top: 30px;
+    padding-left: 10px ;
+    
+}
+
+.details{
+    text-align: center;
+}
