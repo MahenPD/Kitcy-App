@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap");
+
+:root {
+  --primary-colour: #069c54;
+  --secondary-colour: #ffcf27;
+  --text-colour: #585858;
+  --font-style: "Poppins", sans-serif;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p,
+.p1,
+.p2,
+.header-title {
+  font-family: "Poppins", sans-serif;
+  color: #585858 !important;
+}
+
+.body {
+  background-color: white !important;
+}
+
+img {
+  object-fit: contain;
+  padding: 2px;
+}
+
+.heading1 {
+  font-size: 24px;
+  color: var(--text-colour);
+  font-style: var(--font-style);
+}
+
+.subheading1 {
+  font-size: 15px;
+  color: var(--text-colour);
+  font-style: var(--font-style);
+}
+
+.heading2 {
+  font-size: 16px;
+  color: var(--text-colour);
+  font-style: var(--font-style);
+}
+
+.heading3 {
+  font-size: 13px;
+  color: var(--text-colour);
+  font-style: var(--font-style);
+}
+
+.para2 {
+  font-size: 14px;
+  color: var(--text-colour);
+  font-style: var(--font-style);
+}
+
+.para {
+  font-size: 11px;
+  color: white;
+  font-style: var(--font-style);
+}
+
+.center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-around-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.space-between-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kitcy-button {
+  padding: 18px;
+  border-radius: 8px;
+  background-color: var(--primary-colour);
+  color: white;
+  border: none;
+  width: 320px;
+}
+
+.filter-button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid var(--primary-colour);
+  font-size: 12px;
+  color: var(--primary-colour);
+}
+
+.bottom-navbar {
+  background-color: black;
+}
+
+.bold {
+  font-weight: 650;
+}
+
+.xl {
+  font-size: 36px;
+}
+
+.footer {
+  background-color: var(--text-colour);
+  border-radius: 15px;
+}
+
+.navbar {
+  font-family: "Poppins";
+  background-color: #ffffff !important;
+  border-top: 1px solid #ddd;
+  width: auto;
+  justify-content: space-evenly;
+}
+
+.navbar .ui-btn {
+  font-family: "Poppins";
+  color: #929292 !important;
+  font-size: 10px !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  text-shadow: none !important;
+  padding: 15px !important;
+}
+
+.navbar .ui-button-active {
+  font-family: "Poppins";
+  color: #fd5800 !important;
+  font-size: 10px;
+}
+
+.navbar .navbar-icon {
+  height: 25px;
+  margin: 5px 0;
+}
+
+.ui-content {
+  padding: 20px !important;
+}
+
+.location-add-panel {
+  background-color: #ffffff;
+  background-size: cover;
+  min-height: 140px;
+  display: flex !important;
+  align-items: baseline;
+  flex-direction: column !important;
+  padding: 25px;
+}
+
+.info-card {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.food-card-2 .card-img-top {
+  border-radius: 2px !important;
+  top: -50px;
+  background-color: none !important;
+}
+
+.food-card-2 .card-body {
+  padding: 20px 0;
+}
+
+.food-card-2 .p1 {
+  font-size: 16px;
+}
+
+.food-card-2 .p2 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.yellow-stripe {
+  position: absolute;
+  object-fit: contain;
+  width: 250px;
+  margin-top: 60px;
+}
+
+.header-image {
+  background-image: url(../assets/images/CathyDeserts.png);
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-image-food-item {
+  background-image: url(../assets/images/BlueberryCheeseCake.png);
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-cart {
+  background-image: url(../assets/images/GreenStripe.png);
+  height: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  background-color: white !important;
+  border: none !important;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 280px;
+}
+.quantity__minus {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 30px 0 0 30px !important;
+}
+.quantity__plus {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 0 30px 30px 0 !important;
+}
+.quantity__minus:hover,
+.quantity__plus:hover {
+  background: #fff;
+  color: #000;
+}
+.quantity__minus {
+  border-radius: 3px 0 0 3px;
+  background: #fff !important;
+}
+.quantity__plus {
+  border-radius: 0 3px 3px 0;
+}
+
+.ui-input-text,
+.ui-input-search {
+  margin: 0px;
+}
+.quantity__input {
+  width: 70px !important;
+  text-align: center !important;
+  background: #fff !important;
+  color: #000 !important;
+  padding: 20px !important;
+  font-family: "Poppins" !important;
+  font-size: 23px !important;
+  height: 20px !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border: none;
+}
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #000;
+}
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #000;
+}
+.rate-container {
+  float: left !important;
+  height: 46px !important;
+}
+.rate-container:not(:checked) > input {
+  position: absolute !important;
+  top: -9999px !important;
+}
+.rate-container:not(:checked) > label {
+  float: right !important;
+  width: 1em !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  font-size: 30px !important;
+  color: #ccc !important;
+}
+.rate-container:not(:checked) > label:before {
+  content: "★ " !important;
+}
+.rate-container > input:checked ~ label {
+  color: #ffc700 !important;
+}
+.rate-container:not(:checked) > label:hover,
+.rate-container:not(:checked) > label:hover ~ label {
+  color: #deb217 !important;
+}
+.rate-container > input:checked + label:hover,
+.rate-container > input:checked + label:hover ~ label,
+.rate-container > input:checked ~ label:hover,
+.rate-container > input:checked ~ label:hover ~ label,
+.rate-container > label:hover ~ input:checked ~ label {
+  color: #c59b08 !important;
+}
+
+.icon-green {
+  background-color: var(--primary-colour);
+  border-radius: 9px;
+  padding: 8px;
+}
+
+.kitcy-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.fav-list {
+  width: 8rem !important;
+}
+
+.list-group-item .p1 {
+  font-size: 13px;
+  line-height: 11px;
+}
+.list-group-item .p2 {
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.green-order {
+  border-bottom: var(--primary-colour) 2px solid;
+}
