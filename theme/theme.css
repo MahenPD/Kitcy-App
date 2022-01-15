@@ -7,6 +7,12 @@
   --font-style: "Poppins", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+}
+
 .h1,
 .h2,
 .h3,
@@ -23,6 +29,7 @@
 
 .body {
   background-color: white !important;
+  height: 100vh !important;
 }
 
 img {
@@ -93,6 +100,24 @@ img {
   width: 320px;
 }
 
+.kitcy-button-2 {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--primary-colour);
+  color: white;
+  border: none;
+  width: 280px;
+}
+
+.kitcy-button-2:disabled {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: gray;
+  color: white;
+  border: none;
+  width: 280px;
+}
+
 .filter-button {
   padding: 5px;
   border-radius: 5px;
@@ -154,12 +179,8 @@ img {
 
 .location-add-panel {
   background-color: #ffffff;
-  background-size: cover;
   min-height: 140px;
-  display: flex !important;
   align-items: baseline;
-  flex-direction: column !important;
-  padding: 25px;
 }
 
 .info-card {
@@ -214,6 +235,14 @@ img {
 .header-cart {
   background-image: url(../assets/images/GreenStripe.png);
   height: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-order-image {
+  background-image: url(../assets/images/OnGoingOrder.png);
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -357,4 +386,76 @@ img {
 
 .green-order {
   border-bottom: var(--primary-colour) 2px solid;
+}
+
+/* Quantity adjuster */
+
+.minus {
+  background-color: var(--primary-colour) !important;
+  color: white !important;
+  border: none !important;
+  text-shadow: none !important;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.plus {
+  background-color: var(--primary-colour) !important;
+  color: white !important;
+  border: none !important;
+  text-shadow: none !important;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.item-qty {
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.kitcy-input-2 {
+  background-color: transparent;
+  border: none;
+}
+
+/* Nav Bar */
+.ui-grid-d > .ui-block-a,
+.ui-grid-d > .ui-block-b,
+.ui-grid-d > .ui-block-c,
+.ui-grid-d > .ui-block-d {
+  width: 25% !important;
+  background-color: white !important;
+  padding: 10px;
+}
+
+.ui-btn {
+  background-color: white !important;
+  border: none !important;
+}
+
+.search-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("../assets/icons/search-grey.svg");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+.search-result {
+  border-bottom: 2px solid var(--primary-colour);
+  margin-top: 20px;
+}
+
+.search-result > p {
+  line-height: 10px;
+}
+
+.details {
+  line-height: 11px;
 }

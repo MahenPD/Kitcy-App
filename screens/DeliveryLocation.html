@@ -28,7 +28,7 @@
         class="px-3 py-2 bg-white header"
       >
         <div class="row py-2">
-          <div class="col-4">
+          <div class="col-4" onclick="history.back()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -57,7 +57,7 @@
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
-                width="600"
+                width="350"
                 height="500"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=Deanna%20dancing%20school&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -66,50 +66,64 @@
                 marginheight="0"
                 marginwidth="0"
               ></iframe>
-              <a href="https://embedgooglemap.net/maps/62"></a><br />
-              <style>
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 600px;
-                  width: 600px;
-                }
-              </style>
-              <a href="https://www.embedgooglemap.net">embed map</a>
-              <style>
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 500px;
-                  width: 600px;
-                }
-              </style>
             </div>
           </div>
         </div>
 
-        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+        <br />
+
+        <div>
           <div class="location-add-panel">
-            <div class="ui-grid-b my-breakpoint d-flex">
-              <div class="green-order col-9" style="width: 90%">
-                <h5>Police Lane, Thewatta Rd,<br />Ragama</h5>
+            <div class="space-between-container">
+              <div class="green-order col-10">
+                <h1 class="heading3">Police Lane, Thewatta Rd, Ragama</h1>
               </div>
-              <div class="ui-block-c col-3">
+              <div class="">
                 <a href=""
                   ><img src="/assets/icons/location.svg" class="" alt=""
                 /></a>
               </div>
             </div>
             <br />
-            <div>
+            <div class="center-element">
               <a href="addLocation.html">
-                <div class="">
+                <div class="col-2">
                   <button data-role="none" class="kitcy-button">
-                    Add New Location
+                    Confirm Location
                   </button>
                 </div>
               </a>
             </div>
+          </div>
+        </div>
+
+        <br />
+
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-grid="d">
+            <ul>
+              <li>
+                <a href="home.html"
+                  ><img src="/assets/icons/home.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="search.html"
+                  ><img src="/assets/icons/search.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="Cart.html"
+                  ><img src="/assets/icons/cart.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="orders.html"
+                  ><img src="/assets/icons/person.svg" alt=""
+                /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

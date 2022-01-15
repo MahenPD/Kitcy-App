@@ -27,7 +27,7 @@
         class="px-3 py-2 header header-cart"
       >
         <div class="d-flex py-2 justify-content-between">
-          <div>
+          <div onclick="history.back()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
@@ -61,21 +61,44 @@
           <!-- Favorite Items List Start -->
           <div data-role="listview">
             <li class="list-group-item">
-              <div class="row">
-                <div class="col">
+              <div class="d-flex">
+                <div class="col-6">
                   <img src="images/blueberry.jpg" class="fav-list rounded" />
                 </div>
-                <div class="col text-left p-0">
+                <div class="col-6 text-left p-0">
                   <p class="p1">Blueberry Cheesecake</p>
                   <p class="p2">Desserts</p>
                   <p class="p1">LKR 900</p>
                   <div class="d-flex">
-                    <i
-                      ><img
-                        src="../assets/icons/trash.svg"
-                        class="ai-trash-can"
-                        alt=""
-                    /></i>
+                    <div class="item-qty">
+                      <div class="col-2">
+                        <button data-role="none" type="button" class="minus">
+                          -
+                        </button>
+                      </div>
+                      <div class="col-2">
+                        <input
+                          class="kitcy-input-2"
+                          data-role="none"
+                          type="number"
+                          name="quantity"
+                          value="1"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button data-role="none" type="button" class="plus">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <i
+                        ><img
+                          src="../assets/icons/trash-red.svg"
+                          class="ai-trash-can"
+                          alt=""
+                      /></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -89,12 +112,37 @@
                   <p class="p1">Blueberry Cheesecake</p>
                   <p class="p2">Desserts</p>
                   <p class="p1">LKR 900</p>
-                  <i
-                    ><img
-                      src="../assets/icons/trash.svg"
-                      class="ai-trash-can"
-                      alt=""
-                  /></i>
+                  <div class="d-flex">
+                    <div class="item-qty">
+                      <div class="col-2">
+                        <button data-role="none" type="button" class="minus">
+                          -
+                        </button>
+                      </div>
+                      <div class="col-2">
+                        <input
+                          class="kitcy-input-2"
+                          data-role="none"
+                          type="number"
+                          name="quantity"
+                          value="1"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button data-role="none" type="button" class="plus">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <i
+                        ><img
+                          src="../assets/icons/trash-red.svg"
+                          class="ai-trash-can"
+                          alt=""
+                      /></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -111,6 +159,34 @@
         <button data-role="none" class="kitcy-button center-element">
           Checkout
         </button>
+
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-grid="d">
+            <ul>
+              <li>
+                <a href="home.html"
+                  ><img src="/assets/icons/home.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="search.html"
+                  ><img src="/assets/icons/search.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="Cart.html"
+                  ><img src="/assets/icons/cart.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="orders.html"
+                  ><img src="/assets/icons/person.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>
