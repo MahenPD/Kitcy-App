@@ -86,7 +86,7 @@
             </div>
             <br />
             <div class="center-element">
-              <a href="addLocation.html">
+              <a href="#popup-location" data-rel="popup" data-transition="pop">
                 <div class="col-2">
                   <button data-role="none" class="kitcy-button">
                     Confirm Location
@@ -125,6 +125,26 @@
               </li>
             </ul>
           </div>
+        </div>
+
+        <div
+          data-role="popup"
+          id="popup-location"
+          data-overlay-theme="b"
+          class="rectangle ui-content"
+          data-position-to="window"
+        >
+          <span class="popup-title">Thank you !</span>
+          <span class="popup-content"
+            >Your location has been added successfully</span
+          >
+          <a
+            href="#"
+            data-rel="back"
+            data-role="button"
+            class="popup-submit-btn"
+            >Okay</a
+          >
         </div>
       </div>
     </div>
