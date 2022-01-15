@@ -2,6 +2,7 @@ $(document).ready(function () {
     listChallenges();
     listLeaderboard();
     listChallengesip();
+    listLeaderboardip();
 
 
 
@@ -270,4 +271,199 @@ function listLeaderboard() {
         
     `
     $('#leaderboard-view').html(leaderboard).listview('refresh');
+}
+
+function listLeaderboardip() {
+    let leaderboard = `
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-self-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    <div class="row lead-item-ip">
+        <div class="col-2" >
+            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                </div>
+            </div>
+    
+        <div class="col-2" style="font-weight:bold;">
+            1
+        </div>
+        <div class="col-4">
+            <span>Kate Wilson</span>
+        </div>
+        <div class="col-4" style="text-align:center">
+            <span >20</span>
+        </div>
+    </div>
+
+    
+    `
+    $('#leaderboard-view-ip').html(leaderboard).listview('refresh');
 }
