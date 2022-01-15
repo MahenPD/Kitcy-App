@@ -139,3 +139,279 @@
   width: 240px;
   margin-top: 100px;
 }
+
+/* SHAZNI */
+
+.search-menu {
+  height: 105px;
+  width: auto;
+  background-color: #ffff;
+}
+.menu-img {
+  position: relative;
+  margin-top: 35px;
+  margin-left: 36px;
+  height: 23.38px;
+  width: 33px;
+}
+.location-img {
+  position: relative;
+  margin-top: 35px;
+  margin-left: 80px;
+  height: 23.38px;
+  width: 33px;
+}
+.location-txt {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 13px;
+  margin-left: 190px;
+  margin-top: -20px;
+}
+.filter-img {
+  position: relative;
+  height: 23.38px;
+  width: 33px;
+  margin-left: 335px;
+  margin-top: -45px;
+}
+.cook-img {
+  position: relative;
+  margin-left: 42%;
+  margin-top: -67px;
+  height: 30px;
+  width: 30px;
+}
+.elipse-img {
+  position: relative;
+  margin-left: 39%;
+  height: 255px;
+  width: -webkit-fill-available;
+}
+.search-img {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  left: -79%;
+}
+.bdtext-1 {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 24px;
+  left: 7%;
+  margin-top: -62%;
+}
+.favFood-input {
+  position: relative;
+  left: 6%;
+  height: 52px;
+  width: 335px;
+  margin-top: -3%;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+.healty-img {
+  position: relative;
+  left: 4%;
+  margin-top: 6%;
+  width: 160px;
+  height: 150px;
+  margin-left: 10px;
+}
+.fav-block {
+  margin-top: -133%;
+}
+.circle-2 {
+  position: relative;
+  width: 207px;
+  height: 312px;
+  margin-top: 225px;
+}
+.view-1 {
+}
+
+.view-img {
+  position: relative;
+  left: 6%;
+  margin-top: 6%;
+  width: 337px;
+  height: 180px;
+}
+.foodName {
+  position: relative;
+  margin-left: 25px;
+  margin-top: 8px;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #585858;
+}
+.foodPrice {
+  position: relative;
+  margin-left: 300px;
+  margin-top: -22px;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #585858;
+}
+.foodDelivery {
+  position: relative;
+  margin-left: 26px;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #808080;
+}
+
+.output {
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.underline {
+  color: #808080;
+  width: 80%;
+}
+.output-txt {
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #585858;
+}
+.res-block {
+  margin-top: 7%;
+}
+.res-img {
+  position: relative;
+  left: 4%;
+  margin-top: 3%;
+  width: 335px;
+  height: 175px;
+  margin-left: 10px;
+  opacity: 80%;
+}
+.res-name {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 16px;
+  color: white;
+  margin-top: -16%;
+  margin-left: 32%;
+}
+.res-type {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: 11px;
+  margin-left: 9%;
+}
+.res-time {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: -17px;
+  margin-left: 40%;
+}
+.star-img {
+  position: relative;
+  margin-left: 78%;
+  margin-top: -44px;
+  width: 10px;
+  height: 10px;
+}
+.res-rate {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: -41px;
+  margin-left: 82%;
+}
+
+/* Footer css */
+.ft-box {
+  position: fixed;
+  top: 70%;
+  left: 6%;
+  width: 340px;
+  height: 215px;
+  background-color: #585858;
+  border-radius: 10px;
+}
+.ftLogo-img {
+  width: 85px;
+  height: 45px;
+  left: 39%;
+  position: fixed;
+  top: 72%;
+}
+.ftText {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  margin-top: 22%;
+  margin-left: 7%;
+  font-family: "Poppins";
+}
+.ftText-1 {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 71%;
+  font-family: "Poppins";
+}
+.ft-img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 7%;
+  margin-top: 2%;
+}
+.ftText-2 {
+  position: relative;
+  font-size: 13px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 15%;
+  font-family: "Poppins";
+}
+.ft-img-1 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-top: -13%;
+  left: 71%;
+}
+.ft-img-2 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 2%;
+  left: -14%;
+}
+.ftText-3 {
+  position: relative;
+  font-size: 13px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 15%;
+  font-family: "Poppins";
+}
+.ftText-4 {
+  position: relative;
+  font-size: 11px;
+  color: white;
+  margin-top: 8%;
+  margin-left: 12%;
+  font-family: "Poppins";
+}
+.ftText-5 {
+  position: relative;
+  font-size: 10px;
+  color: white;
+  margin-top: 0%;
+  margin-left: 26%;
+  font-family: "Poppins";
+}
