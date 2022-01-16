@@ -52,12 +52,14 @@
             <h3 class="header-title align-middle"><b>Favourites</b></h3>
           </div>
           <div class="col-3 my-auto">
-            <img
-              src="../assets/icons/share.svg"
-              class="img float-right"
-              width="20"
-              alt=""
-            />
+            <a href="#popup-share-list" data-rel="popup" data-transition="pop">
+              <img
+                src="../assets/icons/share.svg"
+                class="img float-right"
+                height="30"
+                alt=""
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -239,6 +241,40 @@
             class="popup-confirm-btn ui-btn"
             onclick="popupConfirm()"
             >Remove</a
+          >
+          <a
+            href="#"
+            data-rel="back"
+            data-role="button"
+            class="popup-cancel-btn"
+            >Cancel</a
+          >
+        </div>
+
+        <div
+          data-role="popup"
+          id="popup-share-list"
+          data-overlay-theme="b"
+          class="rectangle ui-content"
+          data-position-to="window"
+        >
+          <span class="popup-confirm"
+            >Share your favorite foods with your friends!</span
+          >
+          <div class="center-element">
+            <input
+              type="text"
+              data-role="none"
+              class="kitcy-search-input"
+              placeholder="Enter email address"
+            />
+          </div>
+          <a
+            href="#"
+            data-rel="button"
+            class="popup-confirm-btn ui-btn"
+            onclick="popupConfirm()"
+            >Send</a
           >
           <a
             href="#"

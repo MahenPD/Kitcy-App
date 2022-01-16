@@ -533,3 +533,8 @@ img {
   display: inline-block;
   width: auto;
 }
+
+.ui-btn-active {
+  border-top: 3px solid var(--primary-colour) !important;
+  padding-top: 10px !important;
+}

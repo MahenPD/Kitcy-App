@@ -57,3 +57,7 @@ window.addEventListener(
   },
   false
 );
+
+$(document).ready(function () {
+  $("#land-text").delay(2000).slideDown(500);
+});
