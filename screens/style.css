@@ -13,6 +13,14 @@
   font-family: "Poppins", sans-serif;
   color: #585858 !important;
 }
+
+.list-group-item, .list-group-item .a{
+  font-weight: 300 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+
+}
 .h2 {
   font-size: 18px;
   font-style: normal;
@@ -605,5 +613,16 @@
     font-size: 10px;
     margin-top: 0%;
     margin-left: 42%;
+  }
+  
+  .list-group-item .a{
+    font-style: 300;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600 !important;
+    font-size: 24px;
+    line-height: 21px;
+    text-decoration: none;
+
   }
 }

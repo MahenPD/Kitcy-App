@@ -381,3 +381,15 @@ a:link {
   display: none;
 }
 /* Payment Page End */
+
+/* Favorite Page Start */
+.list-group-item{
+  border:none !important
+}
+
+.ui-listview>.ui-li-static{
+  border:none !important;
+}
+/* Favorite Page End */
+
+/* Home Page Start */
