@@ -19,3 +19,13 @@ text-align: center;
     width: 65px;
     margin: 10px;
 }
+
+.save-btn{
+    background-color: #069C54 !important;
+    color: white !important;
+    text-shadow: none !important;
+    border-radius: 16px !important;
+    font-size: 18px;
+    padding: 20px !important;
+    margin: auto;
+}

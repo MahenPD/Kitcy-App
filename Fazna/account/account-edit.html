@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="account.css" />
+
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+
+    <div data-role="page" id="game-home">
+        <div class="container-fluid">
+            <div class="row account-header mt-4 mb-4" >
+                <div class="col-2">
+                    <img src="assets/arrow-left.svg" alt="" style="width: 25px; float: left; color: #585858;">
+                </div>
+                <div class="col" style="padding-right: 80px;">Edit Account</div>
+            </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col" >
+                    <div class="account-dp" style="background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg'); margin: auto;"></div>
+                </div>
+            </div>
+
+            <form class="m-3 edit-account-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control p-3 login-input"
+                    id="firstname-edit"
+                    aria-describedby="emailHelp"
+                    placeholder="First name"
+                    value="John"
+                  />
+                </div>
+                <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control p-3 login-input"
+                      id="surname-edit"
+                      aria-describedby="emailHelp"
+                      placeholder="Surname"
+                      value="Doe"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control p-3 login-input"
+                      id="phone-edit"
+                      aria-describedby="emailHelp"
+                      placeholder="Phone number"
+                      value="+94 77 112 1223"
+                    />
+                  </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control p-3 login-input"
+                    id="email-edit"
+                    placeholder="email"
+                    value="johndoe@gmail.com"
+                  />
+                </div>
+                <a href="#">
+                  <button type="submit" class="save-btn p-3">Save Details</button>
+                </a>
+            
+              </form>
+        
+        </div>
+    </div>
+
+</body>
+
+</html>
