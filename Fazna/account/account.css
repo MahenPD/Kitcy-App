@@ -1,0 +1,21 @@
+.container-fluid{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #585858;
+}
+
+.account-header{
+    font-weight: 500;
+font-size: 18px;
+text-align: center;
+}
+
+.account-dp{
+    border-radius: 50%;
+    background-position: center ;
+    background-size: cover;
+    height: 65px;
+    width: 65px;
+    margin: 10px;
+}
