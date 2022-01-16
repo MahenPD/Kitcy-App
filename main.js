@@ -66,7 +66,7 @@ window.addEventListener(
 //   $("#land-text").delay(2000).slideDown(500);
 // });
 
-function sendFavList() {
+function sendFavList(email) {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
   mailBody =
     "<html> " +
@@ -88,15 +88,16 @@ function sendFavList() {
     "   </div>" +
     "  </body>" +
     "</html>";
-  sendEmail();
+  debugger;
+  sendEmail(email);
 }
 
-function sendEmail() {
+function sendEmail(emailId) {
   Email.send({
     Host: "smtp.gmail.com",
     Username: "kitcyfood123@gmail.com",
     Password: "kitcy123",
-    To: "mahen.2017441@iit.ac.lk,hiruni.2018500@iit.ac.lk",
+    To: emailId,
     From: "kitcyfood123@gmail.com",
     Subject: "Favourites List",
     Body: mailBody,

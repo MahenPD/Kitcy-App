@@ -7,6 +7,8 @@
     <title>Favourites</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
+    <script src="../main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -267,6 +269,7 @@
               <input
                 type="text"
                 data-role="none"
+                id="email"
                 class="kitcy-search-input form-control"
                 placeholder="Enter email address"
               />
@@ -278,7 +281,7 @@
                 href="#"
                 data-rel="button"
                 class="popup-confirm-btn ui-btn"
-                onclick="popupConfirm()"
+                onclick="sendEmail(document.getElementById('email').value)"
                 >Send</a
               >
             </div>
