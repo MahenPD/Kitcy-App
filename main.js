@@ -88,11 +88,11 @@ function sendFavList(email) {
     "   </div>" +
     "  </body>" +
     "</html>";
-  debugger;
   sendEmail(email);
 }
 
 function sendEmail(emailId) {
+  debugger;
   Email.send({
     Host: "smtp.gmail.com",
     Username: "kitcyfood123@gmail.com",
