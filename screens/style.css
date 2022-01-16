@@ -522,6 +522,9 @@
     flex: row;
     margin-left: 67px;
   }
+  a:link {
+    text-decoration: none;
+  }
   .res-block {
     margin-top: 7%;
     margin-left: -10%;

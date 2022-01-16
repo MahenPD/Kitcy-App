@@ -61,109 +61,122 @@
         </div>
       </div>
 
-      <div data-role="content">
-        <div class="row">
-          <!-- Favorite Items List Start -->
-          <div data-role="listview">
-            <li class="list-group-item">
-              <div class="d-flex">
-                <div class="col-6">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col-6 text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <div class="d-flex">
-                    <div class="item-qty">
-                      <div class="col-2">
-                        <button data-role="none" type="button" class="minus">
+      <div data-role="content center-element">
+        <div class="d-flex flex-column">
+          <div class="row">
+            <!-- Favorite Items List Start -->
+            <div data-role="listview">
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/blueberry.jpg" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Blueberry Cheesecake</p>
+                    <p class="p2">Desserts</p>
+                    <p class="p1">LKR 900</p>
+                    <div class="d-flex">
+                      <div class="counter d-flex">
+                        <button
+                          data-role="none"
+                          id="minus"
+                          class="incerement-button"
+                        >
                           -
                         </button>
-                      </div>
-                      <div class="col-2">
                         <input
-                          class="kitcy-input-2"
+                          type="text"
+                          id="quantity"
                           data-role="none"
-                          type="number"
-                          name="quantity"
+                          class="kitcy-input-2 text-center"
                           value="1"
                         />
-                      </div>
-                      <div class="col-2">
-                        <button data-role="none" type="button" class="plus">
+                        <button
+                          data-role="none"
+                          class="incerement-button"
+                          id="plus"
+                        >
                           +
                         </button>
                       </div>
-                    </div>
-                    <div>
-                      <i
-                        ><img
-                          src="../assets/icons/trash-red.svg"
-                          class="ai-trash-can"
-                          alt=""
-                      /></i>
+                      <div>
+                        <i
+                          ><img
+                            src="../assets/icons/trash-red.svg"
+                            class="ai-trash-can"
+                            alt=""
+                        /></i>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <div class="d-flex">
-                    <div class="item-qty">
-                      <div class="col-2">
-                        <button data-role="none" type="button" class="minus">
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/blueberry.jpg" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Blueberry Cheesecake</p>
+                    <p class="p2">Desserts</p>
+                    <p class="p1">LKR 900</p>
+                    <div class="d-flex">
+                      <div class="counter d-flex">
+                        <button
+                          data-role="none"
+                          id="minus2"
+                          class="incerement-button"
+                        >
                           -
                         </button>
-                      </div>
-                      <div class="col-2">
                         <input
-                          class="kitcy-input-2"
+                          type="text"
+                          id="quantity"
                           data-role="none"
-                          type="number"
-                          name="quantity"
+                          class="kitcy-input-2 text-center"
                           value="1"
                         />
-                      </div>
-                      <div class="col-2">
-                        <button data-role="none" type="button" class="plus">
+                        <button
+                          data-role="none"
+                          class="incerement-button"
+                          id="plus2"
+                        >
                           +
                         </button>
                       </div>
-                    </div>
-                    <div>
-                      <i
-                        ><img
-                          src="../assets/icons/trash-red.svg"
-                          class="ai-trash-can"
-                          alt=""
-                      /></i>
+                      <div>
+                        <i
+                          ><img
+                            src="../assets/icons/trash-red.svg"
+                            class="ai-trash-can"
+                            alt=""
+                        /></i>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </div>
+            <!-- Favorite Items List End -->
           </div>
-          <!-- Favorite Items List End -->
-        </div>
 
-        <br />
-        <div class="">
-          <div class="d-flex align-items-center space-around-container">
-            <div class="heading2">Total Amount</div>
-            <div class="heading1 bold">LKR 4800</div>
-          </div>
           <br />
-          <div class="center-element">
-            <button data-role="none" class="kitcy-button">Checkout</button>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <div class="d-flex flex-column" style="flex: 4">
+            <div class="d-flex align-items-center space-around-container">
+              <div class="heading2">Total Amount</div>
+              <div class="heading1 bold">LKR 4800</div>
+            </div>
+            <br />
+            <div class="center-element">
+              <button data-role="none" class="kitcy-button">Checkout</button>
+            </div>
           </div>
         </div>
 

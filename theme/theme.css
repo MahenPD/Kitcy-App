@@ -421,6 +421,7 @@ img {
 .kitcy-input-2 {
   background-color: transparent;
   border: none;
+  width: 30px;
 }
 
 /* Nav Bar */
@@ -541,4 +542,14 @@ img {
 .ui-btn-active {
   border-top: 3px solid var(--primary-colour) !important;
   padding-top: 10px !important;
+}
+
+.incerement-button {
+  color: white;
+  background-color: var(--primary-colour);
+  border: none;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 10px;
 }
