@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../theme/theme.css" />
+  </head>
+
+  <body style="font-family: 'Poppins', sans-serif">
+    <div data-role="page" class="overflow-scroll">
+      <div class="container-fluid">
+        <div
+          data-role="header"
+          data-position="fixed"
+          data-grid="d"
+          class="px-3 py-2 bg-white header"
+        >
+          <div class="row py-2">
+            <div class="col-4" onclick="history.back()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#585858"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="ai ai-ArrowLeft"
+              >
+                <path d="M11 5l-7 7 7 7" />
+                <path d="M4 12h16" />
+              </svg>
+            </div>
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <h3 class="header-title">Add Review</h3>
+            </div>
+            <div class="col-4"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <div
+              class="account-dp"
+              style="
+                background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');
+              "
+            ></div>
+          </div>
+          <div class="col mt-3">
+            <div class="row">
+              <div class="col" style="font-size: 20px">John Doe</div>
+            </div>
+            <div class="row">
+              <div class="col" style="font-size: 13px; color: #069c54">
+                Edit Account
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row mt-2 pl-2">
+          <div class="col" style="font-size: 13px; color: #585858c2">
+            First name
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 14px; margin-bottom: 10px">
+            John
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 13px; color: #585858c2">
+            Surname
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 14px; margin-bottom: 10px">
+            Doe
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 13px; color: #585858c2">
+            Phone number
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 14px; margin-bottom: 10px">
+            +94 77 112 1223
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 13px; color: #585858c2">
+            Email address
+          </div>
+        </div>
+        <div class="row pl-2">
+          <div class="col" style="font-size: 14px; margin-bottom: 10px">
+            johndoe@gmail.com
+          </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col" style="font-size: 15px; margin: 10px">
+            Your Favourites
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" style="font-size: 15px; margin: 10px">
+            Help
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" style="font-size: 15px; margin: 10px">
+            Payment Methods
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" style="font-size: 15px; margin: 10px">
+            About us
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" style="font-size: 15px; margin: 10px">
+            Logout
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-grid="d">
+          <ul>
+            <li>
+              <a href="home.html"
+                ><img src="/assets/icons/home.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="Search.html"
+                ><img src="/assets/icons/search.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="Cart.html"
+                ><img src="/assets/icons/cart.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="orders.html"
+                ><img src="/assets/icons/person.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
