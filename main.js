@@ -61,3 +61,42 @@ window.addEventListener(
 $(document).ready(function () {
   $("#land-text").delay(2000).slideDown(500);
 });
+
+function sendFavList() {
+  var Flist = JSON.parse(sessionStorage.getItem("itemList"));
+  mailBody =
+    "<html> " +
+    "  <body>" +
+    "<h1>Your Favourites List</h1>" +
+    '  <div id="restuarants" class="ui-body-d">' +
+    "<h3>Your Favourite Dishes</h3>" +
+    '     <div class="search-tiles dioni-delight">' +
+    "        <div>" +
+    '         <p class="category-name" style="' +
+    '">' +
+    Flist[0].name +
+    " By " +
+    Flist[0].restaurant +
+    "</p>" +
+    "        </div>" +
+    "     </div>" +
+    "     </div>" +
+    "   </div>" +
+    "  </body>" +
+    "</html>";
+  sendEmail();
+}
+
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "email.foodlabs@gmail.com",
+    Password: "foodlabs123",
+    To: "shashane.2017315@iit.ac.lk,gevin.2016375@iit.ac.lk,pubudu.2017154@iit.ac.lk,aravindhan.2016059@iit.ac.lk",
+    From: "email.foodlabs@gmail.com",
+    Subject: "Favourites List",
+    Body: mailBody,
+  }).then(function (message) {
+    alert("mail sent Successfully");
+  });
+}
