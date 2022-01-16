@@ -78,9 +78,32 @@ function sendFavList(email) {
     "        <div>" +
     '         <p class="category-name" style="' +
     '">' +
-    Flist[0].name +
+    // Flist[0].name +
+    "Blueberry Cheesecake" +
     " By " +
-    Flist[0].restaurant +
+    // Flist[0].restaurant +
+    "Cathys Dessert" +
+    " <br /> " +
+    "Cheese Raviolli" +
+    " By " +
+    // Flist[0].restaurant +
+    "Mummys Delight" +
+    " <br /> " +
+    "Ramen Miso" +
+    " By " +
+    // Flist[0].restaurant +
+    "Sushi Kai" +
+    " <br /> " +
+    "Beef Burger" +
+    " By " +
+    // Flist[0].restaurant +
+    "Street Burger" +
+    " <br /> " +
+    "Cordon Bleu" +
+    " By " +
+    // Flist[0].restaurant +
+    "Diners Lounge" +
+    " <br /> " +
     "</p>" +
     "        </div>" +
     "     </div>" +
@@ -92,7 +115,6 @@ function sendFavList(email) {
 }
 
 function sendEmail(emailId) {
-  debugger;
   Email.send({
     Host: "smtp.gmail.com",
     Username: "kitcyfood123@gmail.com",
