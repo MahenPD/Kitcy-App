@@ -21,7 +21,7 @@
     />
   </head>
   <body>
-    <div data-role="page">
+    <div data-role="page" class="ui-payment">
       <!-- Header End -->
       <!-- Working Header Start -->
       <div
@@ -63,139 +63,123 @@
           </div>
         </div>
       </div>
-      <br />
-      <div data-role="content">
+      <div data-role="content" class="ui-payment-content">
         <div class="row">
-          <!-- Favorite Items List Start -->
-          <div data-role="listview">
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
+          <div class="col">
+            <!-- Favorite Items List Start -->
+            <div data-role="listview" class="ui-listview">
+              <li class="list-group-item pt-3" style="border:none !important">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/blueberry.jpg" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Blueberry Cheesecake</p>
+                    <p class="p2">Desserts</p>
+                    <p class="p1">LKR 900</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/ravioli.png" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Cheese Ravioli</p>
+                    <p class="p2">Pasta</p>
+                    <p class="p1">LKR 1200</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/ramen.png" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Ramen Miso</p>
+                    <p class="p2">Japanses</p>
+                    <p class="p1">LKR 1800</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/burger.png" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Beef Burger</p>
+                    <p class="p2">Fast Food</p>
+                    <p class="p1">LKR 700</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/chicken.png" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Cordan Bleu</p>
+                    <p class="p2">French</p>
+                    <p class="p1">LKR 1400</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/blueberry.jpg" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">Blueberry Cheesecake</p>
+                    <p class="p2">Desserts</p>
+                    <p class="p1">LKR 900</p>
+                    <a href="#popup-remove" data-rel="popup" data-transition="pop"
+                      ><img
+                        src="../assets/icons/trash-red.svg"
+                        height="20px"
+                        alt=""
+                    /></a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="row">
-                <div class="col">
-                  <img src="images/blueberry.jpg" class="fav-list rounded" />
-                </div>
-                <div class="col text-left p-0">
-                  <p class="p1">Blueberry Cheesecake</p>
-                  <p class="p2">Desserts</p>
-                  <p class="p1">LKR 900</p>
-                  <a href="#popup-remove" data-rel="popup" data-transition="pop"
-                    ><img
-                      src="../assets/icons/trash-red.svg"
-                      height="20px"
-                      alt=""
-                  /></a>
-                </div>
-              </div>
-            </li>
+              </li>
+            </div>
+            <!-- Favorite Items List End -->
+
           </div>
-          <!-- Favorite Items List End -->
         </div>
         <!-- Footer -->
         <div data-role="footer" data-position="fixed">
@@ -255,34 +239,44 @@
           data-role="popup"
           id="popup-share-list"
           data-overlay-theme="b"
-          class="rectangle ui-content"
+          class="p-4 text-center"
           data-position-to="window"
+
         >
           <span class="popup-confirm"
             >Share your favorite foods with your friends!</span
           >
-          <div class="center-element">
-            <input
-              type="text"
-              data-role="none"
-              class="kitcy-search-input"
-              placeholder="Enter email address"
-            />
+          <div class="row">
+            <div class="col">
+              <input
+                type="text"
+                data-role="none"
+                class="kitcy-search-input form-control"
+                placeholder="Enter email address"
+              />
+
+            </div>
           </div>
-          <a
-            href="#"
-            data-rel="button"
-            class="popup-confirm-btn ui-btn"
-            onclick="popupConfirm()"
-            >Send</a
-          >
-          <a
-            href="#"
-            data-rel="back"
-            data-role="button"
-            class="popup-cancel-btn"
-            >Cancel</a
-          >
+          <div class="row">
+            <div class="col">
+                  <a
+                href="#"
+                data-rel="button"
+                class="popup-confirm-btn ui-btn"
+                onclick="popupConfirm()"
+                >Send</a
+              >
+            </div>
+            <div class="col">
+                  <a
+                href="#"
+                data-rel="back"
+                data-role="button"
+                class="popup-cancel-btn"
+                >Cancel</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -24,7 +24,99 @@
   </head>
   <body>
     <div data-role="page">
-      <!-- Header End -->
+      <!-- Side Navigation Start -->
+      <div data-role="panel" id="sidenav" data-display="overlay" data-position="left" style="background-color: #069c54;">
+        <div class="row pt-4 px-3">
+          <div class="col-6">
+            <img src="images/yellowlogo.png" width="70">
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-center align-items-end">
+            <a href="" data-rel="close">
+              <i class="ai-cross text-white"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col pt-5">
+            <div data-role="list-view">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row  py-2">
+                    <div class="col-2">
+                      <i class="ai-basket"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Orders</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-trophy"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Rewards</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-heart"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Favorites</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-cart"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Cart</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-chat-dots"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">About Us</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-person"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Account</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-white bg-transparent">
+                  <div class="row py-2">
+                    <div class="col-2">
+                      <i class="ai-sign-out"></i>
+                    </div>
+                    <div class="col-10">
+                      <a href="" class="text-white font-weight-light a">Logout</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Side Navigation End -->
+
       <!-- Working Header Start -->
       <div
         data-role="header"
@@ -33,22 +125,14 @@
         class="px-3 py-2 bg-white header"
       >
         <div class="row py-2">
-          <div class="col-3" onclick="history.back()">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#585858"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="ai ai-ArrowLeft"
-            >
-              <path d="M11 5l-7 7 7 7" />
-              <path d="M4 12h16" />
-            </svg>
+          <div class="col-3 justify-content-center align-items-center" onclick="history.back()">
+            <a href="#sidenav">
+              <img
+                src="../assets/icons/menu.svg"
+                height="20"
+                alt=""
+              />
+            </a>
           </div>
           <div class="col-6 d-flex justify-content-center align-items-center">
             <span
@@ -69,9 +153,10 @@
         </div>
       </div>
       <!-- Working Header End -->
+      
       <div data-role="main" class="ui-content bg-white">
         <div class="container-fluid p-3">
-          <div class="row flex-nowrap overflow-scroll">
+          <div class="row flex-nowrap overflow-scroll py-3">
             <!-- Categories Slide 1 Start -->
             <div class="col-4">
               <div class="card category-card-1 shadow-sm">
@@ -103,7 +188,7 @@
                         src="../assets/images/pizza.png"
                         width="50"
                       />
-                      <p class="card-text p1">Healthy</p>
+                      <p class="card-text p1">Fast Food</p>
                       <i class="ai-circle-chevron-right"></i>
                     </div>
                   </div>
@@ -112,7 +197,7 @@
             </div>
             <!-- Categories Slide 2 End -->
 
-            <!-- Categories Slide 2 Start -->
+            <!-- Categories Slide 3 Start -->
             <div class="col-4">
               <div class="card category-card-2 shadow-sm">
                 <div class="card-body">
@@ -120,19 +205,19 @@
                     <div class="col d-flex flex-column text-center">
                       <img
                         class="img mx-auto mb-4"
-                        src="../assets/images/cupcake.png"
+                        src="../assets/images/HotDog.png"
                         width="50"
                       />
-                      <p class="card-text p1">Healthy</p>
+                      <p class="card-text p1">American</p>
                       <i class="ai-circle-chevron-right"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Categories Slide 2 End -->
+            <!-- Categories Slide 3 End -->
 
-            <!-- Categories Slide 2 Start -->
+            <!-- Categories Slide 4 Start -->
             <div class="col-4">
               <div class="card category-card-2 shadow-sm">
                 <div class="card-body">
@@ -140,17 +225,77 @@
                     <div class="col d-flex flex-column text-center">
                       <img
                         class="img mx-auto mb-4"
-                        src="images/salad.png"
+                        src="images/fried-rice.png"
                         width="50"
                       />
-                      <p class="card-text p1">Healthy</p>
+                      <p class="card-text p1">Authentic</p>
                       <i class="ai-circle-chevron-right"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Categories Slide 2 End -->
+            <!-- Categories Slide 4 End -->
+
+            <!-- Categories Slide 5 Start -->
+            <div class="col-4">
+              <div class="card category-card-2 shadow-sm">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/shrimp.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Seafood</p>
+                      <i class="ai-circle-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 5 End -->
+
+            <!-- Categories Slide 6 Start -->
+            <div class="col-4">
+              <div class="card category-card-2 shadow-sm">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/pie.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Bakery</p>
+                      <i class="ai-circle-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 6 End -->
+
+            <!-- Categories Slide 7 Start -->
+            <div class="col-4">
+              <div class="card category-card-2 shadow-sm">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/cupcake.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Desserts</p>
+                      <i class="ai-circle-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 7 End -->
           </div>
           <br />
 
@@ -163,7 +308,7 @@
 
           <br />
           <div class="favourites-list">
-            <div class="row flex-nowrap overflow-scroll">
+            <div class="row flex-nowrap overflow-scroll pb-3">
               <div class="col">
                 <!-- Food Item Card 1 Start -->
                 <div class="card food-card-1">
