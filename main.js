@@ -1,3 +1,7 @@
+var mailBody;
+var itemList = [];
+var favList = [];
+
 window.addEventListener(
   "load",
   function () {
@@ -90,13 +94,32 @@ function sendFavList() {
 function sendEmail() {
   Email.send({
     Host: "smtp.gmail.com",
-    Username: "email.foodlabs@gmail.com",
-    Password: "foodlabs123",
-    To: "shashane.2017315@iit.ac.lk,gevin.2016375@iit.ac.lk,pubudu.2017154@iit.ac.lk,aravindhan.2016059@iit.ac.lk",
-    From: "email.foodlabs@gmail.com",
+    Username: "kitcyfood123@gmail.com",
+    Password: "kitcy123",
+    To: "mahen.2017441@iit.ac.lk,hiruni.2018500@iit.ac.lk",
+    From: "kitcyfood123@gmail.com",
     Subject: "Favourites List",
     Body: mailBody,
   }).then(function (message) {
     alert("mail sent Successfully");
   });
+}
+
+function enableButton(id) {
+  len = document.getElementById(id).value.length;
+
+  if (len == 10) {
+    document.getElementById("btnOTPtest").disabled = false;
+    phoneNumber = document.getElementById(id).value;
+  } else {
+    document.getElementById("btnOTPtest").disabled = true;
+  }
+}
+
+function addFavourite() {
+  var itemname = document.getElementById("item-name").textContent;
+  var itemrestaurant = "Cathy Desserts";
+  var favItem = { name: itemname, restaurant: itemrestaurant };
+  favList.push(favItem);
+  sessionStorage.setItem("favList", JSON.stringify(favList));
 }

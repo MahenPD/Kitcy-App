@@ -577,3 +577,41 @@ img {
   width: 65px;
   margin: 10px;
 }
+
+/* Land Scape */
+
+@media screen and (orientation: landscape) {
+  .section-1 {
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+  }
+
+  .section-2 {
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+  }
+
+  .filters-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .section-rating-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rate-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating-section {
+    display: flex;
+    flex-direction: row;
+  }
+}
