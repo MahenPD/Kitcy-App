@@ -201,6 +201,7 @@
   font-size: 24px;
   left: 7%;
   margin-top: -62%;
+  width: 65%;
 }
 .favFood-input {
   position: relative;
@@ -209,7 +210,7 @@
   width: 335px;
   margin-top: -3%;
   border-radius: 10px;
-  border: 1px solid lightgray;
+  border-color: #585858;
 }
 .healty-img {
   position: relative;
@@ -220,7 +221,7 @@
   margin-left: 10px;
 }
 .fav-block {
-  margin-top: -133%;
+  margin-top: 0%;
 }
 .circle-2 {
   position: relative;
@@ -328,7 +329,7 @@
   margin-left: 82%;
 }
 
-/* Footer css */
+/* Footer  */
 .ft-box {
   position: fixed;
   top: 70%;
@@ -414,4 +415,192 @@
   margin-top: 0%;
   margin-left: 26%;
   font-family: "Poppins";
+}
+
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .menu-img {
+    margin-left: 25;
+  }
+  .location-img {
+    /* position: relative; */
+    /* margin-top: 35px; */
+    margin-left: 30%;
+    /* height: 23.38px; */
+    /* width: 33px; */
+  }
+  .location-txt {
+    /* position: relative; */
+    /* font-family: 'Poppins'; */
+    /* font-size: 13px; */
+    margin-left: 43%;
+    /* margin-top: -20px; */
+  }
+  .filter-img {
+    /* position: relative;
+      height: 23.38px;
+      width: 33px; */
+    margin-left: 90%;
+    /* margin-top: -45px; */
+  }
+  .cook-img {
+    /* position: relative; */
+    margin-left: 52%;
+    /* margin-top: -67px;
+      height: 30px;
+      width: 30px; */
+  }
+  .elipse-img {
+    margin-left: 73%;
+    height: 170px;
+    width: 231px;
+  }
+  .circle-2 {
+    /* position: relative; */
+    width: 170px;
+    height: 250px;
+    margin-top: 365px;
+  }
+  .search-img {
+    /* position: relative;
+      height: 15px;
+      width: 15px; */
+    left: -79%;
+  }
+  .bdtext-1 {
+    position: relative;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 24px;
+    left: 9%;
+    margin-top: -19%;
+  }
+  .favFood-input {
+    left: 8%;
+    width: 675px;
+    margin-top: -4%;
+  }
+  .fav-block {
+    margin-top: 0%;
+    width: 82%;
+    margin-left: 4%;
+  }
+  .healty-img {
+    width: 214px;
+    height: 150px;
+  }
+  .output {
+    margin-left: 71px;
+  }
+
+  .view-1 {
+    margin-left: -28px;
+  }
+
+  .view-img {
+    /* position: relative; */
+    left: 9%;
+    margin-top: 4%;
+    width: 337px;
+    height: 180px;
+  }
+  .foodName {
+    margin-left: 33px;
+    margin-top: 8px;
+  }
+  .foodPrice {
+    margin-left: 305px;
+    margin-top: -22px;
+    width: 74px;
+  }
+  .foodDelivery {
+    margin-left: 32px;
+  }
+  .column {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex: row;
+    margin-left: 67px;
+  }
+  .res-block {
+    margin-top: 7%;
+    margin-left: -10%;
+  }
+  .res-img {
+    margin-right: 20px;
+  }
+
+  /* Footer css */
+  .ft-box {
+    position: relative;
+    margin-top: 7%;
+    left: 3%;
+    width: 791px;
+    height: 215px;
+  }
+  .ftLogo-img {
+    position: relative;
+    left: 43%;
+    margin-top: -27%;
+    width: 126px;
+    height: 66px;
+  }
+  .ftText {
+    position: relative;
+    font-size: 18px;
+    margin-top: 3%;
+    margin-left: 7%;
+  }
+  .ftText-1 {
+    position: relative;
+    font-size: 18px;
+    margin-top: -3%;
+    margin-left: 81%;
+  }
+  .ft-img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 7%;
+    margin-top: 2%;
+  }
+  .ftText-2 {
+    position: relative;
+    font-size: 14px;
+    margin-top: -3%;
+    margin-left: 12%;
+  }
+  .ft-img-1 {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    margin-top: -6%;
+    left: 81%;
+  }
+  .ft-img-2 {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2%;
+    left: -6%;
+  }
+  .ftText-3 {
+    position: relative;
+    font-size: 14px;
+    margin-top: -3%;
+    margin-left: 12%;
+  }
+  .ftText-4 {
+    position: relative;
+    font-size: 11px;
+    margin-top: 3%;
+    margin-left: 35%;
+  }
+  .ftText-5 {
+    position: relative;
+    font-size: 10px;
+    margin-top: 0%;
+    margin-left: 42%;
+  }
 }
