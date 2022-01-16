@@ -10,14 +10,14 @@ window.addEventListener(
     document.getElementById("stage-three").style.display = "none";
     document.getElementById("stage-four").style.display = "none";
     document.getElementById("stage-five").style.display = "none";
-    document.getElementById("stage-six").style.display = "none";
+    // document.getElementById("stage-six").style.display = "none";
 
     document.getElementById("stage-one-image").style.display = "block";
     document.getElementById("stage-two-image").style.display = "none";
     document.getElementById("stage-three-image").style.display = "none";
     document.getElementById("stage-four-image").style.display = "none";
     document.getElementById("stage-five-image").style.display = "none";
-    document.getElementById("stage-six-image").style.display = "none";
+    // document.getElementById("stage-six-image").style.display = "none";
 
     setTimeout(() => {
       document.getElementById("stage-one").style.display = "none";
@@ -51,20 +51,20 @@ window.addEventListener(
       document.getElementById("stage-five-image").style.display = "block";
     }, 12000);
 
-    setTimeout(() => {
-      document.getElementById("stage-five").style.display = "none";
-      document.getElementById("stage-six").style.display = "block";
+    // setTimeout(() => {
+    //   document.getElementById("stage-five").style.display = "none";
+    //   document.getElementById("stage-six").style.display = "block";
 
-      document.getElementById("stage-five-image").style.display = "none";
-      document.getElementById("stage-six-image").style.display = "block";
-    }, 15000);
+    //   document.getElementById("stage-five-image").style.display = "none";
+    //   document.getElementById("stage-six-image").style.display = "block";
+    // }, 15000);
   },
   false
 );
 
-$(document).ready(function () {
-  $("#land-text").delay(2000).slideDown(500);
-});
+// $(document).ready(function () {
+//   $("#land-text").delay(2000).slideDown(500);
+// });
 
 function sendFavList() {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
