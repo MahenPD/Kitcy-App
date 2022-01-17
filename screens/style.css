@@ -185,7 +185,7 @@
 }
 .cook-img {
   position: relative;
-  margin-left: 42%;
+  margin-left: 69%;
   margin-top: -67px;
   height: 30px;
   width: 30px;
@@ -337,6 +337,67 @@
   margin-left: 82%;
 }
 
+/* About us  */
+/* iphone porttrait */
+.about-us-Logo{
+  height:"250px";
+  width:"250px";
+  margin-top: 10px;
+}
+.about-us-text{
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 36px;
+  color: #585858;
+}
+.video-about{
+  margin-top: 31px;
+    margin-bottom: 20px;
+    max-width: 357px;
+}
+.about-us-scroll{
+}
+/* iphone landscape */ 
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .video-about{
+    max-width: 664px;
+  }
+}
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .about-us-Logo{
+    margin-top: 76px;
+  }
+  .about-us-text{
+    margin-top: 32px;
+  }
+  .video-about{
+    margin-top: 31px;
+    margin-bottom: 73px;
+    max-width: 960px;
+  }
+}
+/* Ipad version-1 */
+@media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .video-about{
+    max-width: 1161px;
+  }
+}
+
+/* Acount  */
+/* iphone porttrait */
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer  */
 .ft-box {
   position: fixed;
@@ -424,6 +485,9 @@
   margin-left: 26%;
   font-family: "Poppins";
 }
+.footer-2{
+  margin-top: 115%;
+}
 
 @media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .menu-img {
@@ -452,7 +516,7 @@
   }
   .cook-img {
     /* position: relative; */
-    margin-left: 52%;
+    margin-left: 61%;
     /* margin-top: -67px;
       height: 30px;
       width: 30px; */
@@ -490,7 +554,7 @@
   .fav-block {
     margin-top: 0%;
     width: 82%;
-    margin-left: 4%;
+    /* margin-left: 4%; */
   }
   .healty-img {
     width: 214px;
@@ -624,5 +688,51 @@
     line-height: 21px;
     text-decoration: none;
 
+  }
+}
+
+
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .bdtext-1{
+    margin-top: -23%;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .cook-img {
+    /* position: relative; */
+    margin-left: 71%;
+    margin-top: -90px;
+    height: 60px;
+    width: 60px;
+  }
+  .elipse-img {
+    /* position: relative; */
+    margin-left: 82%;
+    height: 257px;
+    /* width: -webkit-fill-available; */
+  }
+  .favFood-input {
+    /* position: relative; */
+    left: 7%;
+    /* height: 52px; */
+    width: 860px;
+    /* margin-top: -3%; */
+    /* border-radius: 10px; */
+    /* border-color: #585858; */
+  }
+  .healty-img {
+    /* position: relative; */
+    left: 1%;
+    margin-top: 6%;
+    width: 401px;
+    height: 300px;
+    /* margin-left: 10px; */
+  }
+  .fav-block {
+    margin-left: 1%;
+    overflow: scroll;
+    width: 1024px;
+    height: 600px;
   }
 }
