@@ -384,8 +384,282 @@
   }
 }
 
+
+
 /* Acount  */
 /* iphone porttrait */
+.account-dp1{
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  height: 65px;
+  width: 65px;
+  margin: 10px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');
+}
+.account-name{
+  /* style="font-size: 20px" */
+  font-size: 20px;
+  font-family: 'Poppins';
+}
+.edit-account{
+  /* style="font-size: 13px; color: #069c54" */
+  font-size: 13px;
+  color: #069c54;
+  font-family: 'Poppins';
+}
+.account-txt-v1{
+  font-size: 13px;
+  color: #585858c2;
+  font-family: 'Poppins';
+  margin-left: -4%;
+  margin-top: 2%;
+}
+.output1{
+  font-size: 14px;
+  font-family: 'Poppins';
+  margin-bottom: 10px; 
+  margin-left: -1%;
+  margin-top: 2%;
+}
+.account-txt-v3{
+  font-size: 13px;
+  color: #585858c2;
+  font-family: 'Poppins';
+  /* margin-left: -4%; */
+  margin-top: 2%;
+}
+.output2{
+  font-size: 14px;
+  font-family: 'Poppins';
+  margin-bottom: 10px; 
+  /* margin-left: -4%; */
+}
+.account-txt-v5{
+  font-size: 13px;
+  color: #585858c2;
+  font-family: 'Poppins';
+  /* margin-left: -4%; */
+  margin-top: 2%;
+}
+.output3{
+  font-size: 14px;
+  font-family: 'Poppins';
+  margin-bottom: 10px; 
+  /* margin-left: -4%; */
+}
+.account-txt-v7{
+  font-size: 13px;
+  color: #585858c2;
+  font-family: 'Poppins';
+  /* margin-left: -4%; */
+  margin-top: 2%;
+}
+.output4{
+  font-size: 14px;
+  font-family: 'Poppins';
+  margin-bottom: 10px; 
+  /* margin-left: -4%; */
+}
+
+.account-txt3{
+  /* style="font-size: 15px; margin: 10px" */
+  font-size: 15px;
+  margin: 3px;
+  font-family: 'Poppins';
+  margin-top: 2%;
+}
+
+/* iphone landscape */ 
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* .account-dp1{
+    margin-top: 4%;
+    margin-left: 48%;
+  } */
+  .account-txt-v1{
+    margin-left: -1%;
+    margin-top: -2%;
+  }
+  .output1{
+    margin-left: 0.5%;
+    margin-top: 0%;
+  }
+  .account-txt-v3{
+    margin-left: 26.5%;
+    margin-top: -6%;
+  }
+  .output2{
+    margin-left: 26.5%;
+    margin-top: 0%;
+  }
+  .account-txt-v5{
+    margin-left: 0.5%;
+    margin-top: 3%;
+  }
+  .output3{
+    margin-left: 0.5%;
+    margin-top: 0%;
+  }
+  .account-txt-v7{
+    margin-left: 26.5%;
+    margin-top: -6%;
+  }
+  .output4{
+    margin-left: 26.5%;
+    margin-top: 0%;
+  }
+
+  .set{
+    margin-top: -28%;
+    margin-left: 57%;
+  }
+  
+  .account-txt3{
+    font-size: 15px;
+    margin: -5px;
+  }
+}
+
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .lst1{
+    margin-left: 47%;
+  }
+  .account-name{
+    margin-left: -23%;
+    margin-top: 20%;
+  }
+  .edit-account{
+    margin-left: -22%;
+  }
+  .account-txt-v1{
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 20px;
+  }
+  .output1{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v3{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output2{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v5{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output3{
+    margin-left: 5.5%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v7{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output4{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+
+  .set{
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+  
+  .account-txt3{
+    font-size: 25px;
+    margin: 3px;
+  }
+}
+/* Ipad version-1 */
+@media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .lst1{
+    margin-left: 47%;
+  }
+  .account-name{
+    margin-left: -18%;
+    margin-top: 12%;
+  }
+  .edit-account{
+    margin-left: -17%;
+  }
+  .account-txt-v1{
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 20px;
+  }
+  .output1{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v3{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output2{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v5{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output3{
+    margin-left: 5.5%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+  .account-txt-v7{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  .output4{
+    margin-left: 6%;
+    margin-top: 0%;
+    font-size: 20px;
+  }
+
+  .set{
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+  
+  .account-txt3{
+    font-size: 25px;
+    margin: 3px;
+  }
+}
+
+/* Cart */
+/* center-element text-white" style="font-size: 23px */
+/* font-family: "Poppins", sans-serif; color: #585858 !important; */
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .fav-list{
+    margin-left: 66% !important;
+  }
+}
+
+
 
 
 
