@@ -18,11 +18,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="../theme/theme.css" />
 
-  <script>
-    $(document).on("pagebeforeshow", function( event, data ) {
-    $('#sidenav').panel("open");
-})
-  </script>
+ 
 
 </head>
 
@@ -34,7 +30,7 @@
 
     <!-- Side Navigation Start -->
 
-    <div data-role="panel" id="sidenav" data-display="fixed" data-position="left" data-dismissible="false" style="background-color: #069c54;">
+    <div data-role="panel" id="sidenav" data-display="fixed" data-position="left" style="background-color: #069c54;">
       <div class="row px-3 sidenav-row">
         <div class="col-6">
           <img src="images/yellowlogo.png" width="70" />
@@ -226,7 +222,26 @@
         </ul>
       </div>
     </div>
+
+    <div data-role="popup" id="popup-task-description" style="width: 285px; padding-top: 20px;" data-overlay-theme="b" class="rectangle ui-content"
+            data-position-to="window">
+            <span class="popup-confirm" style="font-weight: 400; font-size: 14px; padding: 0; margin-top: 0; height: 20px;">Reward : 200</span>
+
+            <div style="background-color: rgba(0, 0, 0, 0.116); padding: 10px; border-radius: 10px;  text-align: left; font-size: 14px;">
+                <span>
+                    <dl> 1. Go to Dessert Category</dl>
+                    <dl> 2. Choose your favourite Dessert</dl>
+                    <dl> 3. Create an Order !</dl>
+                </span>
+            </div>
+            <span class="popup-confirm" style="color: #069C54; font-weight: 400; padding: 0; padding-top: 10px;  font-size: 12px;">You will be able to utilize your coins as a discount during checkout</span>
+            
+            <a href="#" data-rel="back" data-role="button" style="width: 100px; margin-top: 10px;" class="popup-submit-btn">Okay</a>
+        </div>
+    
   </div>
+
+
 </body>
 
 </html>
