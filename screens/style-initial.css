@@ -75,6 +75,28 @@ a:link {
 /* Favorites End*/
 
 /* Home Page Start*/
+.logo-col{
+  padding-top:2rem !important
+}
+@media screen 
+and (min-device-width: 844px) 
+and (max-device-width: 1024px) 
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+  .logo{
+    padding-top:0 !important;
+  }
+}
+@media only screen 
+and (min-device-width: 480px) 
+and (max-device-width: 844px)
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+  .sidenav .logo{
+    padding-top:0 !important
+  }
+}
+
 .food-card-1 .p1 {
   font-size: 13px;
 }
@@ -383,6 +405,15 @@ a:link {
   display: none;
 }
 /* Payment Page End */
+/* Add Payment Page Start */
+.payment-btn{
+  font-family: "Poppins", sans-serif !important;
+  color:white !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+
+/* Add Payment Page End */
 
 /* Favorite Page Start */
 .list-group-item{
