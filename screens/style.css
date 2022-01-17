@@ -635,4 +635,36 @@
   .iphone-port{
     display: none !important;
   }
+  .sidenav-list{
+    font-size: 14px !important;
+    font-weight: 200 !important;
+    text-shadow: none;
+  }
+  .sidenav-col{
+    padding-top:0 !important;
+  }
+  .sidenav-row{
+    padding-top: 0 !important;
+  }
+  .sidenav-row-list{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+}
+
+.sidenav-col{
+  padding-top:3rem;
+}
+.sidenav-row{
+  padding-top: 1.5rem;
+}
+
+.sidenav-list{
+  font-size: 16px;
+  font-weight: 200;
+  text-shadow: none;
+}
+.sidenav-row-list{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
