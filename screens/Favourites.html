@@ -74,117 +74,7 @@
         <div class="row">
           <div class="col">
             <!-- Favorite Items List Start -->
-            <div data-role="listview" class="ui-listview">
-              <li class="list-group-item pt-3" style="border: none !important">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/blueberry.jpg" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Blueberry Cheesecake</p>
-                    <p class="p2">Desserts</p>
-                    <p class="p1">LKR 900</p>
-                    <a
-                      href="#popup-remove"
-                      rel="external"
-                      data-rel="popup"
-                      data-transition="pop"
-                      ><img
-                        src="../assets/icons/trash-red.svg"
-                        height="20px"
-                        alt=""
-                    /></a>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/ravioli.png" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Cheese Ravioli</p>
-                    <p class="p2">Pasta</p>
-                    <p class="p1">LKR 1200</p>
-                    <a
-                      href="#popup-remove"
-                      rel="external"
-                      data-rel="popup"
-                      data-transition="pop"
-                      ><img
-                        src="../assets/icons/trash-red.svg"
-                        height="20px"
-                        alt=""
-                    /></a>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/ramen.png" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Ramen Miso</p>
-                    <p class="p2">Japanses</p>
-                    <p class="p1">LKR 1800</p>
-                    <a
-                      href="#popup-remove"
-                      rel="external"
-                      data-rel="popup"
-                      data-transition="pop"
-                      ><img
-                        src="../assets/icons/trash-red.svg"
-                        height="20px"
-                        alt=""
-                    /></a>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/burger.png" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Beef Burger</p>
-                    <p class="p2">Fast Food</p>
-                    <p class="p1">LKR 700</p>
-                    <a
-                      href="#popup-remove"
-                      rel="external"
-                      data-rel="popup"
-                      data-transition="pop"
-                      ><img
-                        src="../assets/icons/trash-red.svg"
-                        height="20px"
-                        alt=""
-                    /></a>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/chicken.png" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Cordan Bleu</p>
-                    <p class="p2">French</p>
-                    <p class="p1">LKR 1400</p>
-                    <a
-                      href="#popup-remove"
-                      rel="external"
-                      data-rel="popup"
-                      data-transition="pop"
-                      ><img
-                        src="../assets/icons/trash-red.svg"
-                        height="20px"
-                        alt=""
-                    /></a>
-                  </div>
-                </div>
-              </li>
+            <div data-role="listview" class="ui-listview" id="fav-food-list">
               <li class="list-group-item">
                 <div class="row">
                   <div class="col">
@@ -313,4 +203,13 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        loadFavourites();
+      },
+      false
+    );
+  </script>
 </html>
