@@ -628,4 +628,11 @@
     text-decoration: none;
 
   }
+
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
 }
