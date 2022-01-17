@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Restaurant</title>
     <link rel="stylesheet" href="../theme/theme.css" />
+    <script src="../main.js"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -66,8 +67,8 @@
         <div class="d-flex flex-column">
           <div class="row">
             <!-- Favorite Items List Start -->
-            <div data-role="listview">
-              <li class="list-group-item">
+            <div data-role="listview" id="cart-items-list">
+              <!-- <li class="list-group-item">
                 <div class="row">
                   <div class="col">
                     <img src="images/blueberry.jpg" class="fav-list rounded" />
@@ -111,52 +112,7 @@
                     </div>
                   </div>
                 </div>
-              </li>
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col">
-                    <img src="images/blueberry.jpg" class="fav-list rounded" />
-                  </div>
-                  <div class="col text-left p-0">
-                    <p class="p1">Blueberry Cheesecake</p>
-                    <p class="p2">Desserts</p>
-                    <p class="p3">LKR 900</p>
-                    <div class="d-flex">
-                      <div class="counter d-flex">
-                        <button
-                          data-role="none"
-                          id="minus2"
-                          class="incerement-button"
-                        >
-                          -
-                        </button>
-                        <input
-                          type="text"
-                          id="quantity"
-                          data-role="none"
-                          class="kitcy-input-2 text-center"
-                          value="1"
-                        />
-                        <button
-                          data-role="none"
-                          class="incerement-button"
-                          id="plus2"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <div>
-                        <i
-                          ><img
-                            src="../assets/icons/trash-red.svg"
-                            class="ai-trash-can"
-                            alt=""
-                        /></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              </li> -->
             </div>
             <!-- Favorite Items List End -->
           </div>
@@ -172,12 +128,14 @@
           <div class="d-flex flex-column" style="flex: 4">
             <div class="d-flex align-items-center space-around-container">
               <div class="heading2">Total Amount</div>
-              <div class="heading1 bold">LKR 4800</div>
+              <div class="heading1 bold" id="cart-total">LKR 0</div>
             </div>
             <br />
-            <div class="center-element">
-              <button data-role="none" class="kitcy-button">Checkout</button>
-            </div>
+            <a href="Checkout.html" rel="external">
+              <div class="center-element">
+                <button data-role="none" class="kitcy-button">Checkout</button>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -186,22 +144,22 @@
           <div data-role="navbar" data-grid="d">
             <ul>
               <li>
-                <a href="./Home.html"rel="external"
+                <a href="./Home.html" rel="external"
                   ><img src="../assets/icons/home.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Search.html"rel="external"
+                <a href="./Search.html" rel="external"
                   ><img src="../assets/icons/search.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Cart.html"rel="external"
+                <a href="./Cart.html" rel="external"
                   ><img src="../assets/icons/cart.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Account.html"rel="external"
+                <a href="./Account.html" rel="external"
                   ><img src="../assets/icons/person.svg" alt=""
                 /></a>
               </li>
@@ -211,4 +169,13 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        loadCart();
+      },
+      false
+    );
+  </script>
 </html>

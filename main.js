@@ -148,7 +148,7 @@ function addFavourite() {
   loadFavourites();
 }
 
-function handleRemoveFav(favName) {
+function handleRemoveFav(favName = "Blueberry Cheesecake") {
   var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
   var filteredFavs = favourites.filter((f) => f.name !== favName);
   sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
@@ -170,10 +170,9 @@ function loadFavourites() {
       <div class="col text-left p-0">
         <p class="p1">${fav.name}</p>
         <p class="p2">Desserts</p>
-        <p class="p1">LKR ${fav.price}</p>
+        <p class="p1">${fav.price}</p>
         <a
           href="#popup-remove"
-          rel="external"
           data-rel="popup"
           data-transition="pop"
           ><img
@@ -296,6 +295,114 @@ function loadReviews() {
   });
 
   document.getElementById("ratings-container").innerHTML = output;
+}
+
+function addToCart() {
+  var cartItems = JSON.parse(sessionStorage.getItem("cart"));
+  var itemName = document.getElementById("item-name").textContent;
+  var itemPrice = document.getElementById("item-price").textContent.split(" ");
+  var itemQuantity = document.getElementById("itemQuantity").value;
+  debugger;
+  var cartItemObj = {
+    name: itemName,
+    price: parseInt(itemPrice[1]),
+    totalPrice: parseInt(itemPrice[1]) * parseInt(itemQuantity),
+    quantity: itemQuantity,
+  };
+
+  if (cartItems) {
+    cartItems.push(cartItemObj);
+  } else {
+    cartItems = [];
+    cartItems.push(cartItemObj);
+  }
+  debugger;
+  sessionStorage.setItem("cart", JSON.stringify(cartItems));
+}
+
+function loadCart() {
+  var cartItems = JSON.parse(sessionStorage.getItem("cart"));
+
+  var output = "";
+  var totalAmount = 0;
+
+  $.each(cartItems, function (index, item) {
+    output += `
+    <li class="list-group-item">
+                <div class="row">
+                  <div class="col">
+                    <img src="images/blueberry.jpg" class="fav-list rounded" />
+                  </div>
+                  <div class="col text-left p-0">
+                    <p class="p1">${item.name}</p>
+                    <p class="p2">Desserts</p>
+                    <p class="p3">LKR ${item.totalPrice}</p>
+                    <div class="d-flex">
+                      <div class="counter d-flex">
+                        <button
+                          data-role="none"
+                          id="minus"
+                          class="incerement-button"
+                        >
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          id="quantity"
+                          data-role="none"
+                          class="kitcy-input-2 text-center"
+                          value="${item.quantity}"
+                        />
+                        <button
+                          data-role="none"
+                          class="incerement-button"
+                          id="plus"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <div>
+                        <i
+                          ><img
+                            src="../assets/icons/trash-red.svg"
+                            class="ai-trash-can"
+                            alt=""
+                        /></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    `;
+  });
+
+  cartItems.map((item) => (totalAmount += item.totalPrice));
+
+  document.getElementById("cart-items-list").innerHTML = output;
+  document.getElementById("cart-total").innerHTML = totalAmount;
+}
+
+function loadCheckoutDetails() {
+  var cartItems = JSON.parse(sessionStorage.getItem("cart"));
+
+  var output = "";
+
+  $.each(cartItems, function (index, item) {
+    output += `
+        <div class="col">
+              <h3 class="check-h4">${item.name} X ${item.quantity}</h3>
+              <h3 class="check-h4">Delivery Cost</h3>
+              <h3 class="check-h4">Subtotal</h3>
+            </div>
+            <div class="col d-flex flex-column align-items-end">
+              <h3 class="check-h4">LKR ${item.totalPrice}</h3>
+              <h3 class="check-h4">LKR 90</h3>
+              <h3 class="check-h4">LKR 1800</h3>
+        </div>
+    `;
+  });
+
+  document.getElementById("checkout-section").innerHTML = output;
 }
 
 // function listChallenges() {
