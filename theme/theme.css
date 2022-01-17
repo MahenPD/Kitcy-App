@@ -373,6 +373,7 @@ img {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid lightgray;
+  outline-width: 0;
 }
 
 .fav-list {
@@ -422,6 +423,7 @@ img {
   background-color: transparent;
   border: none;
   width: 30px;
+  outline-width: 0;
 }
 
 /* Nav Bar */
@@ -441,6 +443,7 @@ img {
 
 .search-input {
   width: 100%;
+  outline-width: 0;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;

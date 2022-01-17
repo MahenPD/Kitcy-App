@@ -228,6 +228,7 @@ a:link {
   font-size: 14px;
   line-height: 21px;
   color: rgba(88, 88, 88, 0.3);
+  outline-width: 0;
 }
 .ui-input-text::placeholder {
   color: rgba(88, 88, 88, 0.3);
@@ -383,12 +384,12 @@ a:link {
 /* Payment Page End */
 
 /* Favorite Page Start */
-.list-group-item{
-  border:none !important
+.list-group-item {
+  border: none !important;
 }
 
-.ui-listview>.ui-li-static{
-  border:none !important;
+.ui-listview > .ui-li-static {
+  border: none !important;
 }
 /* Favorite Page End */
 
