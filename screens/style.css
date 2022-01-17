@@ -80,6 +80,35 @@
   border-radius: 15px !important;
 }
 
+.food-card-filter .p1 {
+  font-size: 13px;
+}
+
+.food-card-filter .p2 {
+  font-size: 11px;
+}
+
+.food-card-filter {
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.food-card-filter .card-img-top {
+  border-radius: 15px !important;
+}
+
+.food-card-filter .yellow {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+}
+
+.filter-card-img{
+  height:170px; 
+}
+
 .food-card-2 {
   border-radius: 5px !important;
   border: none !important;
@@ -475,6 +504,18 @@
   margin-top: 2%;
 }
 
+.food-card-filter .yellow {
+  margin-top: 110px;
+}
+
+.food-card-filter .p1 {
+  font-size: 14px;
+}
+
+.food-card-filter .p2 {
+  font-size: 12px;
+}
+
 /* iphone landscape */ 
 @media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   /* .account-dp1{
@@ -587,6 +628,24 @@
     font-size: 25px;
     margin: 3px;
   }
+
+  .food-card-filter .yellow {
+    margin-top: 170px;
+  }
+
+  .filter-card-img{
+    height:265px; 
+  }
+
+  .food-card-filter .p1 {
+    font-size: 14px;
+  }
+  
+  .food-card-filter .p2 {
+    font-size: 12px;
+  }
+  
+
 }
 /* Ipad version-2 */
 @media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {

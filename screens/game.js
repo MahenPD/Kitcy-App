@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    listChallenges();
     listChallengesip();
     listLeaderboardip();
     loadData();
@@ -128,24 +127,11 @@ function loadData(){
     let progress = user.score%100;
     $("#game-userProgress").text(progress+ "/100");
     $("#game-progress").css('width', progress+'%');
+    $("#leader-selfName").text(user.name);
+    $("#leader-selfRank").text("My Rank : " +rank);
+    $("#leader-selfLevel").text("Level : " +user.level);
 
-}
-
-function listChallenges() {
-    let output = '';
-    $.each(tasks, function (index, task) {
-        if (!(user.completedTaskIds.includes(task.id))) {
-            output += `
-            <li class="chal-item list-group-item-action">
-                <span class="chal-name">${task.name}</span>
-                <span class="chal-points">${task.points} coins</span>
-            </li>
-        `;
-        }
-    });
-
-    $('#challenges').html(output).listview('refresh');
-}
+};
 
 function listChallengesip() {
     let output = '';

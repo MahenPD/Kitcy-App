@@ -7,7 +7,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
-    <link rel="stylesheet" href="filter.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -22,6 +21,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="filter.css" />
+    <script src="filter.js"></script>
+
   </head>
 
   <body>
@@ -143,7 +145,7 @@
             <h3 class="header-title align-middle"><b>Colombo,</b> SL</h3>
           </div>
           <div class="col-3 my-auto">
-            <a href="#" data-rel="button" onclick="openFilter()">
+            <a href="Filters.html" data-rel="button" rel="external">
               <img
                 src="images/filter.png"
                 class="img float-right"
@@ -928,6 +930,7 @@
     </div>
     <script>
       function openFilter() {
+        $("#filter").popup();
         $("#filter").popup("open", {
           positionTo: "#filter-area",
           transition: "slidedown",

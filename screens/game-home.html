@@ -2,21 +2,27 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
 
-    <script src="game.js"></script>
-    <link rel="stylesheet" href="game.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../theme/theme.css" />
+  <script src="game.js"></script>
+  <link rel="stylesheet" href="game.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../theme/theme.css" />
+
+  <script>
+    $(document).on("pagebeforeshow", function( event, data ) {
+    $('#sidenav').panel("open");
+})
+  </script>
 
 </head>
 
@@ -24,212 +30,203 @@
 
 
 
-    <div data-role="page" id="game-home">
-        
-    <!-- Side Navigation Start -->
-  <div
-  data-role="panel"
-  id="sidenav"
-  data-display="fixed"
-  data-position="left"
-  style="background-color: #069c54"
->
+  <div data-role="page" id="game-home">
 
-  <div class="row pt-4 px-3">
-    <div class="col-6">
-      <img src="images/yellowlogo.png" width="70" />
+    <!-- Side Navigation Start -->
+
+    <div data-role="panel" id="sidenav" data-display="fixed" data-position="left" data-dismissible="false" style="background-color: #069c54;">
+      <div class="row px-3 sidenav-row">
+        <div class="col-6">
+          <img src="images/yellowlogo.png" width="70" />
+        </div>
+        <div
+          class="col-6 d-flex flex-column justify-content-center align-items-end"
+        >
+          <a href="" rel="external" data-rel="close">
+            <i class="ai-cross text-white"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row p-3">
+        <div class="col">
+          <div data-role="list-view">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-white bg-transparent">
+
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-basket"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="" rel="external" class="text-white sidenav-list">Orders</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-trophy"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="" rel="external" class="text-white sidenav-list">Rewards</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-heart"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="Favourites.html" rel="external" class="text-white sidenav-list">Favorites</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-cart"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="Cart.html" rel="external" class="text-white sidenav-list">Cart</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-chat-dots"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="AboutUs.html" rel="external" class="text-white sidenav-list">About Us</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-person"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="Account.html" rel="external" class="text-white sidenav-list">Account</a>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item text-white bg-transparent">
+                <div class="row sidenav-row-list">
+                  <div class="col-2">
+                    <i class="ai-sign-out"></i>
+                  </div>
+                  <div class="col-10">
+                    <a href="Login.html" rel="external" class="text-white sidenav-list">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div
-      class="col-6 d-flex flex-column justify-content-center align-items-end"
-    >
-      <a href="" data-rel="close">
-        <i class="ai-cross text-white"></i>
-      </a>
+    <!-- Side Navigation End -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="game-sidebar-area" style="width: 270px;"><a href="#sidenav" class="ui-link">
+            hiiii
+          </a></div>
+        <div class="col">
+
+
+          <div class="row" id="game-headerr">
+            <div class="col-4 mt-2 col-xl-2 col-md-2">
+              <div class="dp-ip"
+                style="background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');">
+              </div>
+
+
+            </div>
+            <div class="col-8 col-xl-10 col-md-10 details-ip ">
+
+              <span class="name" id="game-userName">Karen Gillan</span>
+
+              <div class="progress mt-2 mb-2" style="width: 60%; height: 8px; margin: left;">
+                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100" style="width: 0%;" id="game-progress"></div>
+              </div>
+
+              <span class="idd" id="game-userLevel">LEVEL 22</span>
+              <br>
+              <span class="idd1 mt-2" id="game-userProgress">200/500</span>
+            </div>
+
+          </div>
+
+          <div class="row" style="background-color: #5858584b; height: 20px;"></div>
+
+          <div class="row justify-content-center">
+            <div class="col ">
+              <div id="complete-task-title-ip">Complete tasks and earn more</div>
+
+              <ul data-role="listview" id="challenges-ip" class="list-group">
+
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="row mt-1">
+            <div class="col" style="text-align: right; padding: 0; font-size: 18px; font-weight: 600; color: #585858;">
+              Total Winnings :</div>
+            <div class="col "
+              style="text-align: left; padding: 0; left: 10px; font-size: 18px; font-weight: 600; color: #585858;"
+              id="game-userWinnings">240 </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col" style="text-align: right; padding: 0; font-size: 18px; font-weight: 600; color: #585858;">
+              My Rank :</div>
+            <div class="col "
+              style="text-align: left; padding: 0; left: 10px; font-size: 18px; font-weight: 600; color: #585858;"
+              id="game-userRank">25 </div>
+          </div>
+
+          <div class="row mt-1">
+            <div class="col">
+              <a href="leaderboard.html" rel="external" data-role="button" class="btn-game">View leaderboard</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row p-3">
-    <div class="col pt-5">
-      <div data-role="list-view">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-basket"></i>
-              </div>
-              <div class="col-10">
-                <a href="" class="text-white font-weight-light a"
-                  >Orders</a
-                >
-              </div>
-            </div>
+
+     <!-- Footer -->
+     <div data-role="footer" data-position="fixed" class="game-navbar-footer">
+      <div data-role="navbar" data-grid="d">
+        <ul>
+          <li>
+            <a href="./Home.html" rel="external"
+              ><img src="../assets/icons/home.svg" alt=""
+            /></a>
           </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-trophy"></i>
-              </div>
-              <div class="col-10">
-                <a href="" class="text-white font-weight-light a"
-                  >Rewards</a
-                >
-              </div>
-            </div>
+          <li>
+            <a href="./Search.html" rel="external"
+              ><img src="../assets/icons/search.svg" alt=""
+            /></a>
           </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-heart"></i>
-              </div>
-              <div class="col-10">
-                <a
-                  href="Favourites.html"
-                  class="text-white font-weight-light a"
-                  >Favorites</a
-                >
-              </div>
-            </div>
+          <li>
+            <a href="./Cart.html" rel="external"
+              ><img src="../assets/icons/cart.svg" alt=""
+            /></a>
           </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-cart"></i>
-              </div>
-              <div class="col-10">
-                <a
-                  href="./Cart.html"
-                  class="text-white font-weight-light a"
-                  >Cart</a
-                >
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-chat-dots"></i>
-              </div>
-              <div class="col-10">
-                <a
-                  href="AboutUs.html"
-                  class="text-white font-weight-light a"
-                  >About Us</a
-                >
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-person"></i>
-              </div>
-              <div class="col-10">
-                <a
-                  href="Account.html"
-                  class="text-white font-weight-light a"
-                  >Account</a
-                >
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item text-white bg-transparent">
-            <div class="row py-2">
-              <div class="col-2">
-                <i class="ai-sign-out"></i>
-              </div>
-              <div class="col-10">
-                <a
-                  href="Login.html"
-                  class="text-white font-weight-light a"
-                  >Logout</a
-                >
-              </div>
-            </div>
+          <li>
+            <a href="./Account.html" rel="external"
+              ><img src="../assets/icons/person.svg" alt=""
+            /></a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-</div>
-<!-- Side Navigation End -->
-
-        <div class="container-fluid" >
-            <div class="row">
-                <div id="game-sidebar-area" style="width: 270px;"><a href="#sidenav" class="ui-link">
-                    hiiii
-                  </a></div>
-                <div class="col">
-         
-        
-            <div class="row" id="game-headerr" >
-                <div class="col-4 mt-2 col-xl-2 col-md-2">
-                            <div class="dp-ip"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                                style="background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');">
-                            </div>
-
-
-                </div>
-                <div class="col-8 col-xl-10 col-md-10 details-ip ">
-
-                    <span class="name" id="game-userName">Karen Gillan</span>
-
-                    <div class="progress mt-2 mb-2" style="width: 60%; height: 8px; margin: left;">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 0%;" id="game-progress"></div>
-                    </div>
-
-                    <span class="idd" id="game-userLevel">LEVEL 22</span>
-                    <br>
-                    <span class="idd1 mt-2" id="game-userProgress">200/500</span>
-                </div>
-
-            </div>
-
-            <div class="row" style="background-color: #5858584b; height: 20px;"></div>
-
-            <div class="row justify-content-center">
-                <div class="col ">
-                    <div id="complete-task-title-ip">Complete tasks and earn more</div>
-
-                    <ul data-role="listview" id="challenges-ip" class="list-group">
-
-                    </ul>
-
-                </div>
-            </div>
-
-            <div class="row mt-1">
-                <div class="col" style="text-align: right; padding: 0; font-size: 18px; font-weight: 600; color: #585858;">Total Winnings :</div>
-                <div class="col " style="text-align: left; padding: 0; left: 10px; font-size: 18px; font-weight: 600; color: #585858;" id="game-userWinnings">240 </div>
-            </div>
-            <div class="row mt-1">
-                <div class="col" style="text-align: right; padding: 0; font-size: 18px; font-weight: 600; color: #585858;">My Rank :</div>
-                <div class="col " style="text-align: left; padding: 0; left: 10px; font-size: 18px; font-weight: 600; color: #585858;" id="game-userRank">25 </div>
-            </div>
-
-            <div class="row mt-1">
-                <div class="col">
-                    <a href="leaderboard.html" rel="external" data-role="button" class="btn-game">View leaderboard</a>
-                </div>
-                
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
-
-
-
-
-
-
-
-    </div>
-
-
-
 </body>
 
 </html>
