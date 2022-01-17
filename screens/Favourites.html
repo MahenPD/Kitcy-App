@@ -54,7 +54,12 @@
             <h3 class="header-title align-middle"><b>Favourites</b></h3>
           </div>
           <div class="col-3 my-auto">
-            <a href="#popup-share-list" data-rel="popup" data-transition="pop">
+            <a
+              href="#popup-share-list"
+              rel="external"
+              data-rel="popup"
+              data-transition="pop"
+            >
               <img
                 src="../assets/icons/share.svg"
                 class="img float-right"
@@ -81,6 +86,7 @@
                     <p class="p1">LKR 900</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -102,6 +108,7 @@
                     <p class="p1">LKR 1200</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -123,6 +130,7 @@
                     <p class="p1">LKR 1800</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -144,6 +152,7 @@
                     <p class="p1">LKR 700</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -165,6 +174,7 @@
                     <p class="p1">LKR 1400</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -186,6 +196,7 @@
                     <p class="p1">LKR 900</p>
                     <a
                       href="#popup-remove"
+                      rel="external"
                       data-rel="popup"
                       data-transition="pop"
                       ><img
@@ -205,22 +216,22 @@
           <div data-role="navbar" data-grid="d">
             <ul>
               <li>
-                <a href="./Home.html"
+                <a href="./Home.html" rel="external"
                   ><img src="../assets/icons/home.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Search.html"
+                <a href="./Search.html" rel="external"
                   ><img src="../assets/icons/search.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Cart.html"
+                <a href="./Cart.html" rel="external"
                   ><img src="../assets/icons/cart.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="./Account.html"
+                <a href="./Account.html" rel="external"
                   ><img src="../assets/icons/person.svg" alt=""
                 /></a>
               </li>
@@ -235,27 +246,25 @@
           class="px-5 py-4 text-center"
           data-position-to="window"
         >
-          <span class="p">Are you sure you want to remove this item?</span>
-          <div class="row">
-            <div class="col p-1">
-              <a
-                href="#"
-                data-rel="button"
-                class="popup-confirm-btn ui-btn py-3"
-                onclick="popupConfirm()"
-                >Remove</a
-              >
-            </div>
-            <div class="col p-1">
-              <a
-                href="#"
-                data-rel="back"
-                data-role="button"
-                class="popup-cancel-btn py-3"
-                >Cancel</a
-              >
-            </div>
-          </div>
+          <span class="popup-confirm"
+            >Are you sure you want to remove this item?</span
+          >
+          <a
+            href="#"
+            rel="external"
+            data-rel="button"
+            class="popup-confirm-btn ui-btn"
+            onclick="popupConfirm()"
+            >Remove</a
+          >
+          <a
+            href="#"
+            rel="external"
+            data-rel="back"
+            data-role="button"
+            class="popup-cancel-btn"
+            >Cancel</a
+          >
         </div>
 
         <div
@@ -282,6 +291,7 @@
             <div class="col p-1">
               <a
                 href="#"
+                rel="external"
                 data-rel="button"
                 class="popup-confirm-btn ui-btn py-3"
                 onclick="sendFavList(document.getElementById('email').value)"
@@ -291,6 +301,7 @@
             <div class="col p-1">
               <a
                 href="#"
+                rel="external"
                 data-rel="back"
                 data-role="button"
                 class="popup-cancel-btn py-3"
