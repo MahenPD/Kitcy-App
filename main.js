@@ -2,6 +2,7 @@ var mailBody;
 var itemList = [];
 var favList = [];
 var userList = [];
+var reviewList = [];
 
 window.addEventListener(
   "load",
@@ -11,14 +12,12 @@ window.addEventListener(
     document.getElementById("stage-three").style.display = "none";
     document.getElementById("stage-four").style.display = "none";
     document.getElementById("stage-five").style.display = "none";
-    // document.getElementById("stage-six").style.display = "none";
 
     document.getElementById("stage-one-image").style.display = "block";
     document.getElementById("stage-two-image").style.display = "none";
     document.getElementById("stage-three-image").style.display = "none";
     document.getElementById("stage-four-image").style.display = "none";
     document.getElementById("stage-five-image").style.display = "none";
-    // document.getElementById("stage-six-image").style.display = "none";
 
     setTimeout(() => {
       document.getElementById("stage-one").style.display = "none";
@@ -51,14 +50,6 @@ window.addEventListener(
       document.getElementById("stage-four-image").style.display = "none";
       document.getElementById("stage-five-image").style.display = "block";
     }, 12000);
-
-    // setTimeout(() => {
-    //   document.getElementById("stage-five").style.display = "none";
-    //   document.getElementById("stage-six").style.display = "block";
-
-    //   document.getElementById("stage-five-image").style.display = "none";
-    //   document.getElementById("stage-six-image").style.display = "block";
-    // }, 15000);
   },
   false
 );
@@ -141,11 +132,59 @@ function enableButton(id) {
 }
 
 function addFavourite() {
+  var foodFavList = JSON.parse(sessionStorage.getItem("foodFavList"));
   var itemname = document.getElementById("item-name").textContent;
   var itemrestaurant = "Cathy Desserts";
-  var favItem = { name: itemname, restaurant: itemrestaurant };
-  favList.push(favItem);
-  sessionStorage.setItem("favList", JSON.stringify(favList));
+  var itemprice = document.getElementById("item-price").textContent;
+  var favItem = {
+    name: itemname,
+    restaurant: itemrestaurant,
+    price: itemprice,
+  };
+
+  if (foodFavList) {
+    foodFavList.push(favItem);
+  } else {
+    foodFavList = [];
+    foodFavList.push(favItem);
+  }
+  sessionStorage.setItem("foodFavList", JSON.stringify(foodFavList));
+  loadFavourites();
+}
+
+function loadFavourites() {
+  var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
+
+  var output = "";
+
+  $.each(favourites, function (index, fav) {
+    output += `
+    <li class="list-group-item">
+    <div class="row">
+      <div class="col">
+        <img src="images/blueberry.jpg" class="fav-list rounded" />
+      </div>
+      <div class="col text-left p-0">
+        <p class="p1">${fav.name}</p>
+        <p class="p2">Desserts</p>
+        <p class="p1">LKR ${fav.price}</p>
+        <a
+          href="#popup-remove"
+          rel="external"
+          data-rel="popup"
+          data-transition="pop"
+          ><img
+            src="../assets/icons/trash-red.svg"
+            height="20px"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </li>
+    `;
+  });
+
+  document.getElementById("fav-food-list").innerHTML = output;
 }
 
 function handleRegister() {
@@ -185,4 +224,88 @@ function handleLogin() {
   }
 }
 
-function sendReview() {}
+function sendReview() {
+  var reviews = JSON.parse(sessionStorage.getItem("reviewList"));
+  var reviewByUser = document.getElementById("review").value;
+  var rating = 0;
+  if (document.getElementById("star4").checked) {
+    rating = document.getElementById("star4").value;
+  } else if (document.getElementById("star3").checked) {
+    rating = document.getElementById("star3").value;
+  } else if (document.getElementById("star2").checked) {
+    rating = document.getElementById("star2").value;
+  } else if (document.getElementById("star1").checked) {
+    rating = document.getElementById("star1").value;
+  }
+
+  const reviewObject = {
+    rating: rating,
+    review: reviewByUser,
+  };
+
+  if (reviews) {
+    reviews.push(reviewObject);
+  } else {
+    reviews = [];
+    reviews.push(reviewObject);
+  }
+
+  sessionStorage.setItem("reviewList", JSON.stringify(reviews));
+  loadReviews();
+}
+
+function loadReviews() {
+  var reviews = JSON.parse(sessionStorage.getItem("reviewList"));
+
+  var output = "";
+
+  $.each(reviews, function (index, review) {
+    output += `
+      <div class="row">
+      <div class="col-2">
+        <img
+          src="../assets/icons/person-yellow.svg"
+          alt=""
+          class="bg-success rounded-circle p-2"
+          height="50px"
+        />
+      </div>
+      <div class="col-8">
+        <div class="heading2">${review.review}</div>
+        <div class="d-flex align-items-center">
+          <img
+            src="../assets/icons/star-filled.svg"
+            alt=""
+            height="23px"
+          />
+          <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+          <a href="ReplyToRating.html" rel="external">
+            <p class="mx-4 text-success" style="margin-bottom: 0">
+              Reply
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr />
+    `;
+  });
+
+  document.getElementById("ratings-container").innerHTML = output;
+}
+
+// function listChallenges() {
+//   let output = '';
+// $.each(tasks, function (index, task) {
+//     if (!(user.completedTaskIds.includes(task.id))) {
+//         output += `
+//         <li class="chal-item list-group-item-action">
+//             <span class="chal-name">${task.name}</span>
+//             <span class="chal-points">${task.points} coins</span>
+//         </li>
+//     `;
+//     }
+// });
+
+//   $('#challenges').html(output).listview('refresh');
+// }
