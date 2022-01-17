@@ -47,6 +47,8 @@ img {
   font-size: 24px;
   color: var(--text-colour);
   font-style: var(--font-style);
+  left: -6%;
+  position: relative;
 }
 
 .subheading1 {
@@ -59,6 +61,8 @@ img {
   font-size: 16px;
   color: var(--text-colour);
   font-style: var(--font-style);
+  left: 13%;
+  position: relative;
 }
 
 .heading3 {
@@ -658,6 +662,15 @@ img {
 /* Cart */
 /* center-element text-white" style="font-size: 23px */
 /* font-family: "Poppins", sans-serif; color: #585858 !important; */
+@media screen and (orientation: landscape) {
+  .heading1 {
+    left: -18%;
+  }
+  
+  .heading2 {
+    left: 16%;
+  }
+}
 /* Ipad version-1 */
 @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   .fav-list{
@@ -699,11 +712,11 @@ img {
     left: 800%;
   }
   .heading2{
-    margin-left: 25%;
+    margin-left: 8%;
     margin-top: 40%;
   }
   .heading1{
-    left: -24%;
+    left: -21%;
     position: relative;
     margin-top: 40%;
   }
@@ -747,7 +760,7 @@ img {
 
   }
   .heading2{
-    margin-left: 25%;
+    margin-left: 0%;
     margin-top: -10%;
   } 
   .heading1{
@@ -761,6 +774,25 @@ img {
     background-color: var(--primary-colour);
     color: white;
     border: none;
-    width: 820px;
+    width: 330px;
+    margin-left: -74px;
+    margin-top: -48px;
 }
 }
+
+/* Checkout */
+/* @media screen and (orientation: landscape) {
+  .heading1 {
+    left: -18%;
+  }
+  
+  .heading2 {
+    left: 16%;
+  }
+} */
+
+/* DeliveryLocation */
+
+
+
+
