@@ -1003,7 +1003,27 @@
 }
 
 /* Favourite */
-@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (orientation: landscape) {
+  .fav-list {
+    width: 8rem !important;
+  }
+  
+  .list-group-item .p1 {
+    margin-left: -65%;
+  }
+  .list-group-item .p2 {
+    margin-left: -65%;
 
+  }
+  .trash{
+    margin-left: -65%;
+  }
+  .col{
+    width: 100px;
+  }
+ 
 }
+
+/* Search */
+
   

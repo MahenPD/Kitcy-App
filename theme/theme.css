@@ -46,8 +46,8 @@ img {
   font-size: 24px;
   color: var(--text-colour);
   font-style: var(--font-style);
-  left: -6%;
-  position: relative;
+  /* left: -6%;
+  position: relative; */
 }
 
 .subheading1 {
@@ -60,8 +60,8 @@ img {
   font-size: 16px;
   color: var(--text-colour);
   font-style: var(--font-style);
-  left: 13%;
-  position: relative;
+  /* left: 13%;
+  position: relative; */
 }
 
 .heading3 {
