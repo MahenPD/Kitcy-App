@@ -150,8 +150,8 @@ function addFavourite() {
 
 function handleRegister() {
   var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
-  var firstName = document.getElementById("fullName").value;
-  var lastName = document.getElementById("fullName").value;
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
@@ -180,5 +180,9 @@ function handleLogin() {
   if (loggedInUser.password === password) {
     sessionStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
     window.location.href = "./Home.html";
+  } else {
+    openToastiPhone("Wrong Credentials Please Try Again");
   }
 }
+
+function sendReview() {}

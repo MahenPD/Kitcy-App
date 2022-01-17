@@ -62,7 +62,7 @@
           <!-- </div> -->
           <div class="col mt-3">
             <div class="row">
-              <div class="col account-name">John Doe</div>
+              <div class="col account-name" id="fullName">John Doe</div>
             </div>
             <div class="row">
               <a href="EditAccount.html">
@@ -83,13 +83,13 @@
         <div class="col account-txt-v1">First name</div>
         <!-- </div> -->
         <!-- <div class="row pl-2 "> -->
-        <div class="output1">John</div>
+        <div class="output1" id="firstName">John</div>
         <!-- </div> -->
         <!-- <div class="row pl-2 account-txt"> -->
         <div class="account-txt-v3">Surname</div>
         <!-- </div> -->
         <!-- <div class="row pl-2 "> -->
-        <div class="output2">Doe</div>
+        <div class="output2" id="lastName">Doe</div>
         <!-- </div> -->
         <!-- <div class="row pl-2 "> -->
         <div class="account-txt-v5">Phone number</div>
@@ -101,7 +101,7 @@
         <div class="account-txt-v7">Email address</div>
         <!-- </div> -->
         <!-- <div class="row pl-2"> -->
-        <div class="output4">johndoe@gmail.com</div>
+        <div class="output4" id="email">johndoe@gmail.com</div>
         <!-- </div> -->
         <!-- </div> -->
 
@@ -214,4 +214,20 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        var user = JSON.parse(sessionStorage.getItem("loggedInUser"));
+
+        document.getElementById("firstName").innerHTML = user.firstName;
+        document.getElementById("lastName").innerHTML = user.lastName;
+        document.getElementById("fullName").innerHTML =
+          user.firstName + " " + user.lastName;
+        document.getElementById("email").innerHTML = user.email;
+        document.getElementById("firstName").innerHTML = user.firstName;
+      },
+      false
+    );
+  </script>
 </html>
