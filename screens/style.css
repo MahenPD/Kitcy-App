@@ -588,7 +588,7 @@
     margin: 3px;
   }
 }
-/* Ipad version-1 */
+/* Ipad version-2 */
 @media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .lst1{
     margin-left: 47%;
@@ -652,15 +652,6 @@
   }
 }
 
-/* Cart */
-/* center-element text-white" style="font-size: 23px */
-/* font-family: "Poppins", sans-serif; color: #585858 !important; */
-/* Ipad version-1 */
-@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .fav-list{
-    margin-left: 66% !important;
-  }
-}
 
 
 
@@ -966,8 +957,45 @@
     text-decoration: none;
 
   }
+
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
+  .sidenav-list{
+    font-size: 14px !important;
+    font-weight: 200 !important;
+    text-shadow: none;
+  }
+  .sidenav-col{
+    padding-top:0 !important;
+  }
+  .sidenav-row{
+    padding-top: 0 !important;
+  }
+  .sidenav-row-list{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
 }
 
+.sidenav-col{
+  padding-top:3rem;
+}
+.sidenav-row{
+  padding-top: 1.5rem;
+}
+
+.sidenav-list{
+  font-size: 16px;
+  font-weight: 200;
+  text-shadow: none;
+}
+.sidenav-row-list{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;}
 
 /* Ipad version-1 */
 @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1013,3 +1041,9 @@
     height: 600px;
   }
 }
+
+/* Favourite */
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+  

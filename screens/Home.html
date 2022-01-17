@@ -7,7 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
-    <script src="../popups.js"></script>
+    <link rel="stylesheet" href="filter.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -23,17 +23,13 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <div data-role="page">
       <!-- Side Navigation Start -->
-      <div
-        data-role="panel"
-        id="sidenav"
-        data-display="overlay"
-        data-position="left"
-        style="background-color: #069c54"
-      >
-        <div class="row pt-4 px-3">
+
+      <div data-role="panel" id="sidenav" data-display="overlay" data-position="left" style="background-color: #069c54;">
+        <div class="row px-3 sidenav-row">
           <div class="col-6">
             <img src="images/yellowlogo.png" width="70" />
           </div>
@@ -46,110 +42,77 @@
           </div>
         </div>
         <div class="row p-3">
-          <div class="col pt-5">
+          <div class="col">
             <div data-role="list-view">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-basket"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="Orders.html"
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >Orders</a
-                      >
+                      <a href="" rel="external" class="text-white sidenav-list">Orders</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-trophy"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href=""
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >Rewards</a
-                      >
+                      <a href="" rel="external" class="text-white sidenav-list">Rewards</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-heart"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="Favourites.html"
-                        class="text-white font-weight-light a"
-                        >Favorites</a
-                      >
+                      <a href="Favourites.html" rel="external" class="text-white sidenav-list">Favorites</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-cart"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="./Cart.html"
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >Cart</a
-                      >
+                      <a href="Cart.html" rel="external" class="text-white sidenav-list">Cart</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-chat-dots"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="AboutUs.html"
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >About Us</a
-                      >
+                      <a href="AboutUs.html" rel="external" class="text-white sidenav-list">About Us</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-person"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="Account.html"
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >Account</a
-                      >
+                      <a href="Account.html" rel="external" class="text-white sidenav-list">Account</a>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item text-white bg-transparent">
-                  <div class="row py-2">
+                  <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-sign-out"></i>
                     </div>
                     <div class="col-10">
-                      <a
-                        href="Login.html"
-                        rel="external"
-                        class="text-white font-weight-light a"
-                        >Logout</a
-                      >
+                      <a href="Login.html" rel="external" class="text-white sidenav-list">Logout</a>
                     </div>
                   </div>
                 </li>
@@ -180,7 +143,7 @@
             <h3 class="header-title align-middle"><b>Colombo,</b> SL</h3>
           </div>
           <div class="col-3 my-auto">
-            <a href="Filters.html" rel="external">
+            <a href="#" data-rel="button" onclick="openFilter()">
               <img
                 src="images/filter.png"
                 class="img float-right"
@@ -195,10 +158,10 @@
 
       <div data-role="main" class="ui-content bg-white">
         <div class="container-fluid p-0">
-          <div class="row flex-nowrap overflow-scroll py-3 gx-1">
+          <div class="row flex-nowrap overflow-scroll py-3 gx-1 iphone-port">
             <!-- Categories Slide 1 Start -->
             <div class="col-4">
-              <div class="card category-card-1 shadow-sm">
+              <div class="card category-card-1" style="box-shadow: 0px 5px 20px rgba(6, 156, 84, 0.25);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -218,7 +181,7 @@
 
             <!-- Categories Slide 2 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -238,7 +201,7 @@
 
             <!-- Categories Slide 3 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -258,7 +221,7 @@
 
             <!-- Categories Slide 4 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -278,7 +241,7 @@
 
             <!-- Categories Slide 5 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -298,7 +261,7 @@
 
             <!-- Categories Slide 6 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -318,7 +281,7 @@
 
             <!-- Categories Slide 7 Start -->
             <div class="col-4">
-              <div class="card category-card-2 shadow-sm">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
                   <div class="row">
                     <div class="col d-flex flex-column text-center">
@@ -336,6 +299,127 @@
             </div>
             <!-- Categories Slide 7 End -->
           </div>
+
+          
+          <!-- ///---/// iPhone Landscape ///---///-->
+
+          <div class="row py-3 gx-1 iphone-land" style="display: none;">
+            <!-- Categories Slide 1 Start -->
+            <div class="col-2">
+              <div class="card category-card-1" style="box-shadow: 0px 5px 20px rgba(6, 156, 84, 0.25);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/salad.png"
+                        width="50"
+                      />
+                      <p class="card-text p1 text-white">Healthy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 1 End -->
+
+            <!-- Categories Slide 2 Start -->
+            <div class="col-2">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="../assets/images/pizza.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Fast Food</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 2 End -->
+
+            <!-- Categories Slide 3 Start -->
+            <div class="col-2">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="../assets/images/HotDog.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">American</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 3 End -->
+
+            <!-- Categories Slide 4 Start -->
+            <div class="col-2">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/fried-rice.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Authentic</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 4 End -->
+
+            <!-- Categories Slide 5 Start -->
+            <div class="col-2">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/shrimp.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Seafood</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 5 End -->
+
+            <!-- Categories Slide 7 Start -->
+            <div class="col-2">
+              <div class="card category-card-2" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col d-flex flex-column text-center">
+                      <img
+                        class="img mx-auto mb-4"
+                        src="images/cupcake.png"
+                        width="50"
+                      />
+                      <p class="card-text p1">Desserts</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Categories Slide 7 End -->
+          </div>
+          <!-- ///---/// iPhone Landscape ///---///-->
+
           <br />
 
           <div class="space-between-container">
@@ -390,7 +474,7 @@
                         <p class="card-text p2">30-45 min</p>
                       </div>
                       <div class="col-4">
-                        <p class="card-text p1">LKR 1200</p>
+                        <p class="card-text p1">LKR 600</p>
                       </div>
                     </div>
                   </div>
@@ -413,7 +497,7 @@
                         <p class="card-text p2">20-35 min</p>
                       </div>
                       <div class="col-4">
-                        <p class="card-text p1">LKR 1800</p>
+                        <p class="card-text p1">LKR 800</p>
                       </div>
                     </div>
                   </div>
@@ -425,7 +509,7 @@
           <div class="row">
             <br />
           </div>
-          <div class="row">
+          <div class="row iphone-port">
             <div class="col">
               <!-- Food Item Card 2 Start -->
               <div class="card food-card-2">
@@ -517,6 +601,110 @@
               <!-- Food Item Card 2 End -->
             </div>
           </div>
+
+          <!-- ///-----///iPhone Landscape///-----///-->
+          
+          <div class="row iphone-land" style="display: none;">
+                <div class="col">
+                <!-- Food Item Card 2 Start -->
+                  <div class="card food-card-2">
+                    <img
+                      class="food-img-card-2 card-img-top"
+                      src="images/blueberry.jpg"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-8">
+                          <p class="card-text p1">Blueberry Cheesecake</p>
+                          <p class="card-text p2">50-55 min</p>
+                        </div>
+                        <div class="col-4">
+                          <p class="card-text p1" style="text-align: right">
+                            LKR 900
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Food Item Card 2 End -->
+                <!-- Food Item Card 2 Start -->
+                <div class="col">
+                    <div class="card food-card-2">
+                      <img
+                        class="food-img-card-2 card-img-top"
+                        src="images/meatpie.jpg"
+                        alt="Card image cap"
+                      />
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-8">
+                            <p class="card-text p1">Meat Pie</p>
+                            <p class="card-text p2">40-55 min</p>
+                          </div>
+                          <div class="col-4">
+                            <p class="card-text p1" style="text-align: right">
+                              LKR 1200
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+              <!-- Food Item Card 2 End -->
+              <!-- Food Item Card 2 Start -->
+            <div class="row iphone-land" style="display: none;">
+              <div class="col">
+                  <div class="card food-card-2">
+                    <img
+                      class="food-img-card-2 card-img-top"
+                      src="images/cookies.jpg"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-8">
+                          <p class="card-text p1">Choc Chip Cookies</p>
+                          <p class="card-text p2">30-35 min</p>
+                        </div>
+                        <div class="col-4">
+                          <p class="card-text p1" style="text-align: right">
+                            LKR 800
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- Food Item Card 2 End -->
+              <!-- Food Item Card 2 Start -->
+              <div class="col">
+                <div class="card food-card-2">
+                  <img
+                    class="food-img-card-2 card-img-top"
+                    src="images/pastries.jpg"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-8">
+                        <p class="card-text p1">Puff Pastries with Ground Meat</p>
+                        <p class="card-text p2">50-55 min</p>
+                      </div>
+                      <div class="col-4">
+                        <p class="card-text p1" style="text-align: right">
+                          LKR 500
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Food Item Card 2 End -->
+            </div>
+          </div>
           <br />
         </div>
       </div>
@@ -549,59 +737,202 @@
         </div>
       </div>
 
-      <a href="#popup-area" data-rel="popup" data-transition="pop">Verify</a>
-      <br />
+      <!--Filter popup code start-->
+      <div data-role="popup" id="filter" class="filter ui-content">
+        <div class="container">
+          <div class="row">
+            <div class="col ml-3 mr-3">
+              <form>
+                <fieldset
+                  data-role="controlgroup"
+                  data-iconpos="right"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Sort:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6a"
+                    value="on"
+                    checked="checked"
+                  />
+                  <label for="radio-choice-w-6a">
+                    <img
+                      src="../assets/icons/achievement.svg"
+                      alt=""
+                      height="26px"
+                      style="margin-right: 10px"
+                    />My Favorites</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6b"
+                    value="off"
+                  />
+                  <label for="radio-choice-w-6b">
+                    <img
+                      src="../assets/icons/fire.svg"
+                      alt=""
+                      height="24px"
+                      style="margin-right: 12px"
+                    />Most popular</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6c"
+                    value="other"
+                  />
+                  <label for="radio-choice-w-6c">
+                    <img
+                      src="../assets/icons/star.svg"
+                      alt=""
+                      height="25px"
+                      style="margin-right: 11px"
+                    />Rating</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6d"
+                    value="other"
+                  />
+                  <label for="radio-choice-w-6d">
+                    <img
+                      src="../assets/icons/time.svg"
+                      alt=""
+                      height="24px"
+                      style="margin-right: 12px"
+                    />Delivery time</label
+                  >
+                </fieldset>
 
-      <div
-        data-role="popup"
-        id="popup-area"
-        data-overlay-theme="b"
-        class="rectangle ui-content"
-        data-position-to="window"
-        style="width: 287px"
-      >
-        <div style="width: 100%; height: 30px">
-          <a
-            href="#"
-            data-rel="back"
-            style="
-              font-size: 14px;
-              float: right;
-              font-weight: 400;
-              color: #585858;
-            "
-          >
-            Skip
-          </a>
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3 p-0"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Price Range:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-2a">100-500</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-2b">500-1000</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2c"
+                    value="price1000"
+                  />
+                  <label for="radio-choice-h-2c">1000-1500</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2d"
+                    value="price1500"
+                  />
+                  <label for="radio-choice-h-2d">1500-2000</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2e"
+                    value="price2000"
+                  />
+                  <label for="radio-choice-h-2e">2000-5000</label>
+                </fieldset>
+
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Delivery Fee:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-3"
+                    id="radio-choice-h-3a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-3a">Free</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-3"
+                    id="radio-choice-h-3b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-3b">LKR 90</label>
+                </fieldset>
+
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Dietary:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-4a">Vegetarian</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-4b">Vegan</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4c"
+                    value="price1000"
+                  />
+                  <label for="radio-choice-h-4c">Glutan-free</label>
+                </fieldset>
+
+                <a
+                  href="./Home.html"
+                  rel="external"
+                  data-role="button"
+                  type="submit"
+                  class="filter-submit-btn p-3"
+                >
+                  Apply Filters
+                </a>
+              </form>
+            </div>
+          </div>
         </div>
-        <img
-          src="assets/phone-call.png"
-          id="popup-slide-img"
-          alt=""
-          class="popup-img"
-          style="width: 80px"
-        />
-        <span
-          class="popup-title"
-          id="popup-slide-title"
-          style="font-size: 24px; font-weight: 700"
-          >Order Your Food</span
-        >
-        <span
-          class="popup-content"
-          id="popup-slide-content"
-          style="margin-right: 30px; margin-left: 30px; margin-top: 5px"
-          >Order food anytime right from your mobile</span
-        >
-        <button
-          onclick="nextslide1()"
-          id="popup-slide-btn"
-          style="margin-bottom: 20px; width: 148px"
-          class="popup-submit-btn"
-        >
-          Next
-        </button>
       </div>
+      <!--Filter popup code End-->
     </div>
+    <script>
+      function openFilter() {
+        $("#filter").popup("open", {
+          positionTo: "#filter-area",
+          transition: "slidedown",
+        });
+      }
+    </script>
   </body>
 </html>
