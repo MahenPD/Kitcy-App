@@ -27,6 +27,7 @@ a:link {
 .p1,
 .p2,
 .header-title {
+  font-size: 14px;
   font-family: "Poppins", sans-serif;
   color: #585858 !important;
 }
@@ -507,6 +508,7 @@ img {
 
 .popup-img {
   display: inline-block;
+  width: 40%;
 }
 
 .popup-confirm {
@@ -576,6 +578,16 @@ img {
   height: 65px;
   width: 65px;
   margin: 10px;
+}
+
+.save-btn {
+  background-color: #069c54 !important;
+  color: white !important;
+  text-shadow: none !important;
+  border-radius: 16px !important;
+  font-size: 18px;
+  padding: 20px !important;
+  margin: auto;
 }
 
 /* Land Scape */
