@@ -851,19 +851,42 @@ img {
 @media screen and (orientation: landscape) {
   .reply-cmt-1 {
     margin-left: 101%;
-    left: -78%;
-    margin-top: 4%;
+    left: -101%;
+    margin-top: 1%;
     width: 200%;
 }
 .reply-star {
-  height: 23px;
-  margin-left: 21%;
+    height: 23px;
+    margin-left: -1%;
+}
+.kitcy-input-reply {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    left: 5%;
+    position: relative;
+    width: 37%;
+}
+.icon-green-reply {
+    background-color: var(--primary-colour);
+    border-radius: 9px;
+    padding: 8px;
+    position: relative;
+    margin-left: -367%;
+    margin-top: -14%;
+}
+.rating-container {
+    margin-left: 48%;
+    margin-top: -26%;
+}
+.bg-success {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: -11%;
 }
 .head-review {
   margin-left: 29%;
-}
-.rating-container{
-  margin-left: 12%;
 }
 .icon-green{
   margin-left: -78%;
@@ -875,6 +898,12 @@ img {
 .rate-product-name{
   width: 100%;
   left: 10%;
+}
+.bg-success {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 23%;
 }
 }
 
@@ -965,8 +994,8 @@ img {
     display: contents;
   }
   .rating-container {
-    margin-left: -19%;
-    margin-top: 20%;
+    margin-left: 2%;
+    margin-top: 6%;
     width: 93%;
   }
   .reply-cmt {
@@ -994,9 +1023,8 @@ img {
     margin-left: -16%;
   }
   .kitcy-input-reply {
-    left: 200%;
-    width: 239%;
-    top: -300%;
+    width: 77%;
+    left: 8%;
   }
   .icon-green-rate {
     background-color: var(--primary-colour);
