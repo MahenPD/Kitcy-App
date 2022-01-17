@@ -232,26 +232,30 @@
           data-role="popup"
           id="popup-remove"
           data-overlay-theme="b"
-          class="rectangle ui-content"
+          class="px-5 py-4 text-center"
           data-position-to="window"
         >
-          <span class="popup-confirm"
-            >Are you sure you want to remove this item?</span
-          >
-          <a
-            href="#"
-            data-rel="button"
-            class="popup-confirm-btn ui-btn"
-            onclick="popupConfirm()"
-            >Remove</a
-          >
-          <a
-            href="#"
-            data-rel="back"
-            data-role="button"
-            class="popup-cancel-btn"
-            >Cancel</a
-          >
+          <span class="p">Are you sure you want to remove this item?</span>
+          <div class="row">
+            <div class="col p-1">
+              <a
+                href="#"
+                data-rel="button"
+                class="popup-confirm-btn ui-btn py-3"
+                onclick="popupConfirm()"
+                >Remove</a
+              >
+            </div>
+            <div class="col p-1">
+              <a
+                href="#"
+                data-rel="back"
+                data-role="button"
+                class="popup-cancel-btn py-3"
+                >Cancel</a
+              >
+            </div>
+          </div>
         </div>
 
         <div
@@ -269,28 +273,27 @@
               <input
                 type="text"
                 data-role="none"
-                id="email"
-                class="kitcy-search-input form-control"
+                class="kitcy-search-input form-control py-3"
                 placeholder="Enter email address"
               />
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col p-1">
               <a
                 href="#"
                 data-rel="button"
-                class="popup-confirm-btn ui-btn"
+                class="popup-confirm-btn ui-btn py-3"
                 onclick="sendFavList(document.getElementById('email').value)"
                 >Send</a
               >
             </div>
-            <div class="col">
+            <div class="col p-1">
               <a
                 href="#"
                 data-rel="back"
                 data-role="button"
-                class="popup-cancel-btn"
+                class="popup-cancel-btn py-3"
                 >Cancel</a
               >
             </div>
