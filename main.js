@@ -254,6 +254,7 @@ function sendReview() {
   }
 
   sessionStorage.setItem("reviewList", JSON.stringify(reviews));
+  document.getElementById("review").innerHTML = "";
   loadReviews();
 }
 
