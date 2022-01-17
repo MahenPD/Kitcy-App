@@ -190,7 +190,7 @@ function saveFilterValues(){
     filterObj.deliveryFee = deliveryFee;
     filterObj.sort = sort;
 
-    localStorage.clear();
+    localStorage.removeItem("app");
 
     localStorage.app= JSON.stringify(filterObj);
 
