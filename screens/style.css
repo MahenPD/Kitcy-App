@@ -588,7 +588,7 @@
     margin: 3px;
   }
 }
-/* Ipad version-1 */
+/* Ipad version-2 */
 @media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .lst1{
     margin-left: 47%;
@@ -652,15 +652,6 @@
   }
 }
 
-/* Cart */
-/* center-element text-white" style="font-size: 23px */
-/* font-family: "Poppins", sans-serif; color: #585858 !important; */
-/* Ipad version-1 */
-@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .fav-list{
-    margin-left: 66% !important;
-  }
-}
 
 
 
