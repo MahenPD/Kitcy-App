@@ -152,6 +152,13 @@ function addFavourite() {
   loadFavourites();
 }
 
+function handleRemoveFav(favName) {
+  var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
+  var filteredFavs = favourites.filter((f) => f.name !== favName);
+  sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
+  loadFavourites();
+}
+
 function loadFavourites() {
   var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
 
