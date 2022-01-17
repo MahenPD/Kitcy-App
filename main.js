@@ -1,6 +1,7 @@
 var mailBody;
 var itemList = [];
 var favList = [];
+var userList = [];
 
 window.addEventListener(
   "load",
@@ -145,4 +146,39 @@ function addFavourite() {
   var favItem = { name: itemname, restaurant: itemrestaurant };
   favList.push(favItem);
   sessionStorage.setItem("favList", JSON.stringify(favList));
+}
+
+function handleRegister() {
+  var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
+  var firstName = document.getElementById("fullName").value;
+  var lastName = document.getElementById("fullName").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  const newUser = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: password,
+  };
+
+  if (users) {
+    users.push(newUser);
+  } else {
+    users = [];
+    users.push(newUser);
+  }
+  sessionStorage.setItem("listOfUsers", JSON.stringify(users));
+}
+
+function handleLogin() {
+  var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var loggedInUser = users.find((x) => x.email === email);
+
+  if (loggedInUser.password === password) {
+    sessionStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+    window.location.href = "./Home.html";
+  }
 }
