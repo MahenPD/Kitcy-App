@@ -47,8 +47,6 @@ img {
   font-size: 24px;
   color: var(--text-colour);
   font-style: var(--font-style);
-  left: -6%;
-  position: relative;
 }
 
 .subheading1 {
@@ -61,8 +59,6 @@ img {
   font-size: 16px;
   color: var(--text-colour);
   font-style: var(--font-style);
-  left: 13%;
-  position: relative;
 }
 
 .heading3 {
@@ -657,7 +653,6 @@ img {
   }
 }
 
-
 /* Shazni */
 /* Cart */
 /* center-element text-white" style="font-size: 23px */
@@ -666,14 +661,14 @@ img {
   .heading1 {
     left: -18%;
   }
-  
+
   .heading2 {
     left: 16%;
   }
 }
 /* Ipad version-1 */
 @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .fav-list{
+  .fav-list {
     margin-left: 7%;
     margin-top: 5%;
   }
@@ -706,16 +701,16 @@ img {
     top: -105%;
     left: 115%;
   }
-  .ai-trash-can{
+  .ai-trash-can {
     position: relative;
     top: -105%;
     left: 800%;
   }
-  .heading2{
+  .heading2 {
     margin-left: 8%;
     margin-top: 40%;
   }
-  .heading1{
+  .heading1 {
     left: -21%;
     position: relative;
     margin-top: 40%;
@@ -727,11 +722,11 @@ img {
     color: white;
     border: none;
     width: 820px;
-}
+  }
 }
 /* Ipad version-2 */
 @media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .fav-list{
+  .fav-list {
     margin-left: 46%;
     margin-top: 2%;
   }
@@ -757,13 +752,12 @@ img {
     margin-left: 2%;
     margin-top: -12%;
     line-height: 20px;
-
   }
-  .heading2{
+  .heading2 {
     margin-left: 0%;
     margin-top: -10%;
-  } 
-  .heading1{
+  }
+  .heading1 {
     left: -24%;
     position: relative;
     margin-top: -10%;
@@ -777,7 +771,7 @@ img {
     width: 330px;
     margin-left: -74px;
     margin-top: -48px;
-}
+  }
 }
 
 /* Checkout */
@@ -792,7 +786,3 @@ img {
 } */
 
 /* DeliveryLocation */
-
-
-
-
