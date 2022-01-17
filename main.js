@@ -54,10 +54,6 @@ window.addEventListener(
   false
 );
 
-// $(document).ready(function () {
-//   $("#land-text").delay(2000).slideDown(500);
-// });
-
 function sendFavList(email) {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
   mailBody =

@@ -11,7 +11,6 @@
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
-    <script src="../main.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://unpkg.com/akar-icons-fonts"></script>
@@ -48,4 +47,12 @@
       </div>
     </div>
   </body>
+  <script>
+    $(document).ready(function () {
+      $("#land-text").delay(2000).slideDown(500);
+      setTimeout(() => {
+        window.location.href = "./Login.html";
+      }, 4000);
+    });
+  </script>
 </html>
