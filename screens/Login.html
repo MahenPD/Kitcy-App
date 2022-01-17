@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
     <link rel="stylesheet" href="style-initial.css" />
+    <script src="../main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -41,7 +42,7 @@
                   <input
                     type="email"
                     class="form-control p-3 login-input"
-                    id="exampleInputEmail1"
+                    id="email"
                     aria-describedby="emailHelp"
                     placeholder="Email or phone"
                   />
@@ -50,19 +51,29 @@
                   <input
                     type="password"
                     class="form-control p-3 login-input"
-                    id="exampleInputPassword1"
+                    id="password"
                     placeholder="Password"
                   />
                 </div>
-                <a href="Home.html">
-                  <button type="submit" class="login-btn p-3">Sign In</button>
-                </a>
-                <a href="" class="forgot" style="color: rgba(88, 88, 88, 0.4)"
+                <button
+                  type="submit"
+                  onclick="handleLogin()"
+                  class="login-btn p-3"
+                >
+                  Sign In
+                </button>
+                <a
+                  href=""
+                  rel="external"
+                  class="forgot"
+                  style="color: rgba(88, 88, 88, 0.4)"
                   >Forgot Password</a
                 >
                 <p class="sign-up-text pt-5 text-center">
                   Dont't have an account?
-                  <a href="Register.html" class="sign-up">Sign Up</a>
+                  <a href="Register.html" rel="external" class="sign-up"
+                    >Sign Up</a
+                  >
                 </p>
               </form>
             </div>

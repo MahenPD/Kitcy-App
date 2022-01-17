@@ -233,6 +233,7 @@ a:link {
   font-size: 14px;
   line-height: 21px;
   color: rgba(88, 88, 88, 0.3);
+  outline-width: 0;
 }
 .ui-input-text::placeholder {
   color: rgba(88, 88, 88, 0.3);
@@ -397,12 +398,12 @@ a:link {
 /* Add Payment Page End */
 
 /* Favorite Page Start */
-.list-group-item{
-  border:none !important
+.list-group-item {
+  border: none !important;
 }
 
-.ui-listview>.ui-li-static{
-  border:none !important;
+.ui-listview > .ui-li-static {
+  border: none !important;
 }
 /* Favorite Page End */
 
@@ -414,7 +415,6 @@ a:link {
   background-size: cover;
   background-position: center center;
 }
-
 
 .verify-h1 {
   font-family: "Poppins", sans-serif;
@@ -449,13 +449,12 @@ a:link {
   color: #069c54 !important;
   text-shadow: none;
 }
-.popup-verify-btn{
+.popup-verify-btn {
   background-color: #069c54 !important;
   border-radius: 10px;
   font-family: "Poppins", sans-serif !important;
-  color:white !important;
+  color: white !important;
   font-weight: 200 !important;
   font-size: 16px !important;
-
 }
 /* Verfiy Email Page End */

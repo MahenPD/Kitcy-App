@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Favourites</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../theme/theme.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div data-role="page" class="ui-payment">
+      <!-- Header End -->
+      <!-- Working Header Start -->
+      <div
+        data-role="header"
+        data-position="fixed"
+        data-grid="d"
+        class="px-3 py-2 bg-white header"
+      >
+        <div class="row py-2">
+          <div class="col-3" onclick="history.back()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#585858"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ai ai-ArrowLeft"
+            >
+              <path d="M11 5l-7 7 7 7" />
+              <path d="M4 12h16" />
+            </svg>
+          </div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <h3 class="header-title align-middle"><b>Orders</b></h3>
+          </div>
+          <div class="col-3 my-auto"></div>
+        </div>
+      </div>
+      <div data-role="content" class="ui-payment-content">
+        <div data-role="tabs">
+          <div data-role="navbar">
+            <ul>
+              <li class="center-alignment">
+                <a href="#past-orders" class="kitcy-tab ui-btn-active"
+                  >Past Orders</a
+                >
+              </li>
+              <li class="center-alignment">
+                <a href="#ongoing" class="kitcy-tab">Ongoing</a>
+              </li>
+            </ul>
+          </div>
+
+          <br />
+          <br />
+          <div class="row" id="past-orders">
+            <div class="col">
+              <!-- Favorite Items List Start -->
+              <div data-role="listview" class="ui-listview">
+                <li
+                  class="list-group-item pt-3"
+                  style="border: none !important"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <img
+                        src="images/blueberry.jpg"
+                        class="fav-list rounded"
+                      />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Blueberry Cheesecake</p>
+                      <p class="p2">2 Items</p>
+                      <p class="p1">LKR 900</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img src="images/ravioli.png" class="fav-list rounded" />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Cheese Ravioli</p>
+                      <p class="p2">1 Item</p>
+                      <p class="p1">LKR 1200</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img src="images/ramen.png" class="fav-list rounded" />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Ramen Miso</p>
+                      <p class="p2">3 Items</p>
+                      <p class="p1">LKR 1800</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img src="images/burger.png" class="fav-list rounded" />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Beef Burger</p>
+                      <p class="p2">1 Item</p>
+                      <p class="p1">LKR 700</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img src="images/chicken.png" class="fav-list rounded" />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Cordan Bleu</p>
+                      <p class="p2">1 Item</p>
+                      <p class="p1">LKR 1400</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img
+                        src="images/blueberry.jpg"
+                        class="fav-list rounded"
+                      />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Blueberry Cheesecake</p>
+                      <p class="p2">3 Items</p>
+                      <p class="p1">LKR 900</p>
+                      <p class="text-success">Reorder</p>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <!-- Favorite Items List End -->
+            </div>
+          </div>
+
+          <!-- Ongoing -->
+          <div class="row" id="ongoing">
+            <div class="col">
+              <!-- Favorite Items List Start -->
+              <div data-role="listview" class="ui-listview">
+                <li
+                  class="list-group-item pt-3"
+                  style="border: none !important"
+                >
+                  <div class="row">
+                    <div class="col">
+                      <img
+                        src="images/blueberry.jpg"
+                        class="fav-list rounded"
+                      />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Blueberry Cheesecake</p>
+                      <p class="p2">2 Items</p>
+                      <p class="p1">LKR 900</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <img src="images/chicken.png" class="fav-list rounded" />
+                    </div>
+                    <div class="col text-left p-0">
+                      <p class="p1">Cordan Bleu</p>
+                      <p class="p2">1 Item</p>
+                      <p class="p1">LKR 1400</p>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <!-- Favorite Items List End -->
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-grid="d">
+            <ul>
+              <li>
+                <a href="./Home.html" rel="external"
+                  ><img src="../assets/icons/home.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="./Search.html" rel="external"
+                  ><img src="../assets/icons/search.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="./Cart.html" rel="external"
+                  ><img src="../assets/icons/cart.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="./Account.html" rel="external"
+                  ><img src="../assets/icons/person.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          data-role="popup"
+          id="popup-remove"
+          data-overlay-theme="b"
+          class="px-5 py-4 text-center"
+          data-position-to="window"
+        >
+          <span class="popup-confirm"
+            >Are you sure you want to remove this item?</span
+          >
+          <a
+            href="#"
+            rel="external"
+            data-rel="button"
+            class="popup-confirm-btn ui-btn"
+            onclick="popupConfirm()"
+            >Remove</a
+          >
+          <a
+            href="#"
+            rel="external"
+            data-rel="back"
+            data-role="button"
+            class="popup-cancel-btn"
+            >Cancel</a
+          >
+        </div>
+
+        <div
+          data-role="popup"
+          id="popup-share-list"
+          data-overlay-theme="b"
+          class="p-4 text-center"
+          data-position-to="window"
+        >
+          <span class="popup-confirm"
+            >Share your favorite foods with your friends!</span
+          >
+          <div class="row">
+            <div class="col">
+              <input
+                type="email"
+                data-role="none"
+                class="kitcy-search-input form-control py-3"
+                placeholder="Enter email address"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col p-1">
+              <a
+                href="#"
+                rel="external"
+                data-rel="button"
+                class="popup-confirm-btn ui-btn py-3"
+                onclick="sendFavList(document.getElementById('email').value)"
+                >Send</a
+              >
+            </div>
+            <div class="col p-1">
+              <a
+                href="#"
+                rel="external"
+                data-rel="back"
+                data-role="button"
+                class="popup-cancel-btn py-3"
+                >Cancel</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

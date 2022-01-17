@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
+    <link rel="stylesheet" href="filter.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -22,16 +23,20 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <div data-role="page">
       <!-- Side Navigation Start -->
+
       <div data-role="panel" id="sidenav" data-display="overlay" data-position="left" style="background-color: #069c54;">
         <div class="row px-3 sidenav-row">
           <div class="col-6">
-            <img src="images/yellowlogo.png" width="70">
+            <img src="images/yellowlogo.png" width="70" />
           </div>
-          <div class="col-6 d-flex flex-column justify-content-center align-items-end">
-            <a href="" data-rel="close">
+          <div
+            class="col-6 d-flex flex-column justify-content-center align-items-end"
+          >
+            <a href="" rel="external" data-rel="close">
               <i class="ai-cross text-white"></i>
             </a>
           </div>
@@ -41,6 +46,7 @@
             <div data-role="list-view">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-white bg-transparent">
+
                   <div class="row sidenav-row-list">
                     <div class="col-2">
                       <i class="ai-basket"></i>
@@ -86,7 +92,7 @@
                       <i class="ai-chat-dots"></i>
                     </div>
                     <div class="col-10">
-                      <a href="" class="text-white sidenav-list">About Us</a>
+                      <a href="AboutUs.html" class="text-white sidenav-list">About Us</a>
                     </div>
                   </div>
                 </li>
@@ -96,7 +102,7 @@
                       <i class="ai-person"></i>
                     </div>
                     <div class="col-10">
-                      <a href="" class="text-white sidenav-list">Account</a>
+                      <a href="Account.html" class="text-white sidenav-list">Account</a>
                     </div>
                   </div>
                 </li>
@@ -106,7 +112,7 @@
                       <i class="ai-sign-out"></i>
                     </div>
                     <div class="col-10">
-                      <a href="" class="text-white sidenav-list">Logout</a>
+                      <a href="Login.html" class="text-white sidenav-list">Logout</a>
                     </div>
                   </div>
                 </li>
@@ -126,12 +132,8 @@
       >
         <div class="row py-2">
           <div class="col-3 justify-content-center align-items-center">
-            <a href="#sidenav">
-              <img
-                src="../assets/icons/menu.svg"
-                height="20"
-                alt=""
-              />
+            <a href="#sidenav" rel="external">
+              <img src="../assets/icons/menu.svg" height="20" alt="" />
             </a>
           </div>
           <div class="col-6 d-flex justify-content-center align-items-center">
@@ -141,7 +143,7 @@
             <h3 class="header-title align-middle"><b>Colombo,</b> SL</h3>
           </div>
           <div class="col-3 my-auto">
-            <a href="Filters.html">
+            <a href="#" data-rel="button" onclick="openFilter()">
               <img
                 src="images/filter.png"
                 class="img float-right"
@@ -153,7 +155,7 @@
         </div>
       </div>
       <!-- Working Header End -->
-      
+
       <div data-role="main" class="ui-content bg-white">
         <div class="container-fluid p-0">
           <div class="row flex-nowrap overflow-scroll py-3 gx-1 iphone-port">
@@ -422,7 +424,7 @@
 
           <div class="space-between-container">
             <div class="heading1 bold">Favourites</div>
-            <a href="Favourites.html">
+            <a href="Favourites.html" rel="external">
               <div class="text-success">Show All ></div>
             </a>
           </div>
@@ -433,7 +435,7 @@
               <div class="col">
                 <!-- Food Item Card 1 Start -->
                 <div class="card food-card-1">
-                  <a href="FoodItem.html">
+                  <a href="FoodItem.html" rel="external">
                     <img
                       class="card-img-top"
                       src="images/mgg-vitchakorn-J5ZivsKiu9c-unsplash 1.png"
@@ -712,28 +714,225 @@
         <div data-role="navbar" data-grid="d">
           <ul>
             <li>
-              <a href="Home.html"
+              <a href="./Home.html" rel="external"
                 ><img src="../assets/icons/home.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="Search.html"
+              <a href="./Search.html" rel="external"
                 ><img src="../assets/icons/search.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="Cart.html"
+              <a href="./Cart.html" rel="external"
                 ><img src="../assets/icons/cart.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="orders.html"
+              <a href="./Account.html" rel="external"
                 ><img src="../assets/icons/person.svg" alt=""
               /></a>
             </li>
           </ul>
         </div>
       </div>
+
+      <!--Filter popup code start-->
+      <div data-role="popup" id="filter" class="filter ui-content">
+        <div class="container">
+          <div class="row">
+            <div class="col ml-3 mr-3">
+              <form>
+                <fieldset
+                  data-role="controlgroup"
+                  data-iconpos="right"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Sort:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6a"
+                    value="on"
+                    checked="checked"
+                  />
+                  <label for="radio-choice-w-6a">
+                    <img
+                      src="../assets/icons/achievement.svg"
+                      alt=""
+                      height="26px"
+                      style="margin-right: 10px"
+                    />My Favorites</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6b"
+                    value="off"
+                  />
+                  <label for="radio-choice-w-6b">
+                    <img
+                      src="../assets/icons/fire.svg"
+                      alt=""
+                      height="24px"
+                      style="margin-right: 12px"
+                    />Most popular</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6c"
+                    value="other"
+                  />
+                  <label for="radio-choice-w-6c">
+                    <img
+                      src="../assets/icons/star.svg"
+                      alt=""
+                      height="25px"
+                      style="margin-right: 11px"
+                    />Rating</label
+                  >
+                  <input
+                    type="radio"
+                    name="radio-choice-w-6"
+                    id="radio-choice-w-6d"
+                    value="other"
+                  />
+                  <label for="radio-choice-w-6d">
+                    <img
+                      src="../assets/icons/time.svg"
+                      alt=""
+                      height="24px"
+                      style="margin-right: 12px"
+                    />Delivery time</label
+                  >
+                </fieldset>
+
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3 p-0"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Price Range:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-2a">100-500</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-2b">500-1000</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2c"
+                    value="price1000"
+                  />
+                  <label for="radio-choice-h-2c">1000-1500</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2d"
+                    value="price1500"
+                  />
+                  <label for="radio-choice-h-2d">1500-2000</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-2"
+                    id="radio-choice-h-2e"
+                    value="price2000"
+                  />
+                  <label for="radio-choice-h-2e">2000-5000</label>
+                </fieldset>
+
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Delivery Fee:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-3"
+                    id="radio-choice-h-3a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-3a">Free</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-3"
+                    id="radio-choice-h-3b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-3b">LKR 90</label>
+                </fieldset>
+
+                <fieldset
+                  data-role="controlgroup"
+                  data-type="horizontal"
+                  class="mb-3"
+                >
+                  <legend style="font-size: 18px; font-weight: 700">
+                    Dietary:
+                  </legend>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4a"
+                    value="price100"
+                  />
+                  <label for="radio-choice-h-4a">Vegetarian</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4b"
+                    value="price500"
+                  />
+                  <label for="radio-choice-h-4b">Vegan</label>
+                  <input
+                    type="radio"
+                    name="radio-choice-h-4"
+                    id="radio-choice-h-4c"
+                    value="price1000"
+                  />
+                  <label for="radio-choice-h-4c">Glutan-free</label>
+                </fieldset>
+
+                <a
+                  href="./Home.html"
+                  rel="external"
+                  data-role="button"
+                  type="submit"
+                  class="filter-submit-btn p-3"
+                >
+                  Apply Filters
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Filter popup code End-->
     </div>
+    <script>
+      function openFilter() {
+        $("#filter").popup("open", {
+          positionTo: "#filter-area",
+          transition: "slidedown",
+        });
+      }
+    </script>
   </body>
 </html>

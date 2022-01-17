@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Register</title>
     <link rel="stylesheet" href="style-initial.css" />
+    <script src="../main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -41,16 +42,25 @@
                   <input
                     type="text"
                     class="form-control p-3 login-input"
-                    id="fullName"
+                    id="firstName"
                     aria-describedby="fullNameHelp"
-                    placeholder="Full Name"
+                    placeholder="First Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control p-3 login-input"
+                    id="lastName"
+                    aria-describedby="fullNameHelp"
+                    placeholder="Last Name"
                   />
                 </div>
                 <div class="form-group">
                   <input
                     type="email"
                     class="form-control p-3 login-input"
-                    id="exampleInputEmail1"
+                    id="email"
                     aria-describedby="emailHelp"
                     placeholder="Email or phone"
                   />
@@ -60,7 +70,7 @@
                   <input
                     type="password"
                     class="form-control p-3 login-input"
-                    id="password1"
+                    id="password"
                     placeholder="Password"
                   />
                   <!-- <i class="ai-eye-slashed" id="togglePassword"></i> -->
@@ -70,15 +80,21 @@
                   <input
                     type="password"
                     class="form-control p-3 login-input"
-                    id="confirmPassword1"
+                    id="confirmPassword"
                     placeholder="Confirm Password"
                   />
                   <!-- <i class="ai-eye-slashed" id="togglePassword"></i> -->
                 </div>
-                <button type="submit" class="login-btn p-3">Sign Up</button>
+                <button
+                  type="submit"
+                  onclick="handleRegister()"
+                  class="login-btn p-3"
+                >
+                  Sign Up
+                </button>
                 <p class="sign-up-text text-center pt-1">
                   Already have an account?
-                  <a href="Login.html" class="sign-up">Login</a>
+                  <a href="Login.html" rel="external" class="sign-up">Login</a>
                 </p>
               </form>
             </div>

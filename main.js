@@ -1,3 +1,8 @@
+var mailBody;
+var itemList = [];
+var favList = [];
+var userList = [];
+
 window.addEventListener(
   "load",
   function () {
@@ -6,14 +11,14 @@ window.addEventListener(
     document.getElementById("stage-three").style.display = "none";
     document.getElementById("stage-four").style.display = "none";
     document.getElementById("stage-five").style.display = "none";
-    document.getElementById("stage-six").style.display = "none";
+    // document.getElementById("stage-six").style.display = "none";
 
     document.getElementById("stage-one-image").style.display = "block";
     document.getElementById("stage-two-image").style.display = "none";
     document.getElementById("stage-three-image").style.display = "none";
     document.getElementById("stage-four-image").style.display = "none";
     document.getElementById("stage-five-image").style.display = "none";
-    document.getElementById("stage-six-image").style.display = "none";
+    // document.getElementById("stage-six-image").style.display = "none";
 
     setTimeout(() => {
       document.getElementById("stage-one").style.display = "none";
@@ -47,22 +52,22 @@ window.addEventListener(
       document.getElementById("stage-five-image").style.display = "block";
     }, 12000);
 
-    setTimeout(() => {
-      document.getElementById("stage-five").style.display = "none";
-      document.getElementById("stage-six").style.display = "block";
+    // setTimeout(() => {
+    //   document.getElementById("stage-five").style.display = "none";
+    //   document.getElementById("stage-six").style.display = "block";
 
-      document.getElementById("stage-five-image").style.display = "none";
-      document.getElementById("stage-six-image").style.display = "block";
-    }, 15000);
+    //   document.getElementById("stage-five-image").style.display = "none";
+    //   document.getElementById("stage-six-image").style.display = "block";
+    // }, 15000);
   },
   false
 );
 
-$(document).ready(function () {
-  $("#land-text").delay(2000).slideDown(500);
-});
+// $(document).ready(function () {
+//   $("#land-text").delay(2000).slideDown(500);
+// });
 
-function sendFavList() {
+function sendFavList(email) {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
   mailBody =
     "<html> " +
@@ -74,9 +79,32 @@ function sendFavList() {
     "        <div>" +
     '         <p class="category-name" style="' +
     '">' +
-    Flist[0].name +
+    // Flist[0].name +
+    "Blueberry Cheesecake" +
     " By " +
-    Flist[0].restaurant +
+    // Flist[0].restaurant +
+    "Cathys Dessert" +
+    " <br /> " +
+    "Cheese Raviolli" +
+    " By " +
+    // Flist[0].restaurant +
+    "Mummys Delight" +
+    " <br /> " +
+    "Ramen Miso" +
+    " By " +
+    // Flist[0].restaurant +
+    "Sushi Kai" +
+    " <br /> " +
+    "Beef Burger" +
+    " By " +
+    // Flist[0].restaurant +
+    "Street Burger" +
+    " <br /> " +
+    "Cordon Bleu" +
+    " By " +
+    // Flist[0].restaurant +
+    "Diners Lounge" +
+    " <br /> " +
     "</p>" +
     "        </div>" +
     "     </div>" +
@@ -84,19 +112,77 @@ function sendFavList() {
     "   </div>" +
     "  </body>" +
     "</html>";
-  sendEmail();
+  sendEmail(email);
 }
 
-function sendEmail() {
+function sendEmail(emailId) {
   Email.send({
     Host: "smtp.gmail.com",
-    Username: "email.foodlabs@gmail.com",
-    Password: "foodlabs123",
-    To: "shashane.2017315@iit.ac.lk,gevin.2016375@iit.ac.lk,pubudu.2017154@iit.ac.lk,aravindhan.2016059@iit.ac.lk",
-    From: "email.foodlabs@gmail.com",
+    Username: "kitcyfood123@gmail.com",
+    Password: "kitcy123",
+    To: emailId,
+    From: "kitcyfood123@gmail.com",
     Subject: "Favourites List",
     Body: mailBody,
   }).then(function (message) {
     alert("mail sent Successfully");
   });
 }
+
+function enableButton(id) {
+  len = document.getElementById(id).value.length;
+
+  if (len == 10) {
+    document.getElementById("btnOTPtest").disabled = false;
+    phoneNumber = document.getElementById(id).value;
+  } else {
+    document.getElementById("btnOTPtest").disabled = true;
+  }
+}
+
+function addFavourite() {
+  var itemname = document.getElementById("item-name").textContent;
+  var itemrestaurant = "Cathy Desserts";
+  var favItem = { name: itemname, restaurant: itemrestaurant };
+  favList.push(favItem);
+  sessionStorage.setItem("favList", JSON.stringify(favList));
+}
+
+function handleRegister() {
+  var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  const newUser = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: password,
+  };
+
+  if (users) {
+    users.push(newUser);
+  } else {
+    users = [];
+    users.push(newUser);
+  }
+  sessionStorage.setItem("listOfUsers", JSON.stringify(users));
+}
+
+function handleLogin() {
+  var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var loggedInUser = users.find((x) => x.email === email);
+
+  if (loggedInUser.password === password) {
+    sessionStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+    window.location.href = "./Home.html";
+  } else {
+    openToastiPhone("Wrong Credentials Please Try Again");
+  }
+}
+
+function sendReview() {}

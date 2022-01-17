@@ -57,7 +57,7 @@
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
-                width="350"
+                width="100%"
                 height="500"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=Deanna%20dancing%20school&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -76,11 +76,17 @@
           <div class="location-add-panel">
             <div class="space-between-container">
               <div class="green-order col-10">
-                <h1 class="heading3">Police Lane, Thewatta Rd, Ragama</h1>
+                <input
+                  type="text"
+                  class="kitcy-input"
+                  style="width: 100%; outline-width: 0"
+                  data-role="none"
+                  placeholder="Enter Location"
+                />
               </div>
               <div class="">
                 <a href=""
-                  ><img src="/assets/icons/location.svg" class="" alt=""
+                  ><img src="../assets/icons/location.svg" class="" alt=""
                 /></a>
               </div>
             </div>
@@ -104,23 +110,23 @@
           <div data-role="navbar" data-grid="d">
             <ul>
               <li>
-                <a href="home.html"
-                  ><img src="/assets/icons/home.svg" alt=""
+                <a href="./Home.html"rel="external"
+                  ><img src="../assets/icons/home.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="Search.html"
-                  ><img src="/assets/icons/search.svg" alt=""
+                <a href="./Search.html"rel="external"
+                  ><img src="../assets/icons/search.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="Cart.html"
-                  ><img src="/assets/icons/cart.svg" alt=""
+                <a href="./Cart.html"rel="external"
+                  ><img src="../assets/icons/cart.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="orders.html"
-                  ><img src="/assets/icons/person.svg" alt=""
+                <a href="./Account.html"rel="external"
+                  ><img src="../assets/icons/person.svg" alt=""
                 /></a>
               </li>
             </ul>
@@ -139,7 +145,7 @@
             >Your location has been added successfully</span
           >
           <a
-            href="#"
+            href="#"rel="external"
             data-rel="back"
             data-role="button"
             class="popup-submit-btn"
