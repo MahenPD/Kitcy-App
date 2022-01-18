@@ -291,36 +291,32 @@ function loadReviews() {
 
   $.each(reviews, function (index, review) {
     output += `
-      <div class="row">
-      <div class="col-2">
+    <div class="row">
+    <div class="col-2">
+      <img
+        src="../assets/icons/person-yellow.svg"
+        alt=""
+        class="bg-success rounded-circle p-2"
+        height="50px"
+      />
+    </div>
+    <div class="col-8">
+      <div class="reply-cmt-1">${review.review}</div>
+      <div class="d-flex align-items-center">
         <img
-          src="../assets/icons/person-yellow.svg"
+          src="../assets/icons/star-filled.svg"
           alt=""
-          class="bg-success rounded-circle p-2"
-          height="50px"
+          class="reply-star"
         />
-      </div>
-      <div class="col-8">
-        <div class="heading2">${review.review}</div>
-        <div class="d-flex align-items-center">
-        <div class="col-2">
-          <img
-            src="../assets/icons/star-filled.svg"
-            alt=""
-            height="23px"
-          />
-          </div>
-          <div class="col-8">
-          <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
-          <a href="ReplyToRating.html" rel="external">
-            <p class="mx-4 text-success" style="margin-bottom: 0">
-              Reply
-            </p>
-          </a>
-          </div>
-        </div>
+        <a href="./ReplyToRating.html"
+        <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+        <p class="mx-4 text-success" style="margin-bottom: 0">
+          Reply
+        </p>
+        </a>
       </div>
     </div>
+  </div>
     <hr />
     `;
   });
@@ -357,9 +353,18 @@ function loadCart() {
   var output = "";
   var totalAmount = 0;
 
-  $.each(cartItems, function (index, item) {
+  if (!cartItems || cartItems === 0) {
     output += `
-    <li class="list-group-item">
+    <li class="list-group-item m-5">
+    <div class="row center-element">
+    <h1 class="heading1 bold text-center" style="font-size: 20px; margin: 30px">No Cart Items</h1>
+    </div>
+    </li>
+    `;
+  } else {
+    $.each(cartItems, function (index, item) {
+      output += `
+        <li class="list-group-item">
                 <div class="row">
                   <div class="col">
                     <img src="images/blueberry.jpg" class="fav-list rounded" />
@@ -405,9 +410,10 @@ function loadCart() {
                 </div>
               </li>
     `;
-  });
+    });
 
-  cartItems.map((item) => (totalAmount += item.totalPrice));
+    cartItems.map((item) => (totalAmount += item.totalPrice));
+  }
 
   document.getElementById("cart-items-list").innerHTML = output;
   document.getElementById("cart-total").innerHTML = totalAmount;
