@@ -354,7 +354,7 @@ function loadCart() {
                     <img src="images/blueberry.jpg" class="fav-list rounded" />
                   </div>
                   <div class="col text-left p-0">
-                    <p class="p1">${item.name}</p>
+                    <p class="p1" id="item-name">${item.name}</p>
                     <p class="p2">Desserts</p>
                     <p class="p3">LKR ${item.totalPrice}</p>
                     <div class="d-flex">

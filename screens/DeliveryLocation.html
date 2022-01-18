@@ -78,7 +78,7 @@
         <div>
           <div class="location-add-panel">
             <div class="space-between-container">
-              <div class="green-order col-10">
+              <div class="green-order col-10" onclick="openLocationSearch()">
                 <input
                   type="text"
                   class="kitcy-input"
@@ -159,4 +159,9 @@
       </div>
     </div>
   </body>
+  <script>
+    function openLocationSearch() {
+      window.location.href = "./DeliveryLocationSearch.html";
+    }
+  </script>
 </html>

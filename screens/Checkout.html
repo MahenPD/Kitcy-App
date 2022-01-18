@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style-initial.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -181,13 +182,19 @@
             </div>
           </div>
           <!-- Pricing End -->
-          <a href="OrderProcess.html" rel="external">
-            <button type="submit" class="filter-submit-btn p-3">
-              Place Order
-            </button>
-          </a>
+          <!-- <a href="OrderProcess.html" rel="external"> -->
+          <button
+            type="submit"
+            id="confirm-checkout-btn"
+            class="filter-submit-btn p-3"
+          >
+            Place Order
+          </button>
+          <!-- </a> -->
         </div>
       </div>
+
+      <form id="stripe-form" name="checkout_form" action="_self"></form>
 
       <!-- Footer -->
       <div data-role="footer" data-position="fixed">
@@ -226,6 +233,33 @@
       },
       false
     );
+
+    jQuery(function ($) {
+      var $stripe = $("#stripe-form");
+      var handler = StripeCheckout.configure({
+        key: "pk_test_cp21BcECf4kMMUbSlRlZlsMo",
+        token: function (token) {
+          if (token.id) {
+            window.location.href = "./OrderProcess.html";
+          }
+        },
+      });
+
+      $("#confirm-checkout-btn").on("click", function (e) {
+        handler.open({
+          name: "Purchase",
+          currency: "LKR",
+          description: $("#item-name").val(),
+          amount: $("#cart-total").val() * 100,
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on("popstate", function () {
+        handler.close();
+      });
+    });
 
     function check() {
       $("#checkbox-h-6a").prop("checked", true).checkboxradio("refresh");
