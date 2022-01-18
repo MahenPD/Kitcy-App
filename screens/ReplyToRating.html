@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Reply Rating</title>
     <link rel="stylesheet" href="../screens/ReplyRate.css" />
+    <script src="../main.js"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -57,8 +58,8 @@
         <!-- </div> -->
         <br />
 
-        <div class="row">
-          <div class="col-2">
+        <div class="row" id="message-to-reply">
+          <!-- <div class="col-2">
             <img
               src="../assets/icons/person-yellow.svg"
               alt=""
@@ -75,7 +76,7 @@
               />
               <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
             </div>
-          </div>
+          </div> -->
         </div>
         <br />
         <div class="row">
@@ -85,9 +86,10 @@
               placeholder="Write your reply here"
               data-role="none"
               class="kitcy-input-reply"
+              id="reply-message-input"
             />
           </div>
-          <div class="col-2">
+          <div class="col-2" onclick="handleSendReply()">
             <img
               src="../assets/icons/send.svg"
               alt=""
@@ -100,8 +102,8 @@
         <br />
         <br />
 
-        <div class="rating-container">
-          <div class="row">
+        <div class="rating-container" id="reply-container">
+          <!-- <div class="row">
             <div class="col-2">
               <img
                 src="../assets/icons/person-yellow.svg"
@@ -123,122 +125,17 @@
               </div>
             </div>
           </div>
-          <hr />
-          <div class="row">
-            <div class="col-2">
-              <img
-                src="../assets/icons/person-yellow.svg"
-                alt=""
-                class="bg-success"
-                height="50px"
-              />
-            </div>
-            <div class="col-8">
-              <div class="reply-cmt-1">So soft and creamy! Loved it.</div>
-              <div class="d-flex align-items-center">
-                <img
-                  src="../assets/icons/star-filled.svg"
-                  alt=""
-                  class="reply-star"
-                />
-                <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
-                <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
-              </div>
-            </div>
+          <div class="d-flex flex-nowrap mx-3 mt-3">
+            <img
+              src="../assets/icons/reply-handlesvg.svg"
+              alt=""
+              class=""
+              height="20px"
+              width="20px"
+            />
+            <div class="mx-3">So soft and creamy! Loved it.</div>
           </div>
-          <hr />
-          <div class="row">
-            <div class="col-2">
-              <img
-                src="../assets/icons/person-yellow.svg"
-                alt=""
-                class="bg-success"
-                height="50px"
-              />
-            </div>
-            <div class="col-8">
-              <div class="reply-cmt-1">So soft and creamy! Loved it.</div>
-              <div class="d-flex align-items-center">
-                <img
-                  src="../assets/icons/star-filled.svg"
-                  alt=""
-                  class="reply-star"
-                />
-                <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
-                <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-2">
-              <img
-                src="../assets/icons/person-yellow.svg"
-                alt=""
-                class="bg-success"
-                height="50px"
-              />
-            </div>
-            <div class="col-8">
-              <div class="reply-cmt-1">So soft and creamy! Loved it.</div>
-              <div class="d-flex align-items-center">
-                <img
-                  src="../assets/icons/star-filled.svg"
-                  alt=""
-                  class="reply-star"
-                />
-                <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
-                <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-2">
-              <img
-                src="../assets/icons/person-yellow.svg"
-                alt=""
-                class="bg-success"
-                height="50px"
-              />
-            </div>
-            <div class="col-8">
-              <div class="reply-cmt-1">So soft and creamy! Loved it.</div>
-              <div class="d-flex align-items-center">
-                <img
-                  src="../assets/icons/star-filled.svg"
-                  alt=""
-                  class="reply-star"
-                />
-                <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
-                <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-2">
-              <img
-                src="../assets/icons/person-yellow.svg"
-                alt=""
-                class="bg-success"
-                height="50px"
-              />
-            </div>
-            <div class="col-8">
-              <div class="reply-cmt-1">So soft and creamy! Loved it.</div>
-              <div class="d-flex align-items-center">
-                <img
-                  src="../assets/icons/star-filled.svg"
-                  alt=""
-                  class="reply-star"
-                />
-                <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
-                <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
-              </div>
-            </div>
-          </div>
-          <hr />
+          <hr /> -->
         </div>
 
         <!-- Footer -->
@@ -271,4 +168,13 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        loadReplies();
+      },
+      false
+    );
+  </script>
 </html>

@@ -432,25 +432,101 @@ function loadCheckoutDetails() {
   document.getElementById("totalAmount").innerHTML = parseInt(totalAmount);
 }
 
-// function listChallenges() {
-//   let output = '';
-// $.each(tasks, function (index, task) {
-//     if (!(user.completedTaskIds.includes(task.id))) {
-//         output += `
-//         <li class="chal-item list-group-item-action">
-//             <span class="chal-name">${task.name}</span>
-//             <span class="chal-points">${task.points} coins</span>
-//         </li>
-//     `;
-//     }
-// });
+function handleSendReply() {
+  var allReplies = JSON.parse(sessionStorage.getItem("replies"));
 
-//   $('#challenges').html(output).listview('refresh');
-// }
+  var reply = document.getElementById("reply-message-input").value;
+  var message = document.getElementById("message-reply-input").textContent;
+  debugger;
 
-// <h3 class="check-h4">Delivery Cost</h3>
-// <h3 class="check-h4">Subtotal</h3>
-{
-  /* <h3 class="check-h4">LKR 90</h3>
-<h3 class="check-h4">LKR 1800</h3> */
+  var replyObj = {
+    reply: reply,
+    message: message,
+  };
+
+  if (allReplies) {
+    allReplies.push(replyObj);
+  } else {
+    allReplies = [];
+    allReplies.push(replyObj);
+  }
+
+  sessionStorage.setItem("replies", JSON.stringify(allReplies));
+  loadReplies();
+}
+
+function loadReplies() {
+  var replies = JSON.parse(sessionStorage.getItem("replies"));
+
+  var output = "";
+  var messageOutput = "";
+
+  if (replies) {
+    $.each(replies, function (index, reply) {
+      output += `
+    <div class="row">
+    <div class="col-2">
+      <img
+        src="../assets/icons/person-yellow.svg"
+        alt=""
+        class="bg-success"
+        height="50px"
+      />
+    </div>
+    <div class="col-8">
+      <div class="reply-cmt-1">${reply.message}</div>
+      <div class="d-flex align-items-center">
+        <img
+          src="../assets/icons/star-filled.svg"
+          alt=""
+          class="reply-star"
+        />
+        <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
+        <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-nowrap mx-3 mt-3">
+    <img
+      src="../assets/icons/reply-handlesvg.svg"
+      alt=""
+      class=""
+      height="20px"
+      width="20px"
+    />
+    <div class="mx-3">${reply.reply}</div>
+  </div>
+  <hr />
+    `;
+    });
+  } else {
+    output += `
+    <div class="row">
+  </div>
+    `;
+  }
+
+  messageOutput += `
+  <div class="col-2">
+  <img
+    src="../assets/icons/person-yellow.svg"
+    alt=""
+    class="bg-success"
+  />
+</div>
+<div class="col-8">
+  <div class="reply-cmt-1" id="message-reply-input">So soft and creamy! Loved it.</div>
+  <div class="d-flex align-items-center">
+    <img
+      src="../assets/icons/star-filled.svg"
+      alt=""
+      class="reply-star"
+    />
+    <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
+  </div>
+</div>
+    `;
+
+  document.getElementById("reply-container").innerHTML = output;
+  document.getElementById("message-to-reply").innerHTML = messageOutput;
 }
