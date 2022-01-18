@@ -212,6 +212,7 @@ function handleRegister() {
     users.push(newUser);
   }
   sessionStorage.setItem("listOfUsers", JSON.stringify(users));
+  window.location.href = "./GetStarted.html";
 }
 
 function handleLogin() {
