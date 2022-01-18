@@ -131,11 +131,13 @@ function addFavourite() {
   var foodFavList = JSON.parse(sessionStorage.getItem("foodFavList"));
   var itemname = document.getElementById("item-name").textContent;
   var itemrestaurant = "Cathy Desserts";
+  var image = "images/blueberry.jpg";
   var itemprice = document.getElementById("item-price").textContent;
   var favItem = {
     name: itemname,
     restaurant: itemrestaurant,
     price: itemprice,
+    image: image,
   };
 
   if (foodFavList) {
@@ -165,7 +167,7 @@ function loadFavourites() {
     <li class="list-group-item">
     <div class="row">
       <div class="col">
-        <img src="images/blueberry.jpg" class="fav-list rounded" />
+        <img src="${fav.image}" class="fav-list rounded" />
       </div>
       <div class="col text-left p-0">
         <p class="p1">${fav.name}</p>
@@ -220,6 +222,30 @@ function handleLogin() {
 
   if (loggedInUser.password === password) {
     sessionStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+    sessionStorage.setItem(
+      "foodFavList",
+      JSON.stringify([
+        {
+          name: "Ramen Miso",
+          price: 1800,
+          restaurant: "Japanese",
+          image: "images/ramen.png",
+        },
+        {
+          name: "Cheese Ravioli",
+          price: 1800,
+          restaurant: "Pasta",
+          image: "images/ravioli.png",
+        },
+        {
+          name: "Beef Burger",
+          price: 1800,
+          restaurant: "Fast Food",
+          image: "images/burger.png",
+        },
+      ])
+    );
+
     window.location.href = "./Home.html";
   } else {
     openToastiPhone("Wrong Credentials Please Try Again");
