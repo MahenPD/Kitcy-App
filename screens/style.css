@@ -238,6 +238,7 @@
   position: relative;
   font-family: "Poppins";
   font-weight: bold;
+  color: #585858;
   font-size: 24px;
   left: 7%;
   margin-top: -62%;
@@ -410,6 +411,12 @@
     margin-top: 31px;
     margin-bottom: 73px;
     max-width: 960px;
+  }
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
   }
 }
 /* Ipad version-1 */
@@ -647,6 +654,12 @@
   .food-card-filter .p2 {
     font-size: 12px;
   }
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
   
 
 }
@@ -712,6 +725,7 @@
     font-size: 25px;
     margin: 3px;
   }
+  
 }
 
 

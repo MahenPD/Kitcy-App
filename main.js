@@ -303,17 +303,21 @@ function loadReviews() {
       <div class="col-8">
         <div class="heading2">${review.review}</div>
         <div class="d-flex align-items-center">
+        <div class="col-2">
           <img
             src="../assets/icons/star-filled.svg"
             alt=""
             height="23px"
           />
+          </div>
+          <div class="col-8">
           <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
           <a href="ReplyToRating.html" rel="external">
             <p class="mx-4 text-success" style="margin-bottom: 0">
               Reply
             </p>
           </a>
+          </div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../theme/theme.css" />
     <script src="../main.js"></script>
     <script src="../cart.js" async></script>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -47,21 +48,24 @@
             </svg>
           </div>
           <div class="col-2" onclick="addFavourite()">
-            <img
+            <!-- <img
               src="../assets/icons/heart-black.svg"
               alt=""
-              height="40px"
+              height="30px"
               class="bg-white p-2 rounded-circle icon"
-            />
+            /> -->
+            <i class="ai-heart bg-white akar-icon mt-2"></i>
           </div>
           <div class="col-2">
             <a href="Rating.html" rel="external">
-              <img
+              <!-- <img
                 src="../assets/icons/review.svg"
                 alt=""
                 height="40px"
                 class="bg-white p-2 rounded-circle icon"
-              />
+              /> -->
+              
+            <i class="ai-chat-add bg-white akar-icon mt-2"></i>
             </a>
           </div>
         </div>
@@ -73,10 +77,12 @@
               background-color: white;
               align-items: center;
               padding: 5px;
+              color:#585858;
             "
           >
             <a href="#" rel="external" data-role="none" class="quantity__minus"
-              ><span style="font-size: 30px; font-family: 'Poppins'">-</span></a
+              ><span style="font-size: 30px; 
+              color:#585858; font-family: 'Poppins'">-</span></a
             >
             <input
               name="quantity"
@@ -87,7 +93,8 @@
               data-role="none"
             />
             <a href="#" rel="external" data-role="none" class="quantity__plus"
-              ><span style="font-size: 30px; font-family: 'Poppins'">+</span></a
+              ><span style="font-size: 30px; 
+              color:#585858; font-family: 'Poppins'">+</span></a
             >
           </div>
           <script>
@@ -121,7 +128,7 @@
       <!-- Content -->
       <div data-role="content" class="body">
         <div class="basic-shop-info">
-          <div class="flex-column">
+          <div class="d-flex flex-column">
             <div class="heading1 bold" id="item-name">Blueberry Cheesecake</div>
             <p>
               Our signature chilled cheesecake topped with blueberries and
@@ -157,13 +164,13 @@
               <p style="margin-bottom: 0px">5.0</p>
             </div>
 
-            <div class="d-flex justify-content-center mt-2">
+            <div class="mt-2 g-1">
               <button
                 onclick="addToCart()"
                 data-role="none"
                 id="addToCart"
                 disabled
-                class="kitcy-button"
+                class="kitcy-button btn-block"
               >
                 Add to Cart
               </button>
