@@ -54,6 +54,24 @@ window.addEventListener(
   false
 );
 
+function openToastiPhone(message) {
+  $("#popupBasic").empty();
+
+  var str = `<span> ${message} <a href="#" data-rel="back" class="toast-close">OK</a> </span>`;
+  myClone1 = $(str);
+  myClone1.appendTo("#popupBasic").trigger("create");
+
+  $("#popupBasic").popup("open", {
+    positionTo: "#iphone-area",
+    transition: "pop",
+  });
+
+  setTimeout(() => {
+    // Invoke the close() method after 3seconds
+    $("#popupBasic").popup("close");
+  }, 3000);
+}
+
 function sendFavList(email) {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
   mailBody =
@@ -147,7 +165,7 @@ function addFavourite() {
     foodFavList.push(favItem);
   }
   sessionStorage.setItem("foodFavList", JSON.stringify(foodFavList));
-  loadFavourites();
+  openToastiPhone("Added item to your favourite list");
 }
 
 function handleRemoveFav(favName = "Blueberry Cheesecake") {
@@ -155,6 +173,7 @@ function handleRemoveFav(favName = "Blueberry Cheesecake") {
   var filteredFavs = favourites.filter((f) => f.name !== favName);
   sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
   loadFavourites();
+  openToastiPhone("Removed item from your favourite list");
 }
 
 function loadFavourites() {
@@ -212,7 +231,7 @@ function handleRegister() {
     users.push(newUser);
   }
   sessionStorage.setItem("listOfUsers", JSON.stringify(users));
-  window.location.href = "./GetStarted.html";
+  window.location.href = "./VerifyEmail.html";
 }
 
 function handleLogin() {
@@ -296,6 +315,7 @@ function sendReview() {
   sessionStorage.setItem("reviewList", JSON.stringify(reviews));
   document.getElementById("review").innerHTML = "";
   loadReviews();
+  openToastiPhone("Rating and review added successfully");
 }
 
 function loadReviews() {
@@ -343,7 +363,7 @@ function addToCart() {
   var itemName = document.getElementById("item-name").textContent;
   var itemPrice = document.getElementById("item-price").textContent.split(" ");
   var itemQuantity = document.getElementById("itemQuantity").value;
-  debugger;
+
   var cartItemObj = {
     name: itemName,
     price: parseInt(itemPrice[1]),
@@ -357,8 +377,8 @@ function addToCart() {
     cartItems = [];
     cartItems.push(cartItemObj);
   }
-  debugger;
   sessionStorage.setItem("cart", JSON.stringify(cartItems));
+  openToastiPhone("Item added to cart successfully");
 }
 
 function loadCart() {
