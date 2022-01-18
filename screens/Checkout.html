@@ -369,7 +369,7 @@
       check();
 
       if (!disAdded) {
-        distotal = parseInt($("#totalAmount").text().split(" ")[1]);
+        distotal = parseInt($("#totalAmount").text());
         discountAmnt = (distotal * 10) / 100;
         $("#totalAmount").text("LKR " + (distotal - discountAmnt));
       }
