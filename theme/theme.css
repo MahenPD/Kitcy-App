@@ -843,12 +843,12 @@ img {
   font-style: var(--font-style);
   font-weight: bold;
 }
-.bg-success {
+/* .bg-success {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-left: 27%;
-}
+} */
 .reply-cmt-1 {
   position: relative;
   margin-left: 101%;
