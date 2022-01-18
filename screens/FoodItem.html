@@ -130,7 +130,20 @@
         </div>
       </div>
       <!-- Content -->
+
       <div data-role="content" class="body">
+        <div
+          data-role="popup"
+          id="popupBasic"
+          data-theme="b"
+          class="toast ui-content"
+        >
+          <span>
+            Item added to cart
+            <a href="#" data-rel="back" class="toast-close">OK</a>
+          </span>
+        </div>
+
         <div class="basic-shop-info">
           <div class="d-flex flex-column">
             <div class="heading1 bold" id="item-name">Blueberry Cheesecake</div>
@@ -180,6 +193,7 @@
               </button>
             </div>
           </div>
+          <div id="toast-area"></div>
         </div>
       </div>
 

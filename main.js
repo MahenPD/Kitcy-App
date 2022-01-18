@@ -313,12 +313,12 @@ function addToCart() {
   var itemName = document.getElementById("item-name").textContent;
   var itemPrice = document.getElementById("item-price").textContent.split(" ");
   var itemQuantity = document.getElementById("itemQuantity").value;
-
   var cartItemObj = {
     name: itemName,
     price: parseInt(itemPrice[1]),
     totalPrice: parseInt(itemPrice[1]) * parseInt(itemQuantity),
     quantity: itemQuantity,
+    category: "Dessert",
   };
 
   if (cartItems) {
@@ -328,7 +328,7 @@ function addToCart() {
     cartItems.push(cartItemObj);
   }
   sessionStorage.setItem("cart", JSON.stringify(cartItems));
-  openToastiPhone("Item added to cart successfully");
+  openToast("Item Added to cart successfully");
 }
 
 function loadCart() {
