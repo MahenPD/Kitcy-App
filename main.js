@@ -254,7 +254,7 @@ function handleLogin() {
 
     localStorage.gameUser = JSON.stringify(gameUser);
 
-    sessionStorage.setItem("firstLogin", JSON.stringify("true"));
+    sessionStorage.setItem("firstLogin", JSON.stringify(true));
 
     window.location.href = "./Home.html";
   } else {
