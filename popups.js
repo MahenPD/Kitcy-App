@@ -7,6 +7,12 @@ function popupConfirm() {
   $("#popup-redeem-confirm").popup("close", { transition: "pop" });
 }
 
+function popupConfirmEmail() {
+  $("#popup-remove").popup("close", { transition: "pop" });
+  $("#popup-redeem-confirm").popup("close", { transition: "pop" });
+  window.location.href = "./GetStarted";
+}
+
 function nextslide1() {
   $("#popup-slide-title").text("Cooking Safe Food");
   $("#popup-slide-content").text(

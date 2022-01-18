@@ -50,7 +50,7 @@
     margin-bottom: 0;
     overflow: hidden;
     overflow-y: scroll;
-    height: 560px;
+    height: 540px;
 
 }
 
@@ -432,7 +432,30 @@ hr .new1 {
     display: none;
 }
 
+.ui-header-fixed {
+    width: 100%;
+    right: 0;
+    left:0;
+}
+
+
+
 @media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .ui-header-fixed {
+        width: 100%;
+        right: 0;
+        left:0;
+    }
+    #sidenav{
+        display: none;
+    }
+    #game-sidebar-area {
+        display: none;
+    }
+
+
+
 }
 
 
@@ -485,8 +508,17 @@ hr .new1 {
         display: none;
     }
 
-    #side-nav{
+    #sidenav{
         display: inline-block;
+    }
+    #game-sidebar-area {
+        display: inline-block;
+    }
+
+    .ui-header-fixed {
+        width: 1100px;
+        right: 0;
+        left:auto;
     }
 
 
@@ -534,6 +566,12 @@ hr .new1 {
 
     #game-sidebar-area {
         display: none;
+    }
+
+    .ui-header-fixed {
+        width: 100%;
+        right: 0;
+        left:0;
     }
 
 

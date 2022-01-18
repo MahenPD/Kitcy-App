@@ -4,55 +4,23 @@ var favList = [];
 var userList = [];
 var reviewList = [];
 
-window.addEventListener(
-  "load",
-  function () {
-    document.getElementById("stage-one").style.display = "block";
-    document.getElementById("stage-two").style.display = "none";
-    document.getElementById("stage-three").style.display = "none";
-    document.getElementById("stage-four").style.display = "none";
-    document.getElementById("stage-five").style.display = "none";
+function openToastiPhone(message) {
+  $("#popupBasic").empty();
 
-    document.getElementById("stage-one-image").style.display = "block";
-    document.getElementById("stage-two-image").style.display = "none";
-    document.getElementById("stage-three-image").style.display = "none";
-    document.getElementById("stage-four-image").style.display = "none";
-    document.getElementById("stage-five-image").style.display = "none";
+  var str = `<span> ${message} <a href="#" data-rel="back" class="toast-close">OK</a> </span>`;
+  myClone1 = $(str);
+  myClone1.appendTo("#popupBasic").trigger("create");
 
-    setTimeout(() => {
-      document.getElementById("stage-one").style.display = "none";
-      document.getElementById("stage-two").style.display = "block";
+  $("#popupBasic").popup("open", {
+    positionTo: "#iphone-area",
+    transition: "pop",
+  });
 
-      document.getElementById("stage-one-image").style.display = "none";
-      document.getElementById("stage-two-image").style.display = "block";
-    }, 3000);
-
-    setTimeout(() => {
-      document.getElementById("stage-two").style.display = "none";
-      document.getElementById("stage-three").style.display = "block";
-
-      document.getElementById("stage-two-image").style.display = "none";
-      document.getElementById("stage-three-image").style.display = "block";
-    }, 6000);
-
-    setTimeout(() => {
-      document.getElementById("stage-three").style.display = "none";
-      document.getElementById("stage-four").style.display = "block";
-
-      document.getElementById("stage-three-image").style.display = "none";
-      document.getElementById("stage-four-image").style.display = "block";
-    }, 9000);
-
-    setTimeout(() => {
-      document.getElementById("stage-four").style.display = "none";
-      document.getElementById("stage-five").style.display = "block";
-
-      document.getElementById("stage-four-image").style.display = "none";
-      document.getElementById("stage-five-image").style.display = "block";
-    }, 12000);
-  },
-  false
-);
+  setTimeout(() => {
+    // Invoke the close() method after 3seconds
+    $("#popupBasic").popup("close");
+  }, 3000);
+}
 
 function sendFavList(email) {
   var Flist = JSON.parse(sessionStorage.getItem("itemList"));
@@ -147,7 +115,7 @@ function addFavourite() {
     foodFavList.push(favItem);
   }
   sessionStorage.setItem("foodFavList", JSON.stringify(foodFavList));
-  loadFavourites();
+  openToastiPhone("Added item to your favourite list");
 }
 
 function handleRemoveFav(favName = "Blueberry Cheesecake") {
@@ -155,6 +123,7 @@ function handleRemoveFav(favName = "Blueberry Cheesecake") {
   var filteredFavs = favourites.filter((f) => f.name !== favName);
   sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
   loadFavourites();
+  openToastiPhone("Removed item from your favourite list");
 }
 
 function loadFavourites() {
@@ -212,7 +181,7 @@ function handleRegister() {
     users.push(newUser);
   }
   sessionStorage.setItem("listOfUsers", JSON.stringify(users));
-  window.location.href = "./GetStarted.html";
+  window.location.href = "./VerifyEmail.html";
 }
 
 function handleLogin() {
@@ -243,6 +212,20 @@ function handleLogin() {
           price: 1800,
           restaurant: "Fast Food",
           image: "images/burger.png",
+        },
+      ])
+    );
+
+    sessionStorage.setItem(
+      "reviewList",
+      JSON.stringify([
+        {
+          rating: 5,
+          review: "So soft and creamy. I loved it!",
+        },
+        {
+          rating: 3,
+          review: "Good Stuff!",
         },
       ])
     );
@@ -282,6 +265,7 @@ function sendReview() {
   sessionStorage.setItem("reviewList", JSON.stringify(reviews));
   document.getElementById("review").innerHTML = "";
   loadReviews();
+  openToastiPhone("Rating and review added successfully");
 }
 
 function loadReviews() {
@@ -303,13 +287,13 @@ function loadReviews() {
     <div class="col-8">
       <div class="reply-cmt-1">${review.review}</div>
       <div class="d-flex align-items-center">
-        <img
-          src="../assets/icons/star-filled.svg"
-          alt=""
-          class="reply-star"
-        />
-        <a href="./ReplyToRating.html"
-        <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+      <img
+      src="../assets/icons/star-filled.svg"
+      alt=""
+      class="reply-star"
+      />
+      <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+      <a href="./ReplyToRating.html"
         <p class="mx-4 text-success" style="margin-bottom: 0">
           Reply
         </p>
@@ -329,7 +313,7 @@ function addToCart() {
   var itemName = document.getElementById("item-name").textContent;
   var itemPrice = document.getElementById("item-price").textContent.split(" ");
   var itemQuantity = document.getElementById("itemQuantity").value;
-  debugger;
+
   var cartItemObj = {
     name: itemName,
     price: parseInt(itemPrice[1]),
@@ -343,8 +327,8 @@ function addToCart() {
     cartItems = [];
     cartItems.push(cartItemObj);
   }
-  debugger;
   sessionStorage.setItem("cart", JSON.stringify(cartItems));
+  openToastiPhone("Item added to cart successfully");
 }
 
 function loadCart() {

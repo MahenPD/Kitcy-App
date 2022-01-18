@@ -13,6 +13,18 @@
   text-shadow: none;
 }
 
+input {
+  outline-width: 0;
+}
+
+input::placeholder {
+  padding: 3px;
+  font-size: 16px;
+  font-style: var(--font-style);
+  color: var(--text-colour);
+  opacity: 0.7;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -266,18 +278,18 @@ img {
 .icon {
   font-size: 40px;
 }
-.akar-icon{
-  font-size:24px;
-  border-radius:50%;
-  color:#585858;
+.akar-icon {
+  font-size: 24px;
+  border-radius: 50%;
+  color: #585858;
   padding: 0.4rem 0.8rem;
   font-family: "Poppins";
   -webkit-text-stroke-width: 1px;
 }
 
-.akar-icon:hover{
+.akar-icon:hover {
   background-color: #069c54;
-  color:#069c54;
+  color: #069c54;
 }
 
 .quantity {
@@ -622,7 +634,6 @@ img {
 }
 
 .ui-btn-active {
-  background-color: var(--primary-colour) !important;
   color: white !important;
   outline-width: 0;
   border-width: 0;
@@ -832,12 +843,12 @@ img {
   font-style: var(--font-style);
   font-weight: bold;
 }
-.bg-success {
+/* .bg-success {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-left: 27%;
-}
+} */
 .reply-cmt-1 {
   position: relative;
   margin-left: 101%;
@@ -1044,4 +1055,9 @@ img {
     margin-left: -110%;
     margin-top: -8%;
   }
+}
+
+/* Payment */
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }

@@ -13,6 +13,7 @@
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
     />
     <script src="../main.js"></script>
+    <script src="popups.css"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://unpkg.com/akar-icons-fonts"></script>
@@ -23,6 +24,7 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <div data-role="page" class="ui-checkout">
       <div data-role="main" class="ui-checkout-content h-100">
@@ -103,18 +105,86 @@
               <h3 class="check-h4">LKR 1800</h3>
             </div> -->
           </div>
+
+          <div class="row">
+            <fieldset data-role="controlgroup" data-iconpos="right">
+              <input
+                type="checkbox"
+                name="checkbox-h-6a"
+                id="checkbox-h-6a"
+                onclick="confirmRedeem()"
+              />
+              <label for="checkbox-h-6a"
+                >Redeem 100 coins (get 10% discount)</label
+              >
+            </fieldset>
+          </div>
+
+          <div
+            data-role="popup"
+            id="popup-redeem-confirm"
+            style="
+              width: 240px;
+              padding-top: 20px;
+              background-color: white !important;
+            "
+            data-overlay-theme="b"
+            class="rectangle ui-content"
+            data-position-to="window"
+          >
+            <img
+              src="../assets/images/coins-pile.jpg"
+              alt=""
+              class="popup-img"
+              style="width: 50%"
+            />
+            <span
+              class="popup-confirm"
+              style="font-weight: 700; font-size: 16px"
+              >You will lose 100 coins from your total coins. Are you sure you
+              want to redeem 100 coins?</span
+            >
+            <a
+              href="#"
+              data-rel="button"
+              class="popup-confirm-btn ui-btn"
+              onclick="popupConfirm()"
+              >Confirm</a
+            >
+            <a
+              href="#"
+              data-rel="button"
+              data-role="button"
+              class="popup-cancel-btn"
+              onclick="cancelRedeem()"
+              >Cancel</a
+            >
+          </div>
+
           <hr />
+          <div class="row" id="discount" style="display: none">
+            <div class="col">
+              <h3 class="check-h4" style="color: green">Discount</h3>
+            </div>
+            <div class="col d-flex flex-column align-items-end">
+              <h3 class="check-h4" id="discount-amount" style="color: green">
+                200
+              </h3>
+            </div>
+          </div>
           <div class="row">
             <div class="col">
               <h3 class="check-h4">Total</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
-              <h3 class="check-h4" id="totalAmount">LKR 1890</h3>
+              <h3 class="check-h4" id="totalAmount">LKR 0</h3>
             </div>
           </div>
           <!-- Pricing End -->
           <a href="OrderProcess.html" rel="external">
-            <button type="submit" class="login-btn p-3">Place Order</button>
+            <button type="submit" class="filter-submit-btn p-3">
+              Place Order
+            </button>
           </a>
         </div>
       </div>
@@ -156,5 +226,48 @@
       },
       false
     );
+
+    function check() {
+      $("#checkbox-h-6a").prop("checked", true).checkboxradio("refresh");
+    }
+
+    function uncheck() {
+      $("#checkbox-h-6a").prop("checked", false).checkboxradio("refresh");
+    }
+
+    function confirmRedeem() {
+      uncheck();
+      var checkboxstatus = $("#checkbox-h-6a").prop("checked");
+      if (!checkboxstatus) {
+        $("#popup-redeem-confirm").popup("open", { transition: "pop" });
+      } else {
+        uncheck();
+        $("#discount").css("display", "none");
+      }
+    }
+
+    var distotal;
+    var disAdded = false;
+    var discountAmnt;
+    function cancelRedeem() {
+      $("#popup-redeem-confirm").popup("close", { transition: "pop" });
+      $("#discount").css("display", "none");
+      $("#totalAmount").text("LKR " + distotal);
+      disAdded = false;
+    }
+
+    function popupConfirm() {
+      $("#popup-redeem-confirm").popup("close", { transition: "pop" });
+      check();
+
+      if (!disAdded) {
+        distotal = parseInt($("#totalAmount").text().split(" ")[1]);
+        discountAmnt = (distotal * 10) / 100;
+        $("#totalAmount").text("LKR " + (distotal - discountAmnt));
+      }
+      $("#discount").css("display", "flex");
+      $("#discount-amount").text("- LKR " + discountAmnt);
+      disAdded = true;
+    }
   </script>
 </html>
