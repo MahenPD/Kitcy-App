@@ -312,7 +312,7 @@ function loadReviews() {
       class="reply-star"
       />
       <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
-        <p class="mx-4 text-success" style="margin-bottom: 0" onclick="goToReplyRating(review.review)">
+        <p class="mx-4 text-success" style="margin-bottom: 0" onclick="goToReplyRating()">
           Reply
         </p>
       </div>
@@ -549,7 +549,7 @@ function loadReplies() {
   document.getElementById("message-to-reply").innerHTML = messageOutput;
 }
 
-function goToReplyRating(review) {
+function goToReplyRating(review = "So Soft and creamy. Loved It!") {
   sessionStorage.setItem("selectedReview", JSON.stringify(review));
   window.location.href = "./ReplyToRating.html";
 }
