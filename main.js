@@ -115,15 +115,16 @@ function addFavourite() {
     foodFavList.push(favItem);
   }
   sessionStorage.setItem("foodFavList", JSON.stringify(foodFavList));
-  openToastiPhone("Added item to your favourite list");
+  openToast("Added item to your favourite list");
 }
 
 function handleRemoveFav(favName = "Blueberry Cheesecake") {
+  $( "#popup-remove" ).popup( "close", {transition: "pop"});
   var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
   var filteredFavs = favourites.filter((f) => f.name !== favName);
   sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
   loadFavourites();
-  openToastiPhone("Removed item from your favourite list");
+  openToast("Removed item from your favourite list");
 }
 
 function loadFavourites() {
@@ -180,6 +181,22 @@ function handleRegister() {
     users = [];
     users.push(newUser);
   }
+
+  var gameUser = new Object();
+    
+  gameUser.id = 12;
+  gameUser.name = "Jane Doe";
+  gameUser.totalWinnings = 520;
+  gameUser.completedTasksNos = 5;
+  gameUser.completedTaskIds = [];
+  gameUser.score = 2640;
+  gameUser.level = 26;
+  gameUser.img = "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
+
+  localStorage.removeItem("gameUser");
+
+  localStorage.gameUser= JSON.stringify(gameUser);
+
   sessionStorage.setItem("listOfUsers", JSON.stringify(users));
   window.location.href = "./VerifyEmail.html";
 }
@@ -229,6 +246,23 @@ function handleLogin() {
         },
       ])
     );
+
+    var gameUser = new Object();
+    
+    gameUser.id = 12;
+    gameUser.name = "Jane Doe";
+    gameUser.totalWinnings = 520;
+    gameUser.completedTasksNos = 5;
+    gameUser.completedTaskIds = [];
+    gameUser.score = 2640;
+    gameUser.level = 26;
+    gameUser.img = "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
+
+    localStorage.removeItem("gameUser");
+
+    localStorage.gameUser= JSON.stringify(gameUser);
+
+  
 
     window.location.href = "./Home.html";
   } else {

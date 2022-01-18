@@ -160,16 +160,25 @@ let users = [
 ];
 
 function loadData(){
-    $("#game-userName").text(user.name);
-    $("#game-userLevel").text("LEVEL "+user.level);
-    $("#game-userWinnings").text(user.totalWinnings);
+    
+    if(localStorage.gameUser != undefined){
+        var gameUser = JSON.parse(localStorage.gameUser);
+    }
+    console.log(gameUser)
+
+
+    
+
+    $("#game-userName").text(gameUser.name);
+    $("#game-userLevel").text("LEVEL "+gameUser.level);
+    $("#game-userWinnings").text(gameUser.totalWinnings);
     $("#game-userRank").text(myrank);
     let progress = user.score%100;
     $("#game-userProgress").text(progress+ "/100");
     $("#game-progress").css('width', progress+'%');
-    $("#leader-selfName").text(user.name);
+    $("#leader-selfName").text(gameUser.name);
     $("#leader-selfRank").text("My Rank : " +myrank);
-    $("#leader-selfLevel").text("Level : " +user.level);
+    $("#leader-selfLevel").text("Level : " +gameUser.level);
 
 };
 

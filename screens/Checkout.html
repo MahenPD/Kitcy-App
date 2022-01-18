@@ -107,7 +107,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row discount-option">
             <fieldset data-role="controlgroup" data-iconpos="right">
               <input
                 type="checkbox"
@@ -258,13 +258,7 @@
           <!-- </a> -->
         </div>
         <!-- Pricing End -->
-        <button
-          type="submit"
-          onclick="checkRewardsAndOrder()"
-          class="filter-submit-btn p-3"
-        >
-          Place Order
-        </button>
+        
         <!--  var cartItems = JSON.parse(sessionStorage.getItem("cart"));-->
       </div>
 
@@ -304,6 +298,7 @@
       "load",
       function () {
         loadCheckoutDetails();
+        checkDiscountAvailability();
       },
       false
     );
@@ -334,6 +329,17 @@
         handler.close();
       });
     });
+
+        function checkDiscountAvailability(){
+          var gameUser = JSON.parse(localStorage.gameUser);
+          if (gameUser.totalWinnings <100){
+          $("#discount-option").css("display", "none");
+          
+        } 
+
+      
+    }
+        
 
     function check() {
       $("#checkbox-h-6a").prop("checked", true).checkboxradio("refresh");
@@ -376,10 +382,20 @@
       $("#discount").css("display", "flex");
       $("#discount-amount").text("- LKR " + discountAmnt);
       disAdded = true;
+
+        var gameUser = JSON.parse(localStorage.gameUser);
+    
+        gameUser.totalWinnings -= 100;
+        localStorage.removeItem("gameUser");
+        localStorage.gameUser= JSON.stringify(gameUser);
     }
 
     function checkRewardsAndOrder() {
-      $("#popup-task-complete").popup("open", { transition: "pop" });
+      var gameUser = JSON.parse(localStorage.gameUser);
+      gameUser.completedTaskIds = [1];
+      gameUser.totalWinnings += 20;
+      localStorage.removeItem("gameUser");
+      localStorage.gameUser= JSON.stringify(gameUser);
     }
 
     function redirectToOrderProcess() {

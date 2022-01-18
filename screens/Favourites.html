@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../theme/theme.css" />
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../main.js"></script>
+    <script src="toast.js"></script>
+    <link rel="stylesheet" href="toast.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -231,21 +233,19 @@
           </div>
           <!-- Favorite Items List End -->
         </div>
-      </div>
-      <!-- ///---///---iPhone Landscape---///---/// -->
-
-      <div
+        <div
         data-role="popup"
         id="popupBasic"
         data-theme="b"
         class="toast ui-content"
       ></div>
 
-      <div id="ipad-area" style="float: right"></div>
-      <div
-        id="iphone-area"
-        style="position: fixed; bottom: 0; left: 0; right: 0"
-      ></div>
+      <div id="toast-area"></div>
+      </div>
+      <!-- ///---///---iPhone Landscape---///---/// -->
+
+      
+   
 
       <!-- Footer -->
       <div data-role="footer" data-position="fixed">
