@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="style-initial.css" />
+    <link rel="stylesheet" href="./screens/style-initial.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -34,7 +34,7 @@
             <div class="col d-flex flex-column justify-content-center h-100">
               <img
                 class="img pb-4 mx-auto"
-                src="images/yellowlogo.png"
+                src="./screens/images/yellowlogo.png"
                 width="200rem"
               />
               <span class="text-white" id="land-text" style="display: none">
@@ -51,7 +51,7 @@
     $(document).ready(function () {
       $("#land-text").delay(2000).slideDown(500);
       setTimeout(() => {
-        window.location.href = "./Login.html";
+        window.location.href = "./screens/Login.html";
       }, 4000);
     });
   </script>
