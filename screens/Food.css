@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap");
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p,
+.p1,
+.p2,
+.header-title {
+  font-family: "Poppins", sans-serif;
+  color: #585858 !important;
+}
+
+.list-group-item, .list-group-item .a{
+  font-weight: 300 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+
+}
+.h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  text-align: center;
+}
+.header {
+  box-shadow: 0px -2px 20px rgba(88, 88, 88, 0.1);
+  border-bottom: none !important;
+}
+.header .img {
+  float: right;
+}
+
+.header-title {
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.p1,
+.p2 {
+  font-style: normal;
+  font-weight: 500;
+}
+.p1 {
+  color: #585858 !important;
+}
+
+.p2 {
+  color: #808080 !important;
+}
+
+.food-card-1 .p1 {
+  font-size: 13px;
+}
+
+.food-card-1 .p2 {
+  font-size: 11px;
+}
+
+.food-card-1 {
+  border-radius: 15px !important;
+  border: none !important;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  width: 15rem;
+}
+
+.food-card-1 .card-img-top {
+  border-radius: 15px !important;
+}
+
+.food-card-2 {
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+.food-card-2 .card-img-top {
+  border-radius: 2px !important;
+  top: -50px;
+  background-color: none !important;
+}
+
+.food-card-2 .card-body {
+  padding: 20px 0;
+}
+
+.food-card-2 .p1 {
+  font-size: 16px;
+}
+
+.food-card-2 .p2 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.fav-list {
+  width: 8rem !important;
+}
+
+.list-group-item .p1 {
+  font-size: 13px;
+  line-height: 11px;
+}
+.list-group-item .p2 {
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.ai-trash-can {
+  color: red;
+}
+
+.category-card-1 .p1 {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.category-card-1 {
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0px 5px 20px rgba(6, 156, 84, 0.25);
+  width: 6rem;
+  background-color: #069c54 !important;
+}
+.category-card-2 .p1 {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.category-card-2 {
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0px 5px 20px rgba(37, 42, 40, 0.25);
+  width: 6rem;
+}
+
+.yellow {
+  position: absolute;
+  object-fit: cover;
+  width: 240px;
+  margin-top: 100px;
+}
+
+/* SHAZNI */
+
+.search-menu {
+  height: 105px;
+  width: auto;
+  background-color: #ffff;
+}
+.menu-img {
+  position: relative;
+  margin-top: 35px;
+  margin-left: 36px;
+  height: 23.38px;
+  width: 33px;
+}
+.location-img {
+  position: relative;
+  margin-top: 35px;
+  margin-left: 80px;
+  height: 23.38px;
+  width: 33px;
+}
+.location-txt {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 13px;
+  margin-left: 190px;
+  margin-top: -20px;
+}
+.filter-img {
+  position: relative;
+  height: 23.38px;
+  width: 33px;
+  margin-left: 335px;
+  margin-top: -45px;
+}
+.cook-img {
+  position: relative;
+  margin-left: 69%;
+  margin-top: -67px;
+  height: 30px;
+  width: 30px;
+}
+.elipse-img {
+  position: relative;
+  margin-left: 53%;
+  height: 255px;
+  width: -webkit-fill-available;
+}
+.search-img {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  left: -79%;
+}
+.bdtext-1 {
+    position: relative;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 24px;
+    left: 7%;
+    margin-top: -62%;
+    width: 75%;
+}
+.favFood-input {
+  position: relative;
+  left: 6%;
+  height: 52px;
+  width: 335px;
+  margin-top: -3%;
+  border-radius: 10px;
+  border-color: #585858;
+}
+.healty-img {
+  position: relative;
+  left: 4%;
+  margin-top: 6%;
+  width: 160px;
+  height: 150px;
+  margin-left: 10px;
+}
+.fav-block {
+  margin-top: 0%;
+}
+.circle-2 {
+  position: relative;
+  width: 207px;
+  height: 312px;
+  margin-top: 225px;
+}
+.view-1 {
+}
+
+.view-img {
+  position: relative;
+  left: 6%;
+  margin-top: 6%;
+  width: 337px;
+  height: 180px;
+}
+.foodName {
+  position: relative;
+  margin-left: 25px;
+  margin-top: 8px;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #585858;
+}
+.foodPrice {
+  position: relative;
+  margin-left: 300px;
+  margin-top: -22px;
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #585858;
+}
+.foodDelivery {
+  position: relative;
+  margin-left: 26px;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: #808080;
+}
+
+.output {
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.underline {
+  color: #808080;
+  width: 80%;
+}
+.output-txt {
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #585858;
+}
+.res-block {
+  margin-top: 7%;
+}
+.res-img {
+  position: relative;
+  left: 4%;
+  margin-top: 3%;
+  width: 335px;
+  height: 175px;
+  margin-left: -2px;
+  opacity: 112%;
+}
+.res-name {
+  position: relative;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin-top: -16%;
+  margin-left: 32%;
+}
+.res-type {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: 11px;
+  margin-left: 12%;
+}
+.res-time {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: -17px;
+  margin-left: 40%;
+}
+.star-img {
+  position: relative;
+  margin-left: 73%;
+  margin-top: -44px;
+  width: 10px;
+  height: 10px;
+}
+.res-rate {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  color: white;
+  margin-top: -41px;
+  margin-left: 78%;
+}
+.ft1{
+  margin-top: 74px;
+}
+
+/* Footer  */
+.ft-box {
+  position: fixed;
+  top: 70%;
+  left: 6%;
+  width: 340px;
+  height: 215px;
+  background-color: #585858;
+  border-radius: 10px;
+}
+.ftLogo-img {
+  width: 85px;
+  height: 45px;
+  left: 39%;
+  position: fixed;
+  top: 72%;
+}
+.ftText {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  margin-top: 22%;
+  margin-left: 7%;
+  font-family: "Poppins";
+}
+.ftText-1 {
+  position: relative;
+  font-size: 14px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 71%;
+  font-family: "Poppins";
+}
+.ft-img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 7%;
+  margin-top: 2%;
+}
+.ftText-2 {
+  position: relative;
+  font-size: 13px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 15%;
+  font-family: "Poppins";
+}
+.ft-img-1 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-top: -13%;
+  left: 71%;
+}
+.ft-img-2 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 2%;
+  left: -14%;
+}
+.ftText-3 {
+  position: relative;
+  font-size: 13px;
+  color: white;
+  margin-top: -6%;
+  margin-left: 15%;
+  font-family: "Poppins";
+}
+.ftText-4 {
+  position: relative;
+  font-size: 11px;
+  color: white;
+  margin-top: 8%;
+  margin-left: 12%;
+  font-family: "Poppins";
+}
+.ftText-5 {
+  position: relative;
+  font-size: 10px;
+  color: white;
+  margin-top: 0%;
+  margin-left: 26%;
+  font-family: "Poppins";
+}
+.footer-2{
+  margin-top: 115%;
+}
+
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .menu-img {
+      margin-left: 25;
+    }
+    .location-img {
+      margin-left: 30%;
+    }
+    .location-txt {
+      margin-left: 43%;
+    }
+    .filter-img {
+      margin-left: 90%;
+    }
+    .cook-img {
+      margin-left: 61%;
+    }
+    .elipse-img {
+      margin-left: 80%;
+      height: 170px;
+      width: 231px;
+    }
+    .circle-2 {
+      width: 170px;
+      height: 250px;
+      margin-top: 365px;
+    }
+    .search-img {
+      left: -79%;
+    }
+    .bdtext-1 {
+      position: relative;
+      font-family: "Poppins";
+      font-weight: bold;
+      font-size: 24px;
+      left: 9%;
+      margin-top: -19%;
+    }
+    .favFood-input {
+      left: 8%;
+      width: 675px;
+      margin-top: -4%;
+    }
+    .fav-block {
+      margin-top: 0%;
+      width: 82%;
+    }
+    .healty-img {
+      width: 214px;
+      height: 150px;
+    }
+    .output {
+      margin-left: 71px;
+    }
+  
+    .view-1 {
+      margin-left: -28px;
+    }
+  
+    .view-img {
+        left: 11%;
+        margin-top: 4%;
+        width: 337px;
+        height: 180px;
+    }
+    .foodName {
+        margin-left: 105px;
+        margin-top: 8px;
+    }
+    .foodPrice {
+        margin-left: 359px;
+        margin-top: -22px;
+        width: 74px;
+    }
+   .foodDelivery {
+        margin-left: 104px;
+    }
+  }
+
+  /* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .bdtext-1{
+      margin-top: -23%;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .cook-img {
+      /* position: relative; */
+      margin-left: 71%;
+      margin-top: -90px;
+      height: 60px;
+      width: 60px;
+    }
+    .elipse-img {
+      /* position: relative; */
+      margin-left: 82%;
+      height: 257px;
+      /* width: -webkit-fill-available; */
+    }
+    .favFood-input {
+      /* position: relative; */
+      left: 7%;
+      /* height: 52px; */
+      width: 860px;
+      /* margin-top: -3%; */
+      /* border-radius: 10px; */
+      /* border-color: #585858; */
+    }
+    .healty-img {
+      /* position: relative; */
+      left: 1%;
+      margin-top: 6%;
+      width: 401px;
+      height: 300px;
+      /* margin-left: 10px; */
+    }
+    .fav-block {
+      margin-left: 1%;
+      overflow: scroll;
+      width: 1024px;
+      height: 600px;
+    }
+    .foodName {
+        margin-left: 70px;
+        margin-top: 8px;
+        font-size: 19px;
+    }
+    .foodPrice {
+        margin-left: 324px;
+        margin-top: -22px;
+        font-size: 16px;
+    }
+    .foodDelivery {
+        margin-left: 71px;
+    }
+  }
+  /* Ipad version-2 */
+@media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .bdtext-1 {
+      position: relative;
+      font-family: "Poppins";
+      font-weight: bold;
+      font-size: 45px;
+      left: 10%;
+      margin-top: -17%;
+      width: 65%;
+    }
+    .cook-img {
+      position: relative;
+      margin-left: 71%;
+      margin-top: -95px;
+      height: 60px;
+      width: 60px;
+    }
+    .favFood-input {
+      position: relative;
+      left: 10%;
+      height: 52px;
+      width: 81%;
+      border-radius: 10px;
+      border-color: #585858;
+    }
+    .search-menu {
+      height: 105px;
+      width: auto;
+      background-color: #ffff;
+    }
+    .elipse-img {
+      position: relative;
+      margin-left: 86%;
+      height: 294px;
+      width: -webkit-fill-available;
+    }
+    .healty-img {
+      left: 5%;
+      margin-top: 6%;
+      width: 549px;
+      height: 400px;
+    }
+    .search-footer{
+      margin-top: 130px;
+    }
+    .fav-block{
+      height: 100%;
+    }
+    .output{
+      margin-left: 10%;
+    }
+    .output-txt {
+      font-size: 22px;
+    }
+    .foodName {
+        margin-left: 145px;
+    margin-top: 8px;
+    font-size: 19px;
+    }
+    .foodPrice {
+        margin-left: 400px;
+        margin-top: -22px;
+        font-size: 16px;
+    }
+    .foodDelivery {
+        margin-left: 146px;
+    }
+    .view-img {
+        position: relative;
+        left: 10%;
+        margin-top: 3%;
+        width: 337px;
+        height: 180px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+  
