@@ -148,11 +148,11 @@
             >Your location has been added successfully</span
           >
           <a
-            href="#"
             rel="external"
             data-rel="back"
             data-role="button"
             class="popup-submit-btn"
+            onclick="moveToHome()"
             >Okay</a
           >
         </div>
@@ -162,6 +162,9 @@
   <script>
     function openLocationSearch() {
       window.location.href = "./DeliveryLocationSearch.html";
+    }
+    function moveToHome() {
+      window.location.href = "./Home.html";
     }
   </script>
 </html>
