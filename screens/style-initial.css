@@ -493,4 +493,14 @@ a:link {
     background-position: center bottom;
     margin-top: 100px;
   }
+
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
+  .ui-started{
+    background-image: url("images/bg-started-land.png") !important;
+  }
 }
