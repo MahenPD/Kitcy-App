@@ -247,6 +247,20 @@ function handleLogin() {
       ])
     );
 
+    sessionStorage.setItem(
+      "reviewList",
+      JSON.stringify([
+        {
+          rating: 5,
+          review: "So soft and creamy. I loved it!",
+        },
+        {
+          rating: 3,
+          review: "Good Stuff!",
+        },
+      ])
+    );
+
     window.location.href = "./Home.html";
   } else {
     openToastiPhone("Wrong Credentials Please Try Again");
@@ -303,13 +317,13 @@ function loadReviews() {
     <div class="col-8">
       <div class="reply-cmt-1">${review.review}</div>
       <div class="d-flex align-items-center">
-        <img
-          src="../assets/icons/star-filled.svg"
-          alt=""
-          class="reply-star"
-        />
-        <a href="./ReplyToRating.html"
-        <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+      <img
+      src="../assets/icons/star-filled.svg"
+      alt=""
+      class="reply-star"
+      />
+      <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
+      <a href="./ReplyToRating.html"
         <p class="mx-4 text-success" style="margin-bottom: 0">
           Reply
         </p>

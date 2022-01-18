@@ -819,6 +819,7 @@ img {
   left: 5%;
   position: relative;
   width: 86%;
+  outline-width: 0;
 }
 .icon-green-reply {
   background-color: var(--primary-colour);
