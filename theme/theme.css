@@ -634,7 +634,6 @@ img {
 }
 
 .ui-btn-active {
-  background-color: var(--primary-colour) !important;
   color: white !important;
   outline-width: 0;
   border-width: 0;
