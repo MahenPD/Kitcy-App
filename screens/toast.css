@@ -10,11 +10,11 @@
 }
 
 .toast {
-    background: #585858;
-    border-radius: 10px;
-    box-shadow: none;
-    float: left;
-    bottom: 50px;
+    background: #585858 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    float: left !important;
+    bottom: 50px !important;
 }
 
 #toast-area {
