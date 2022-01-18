@@ -302,6 +302,16 @@ a:link {
 /* Login Page End*/
 
 /* Register Page Start*/
+.register-h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: left;
+  color: #585858;
+  font-family: "Poppins", sans-serif;
+  margin-top: 115%;
+}
 .ui-register,
 .ui-register-content {
   background-repeat: no-repeat;
@@ -458,3 +468,29 @@ a:link {
   font-size: 16px !important;
 }
 /* Verfiy Email Page End */
+/* Home Page Start */
+
+.cover-image{
+  
+}
+
+/* Register Iphone landscape */
+@media screen and (orientation: landscape) {
+  .register-h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: left;
+    color: #585858;
+    font-family: "Poppins", sans-serif;
+    margin-top: 19%;
+  }
+  .cover-image{
+    background-repeat: no-repeat;
+    background-image: url("images/bg-login.png") !important;
+    background-size: cover;
+    background-position: center bottom;
+    margin-top: 100px;
+  }
+}

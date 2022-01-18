@@ -425,6 +425,18 @@ hr .new1 {
     background-color: #069C54;
 }
 
+#game-sidebar-area {
+    display: none;
+}
+#sidenav{
+    display: none;
+}
+
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+
+
 
 
 @media screen and (min-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -469,6 +481,14 @@ hr .new1 {
 
     }
 
+    .game-navbar-footer{
+        display: none;
+    }
+
+    #side-nav{
+        display: inline-block;
+    }
+
 
 
 }
@@ -506,6 +526,14 @@ hr .new1 {
         min-height: 60px;
         font-size: 16px;
         margin-top: 10px;
+    }
+
+    #sidenav{
+        display: none;
+    }
+
+    #game-sidebar-area {
+        display: none;
     }
 
 

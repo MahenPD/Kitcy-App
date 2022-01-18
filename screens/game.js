@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    listChallenges();
     listChallengesip();
     listLeaderboardip();
     loadData();
@@ -9,12 +8,14 @@ let rank = 0;
 
 let user = {
     id: 12,
-    name: "Dory",
+    name: "Jane Doe",
     totalWinnings: 520,
     completedTasksNos: 5,
-    completedTaskIds: [2, 4],
+    completedTaskIds: [],
     score: 2640,
-    level: 26
+    level: 26,
+    img: "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg"
+
 
 };
 
@@ -45,77 +46,105 @@ let tasks = [
 let users = [
     {
         id: 12,
-        name: "Dory",
+        name: "Jane Doe",
         totalWinnings: 520,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 2640,
-        level: 26
+        level: 26,
+        img: "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg"
 
     },
     {
         id: 10,
-        name: "Alvin",
+        name: "Alvin Thomas",
         totalWinnings: 420,
         completedTasksNos: 5,
         completedTaskIds: [2, 4, 1],
         score: 3002,
-        level: 30
+        level: 30,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNdSL0wetARyMZVIRgtl2yPZyzXSJQx4EzA&usqp=CAU"
 
     },
     {
         id: 5,
-        name: "Scooby",
+        name: "Bob Peterson",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 1],
         score: 4203,
-        level: 42
+        level: 42,
+        img: "https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg"
     },
     {
         id: 7,
-        name: "Olaf",
+        name: "Olaf milton",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 1103,
-        level: 11
+        level: 11,
+        img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
         id: 3,
-        name: "Garfield",
+        name: "Brenda Dun",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 5003,
-        level: 50
+        level: 50,
+        img: "https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg"
     },
     {
         id: 30,
-        name: "Tom",
+        name: "Florence Pugh",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 2010,
-        level: 20
+        level: 20,
+        img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTI3t-yr1FcF9xzZOdFaHc-9T9KZHwANaEwpdyKQAT_xGGwzDmS"
     },
     {
         id: 28,
-        name: "Jerry",
+        name: "Salma Hayek",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 3302,
-        level: 33
+        level: 33,
+        img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQsdekenlI_nPJ15H2NIWtD3TMI5Suq-YKaUpszI4ibgrE6-fsV"
     },
     {
         id: 11,
-        name: "Harry",
+        name: "Harry Styles",
         totalWinnings: 500,
         completedTasksNos: 5,
         completedTaskIds: [2, 4],
         score: 2940,
-        level: 29
+        level: 29,
+        img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRTLO6mzbNcykX9Eh-lcYRhv7aaPmGfSha2ti2tp6rEa2hpPsC0"
+    },
+    {
+        id: 11,
+        name: "Nick Fury",
+        totalWinnings: 500,
+        completedTasksNos: 5,
+        completedTaskIds: [2, 4],
+        score: 2940,
+        level: 29,
+        img: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nick-fury-eye-1552397861.jpg?crop=0.488xw:0.976xh;0,0&resize=480:*"
+    },
+    {
+        id: 13,
+        name: "James Franco",
+        totalWinnings: 200,
+        completedTasksNos: 5,
+        completedTaskIds: [2, 4],
+        score: 1010,
+        level: 10,
+        img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSgH_fHEjWiPOMyZKGF1cooyoCJQSEXyoipGxMHM7n6bMg19cjh"
     },
 
 ];
@@ -128,34 +157,24 @@ function loadData(){
     let progress = user.score%100;
     $("#game-userProgress").text(progress+ "/100");
     $("#game-progress").css('width', progress+'%');
+    $("#leader-selfName").text(user.name);
+    $("#leader-selfRank").text("My Rank : " +rank);
+    $("#leader-selfLevel").text("Level : " +user.level);
 
-}
-
-function listChallenges() {
-    let output = '';
-    $.each(tasks, function (index, task) {
-        if (!(user.completedTaskIds.includes(task.id))) {
-            output += `
-            <li class="chal-item list-group-item-action">
-                <span class="chal-name">${task.name}</span>
-                <span class="chal-points">${task.points} coins</span>
-            </li>
-        `;
-        }
-    });
-
-    $('#challenges').html(output).listview('refresh');
-}
+};
 
 function listChallengesip() {
     let output = '';
     $.each(tasks, function (index, task) {
         if (!(user.completedTaskIds.includes(task.id))) {
             output += `
+            <a href="#popup-task-description" data-rel="popup" data-transition="pop">
             <li class="chal-item list-group-item-action">
                 <span class="chal-name">${task.name}</span>
                 <span class="chal-points">${task.points} coins</span>
             </li>
+            </a>
+
         `;
         }
     });
@@ -178,17 +197,17 @@ function listLeaderboardip() {
             output += `
             <div class="row lead-item-self-ip">
         <div class="col-2" >
-            <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+            <div class="lead-img-ip" style="background-image:url('${player.img}'); padding:0">
                 </div>
             </div>
     
-        <div class="col-2" style="font-weight:bold;">
+        <div class="col-1" style="font-weight:bold;">
         ${rank}
         </div>
-        <div class="col-4">
+        <div class="col-5">
             <span>${player.name}</span>
         </div>
-        <div class="col-4" style="text-align:center">
+        <div class="col-3" style="text-align:center">
             <span >${player.level}</span>
         </div>
     </div>
@@ -198,17 +217,17 @@ function listLeaderboardip() {
 
             <div class="row lead-item-ip">
             <div class="col-2" >
-                <div class="lead-img-ip" style="background-image:url('https://www.semidelicatebalance.com/wp-content/uploads/2019/06/kal-visuals-592091-unsplash.jpg'); padding:0">
+                <div class="lead-img-ip" style="background-image:url('${player.img}'); padding:0">
                     </div>
                 </div>
         
-            <div class="col-2" style="font-weight:bold;">
+            <div class="col-1" style="font-weight:bold;">
                 ${rank}
             </div>
-            <div class="col-4">
+            <div class="col-5">
                 <span>${player.name}</span>
             </div>
-            <div class="col-4" style="text-align:center">
+            <div class="col-3" style="text-align:center">
                 <span >${player.level}</span>
             </div>
         </div>

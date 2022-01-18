@@ -52,7 +52,9 @@
               </p>
             </div>
             <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="" class="a del-link my-auto">Change</a>
+              <a href="DeliveryLocation.html" class="a del-link my-auto"
+                >Change</a
+              >
             </div>
           </div>
           <!-- Delivery Address End -->
@@ -72,7 +74,7 @@
               <p class="del-p">*****2678</p>
             </div>
             <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="" class="a del-link my-auto">Change</a>
+              <a href="Payment.html" class="a del-link my-auto">Change</a>
             </div>
           </div>
           <!-- Payment Method End -->
@@ -91,15 +93,15 @@
           <!-- Promo Code End -->
           <div class="row pt-2"></div>
           <!-- Pricing Start -->
-          <div class="row">
-            <div class="col">
+          <div class="row" id="checkout-section">
+            <!-- <div class="col">
               <h3 class="check-h4">Delivery Cost</h3>
               <h3 class="check-h4">Subtotal</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
               <h3 class="check-h4">LKR 90</h3>
               <h3 class="check-h4">LKR 1800</h3>
-            </div>
+            </div> -->
           </div>
           <hr />
           <div class="row">
@@ -107,12 +109,13 @@
               <h3 class="check-h4">Total</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
-              <h3 class="check-h4">LKR 1890</h3>
+              <h3 class="check-h4" id="totalAmount">LKR 1890</h3>
             </div>
           </div>
           <!-- Pricing End -->
-
-          <button type="submit" class="login-btn p-3">Place Order</button>
+          <a href="OrderProcess.html" rel="external">
+            <button type="submit" class="login-btn p-3">Place Order</button>
+          </a>
         </div>
       </div>
 
@@ -121,22 +124,22 @@
         <div data-role="navbar" data-grid="d">
           <ul>
             <li>
-              <a href="./Home.html"rel="external"
+              <a href="./Home.html" rel="external"
                 ><img src="../assets/icons/home.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="./Search.html"rel="external"
+              <a href="./Search.html" rel="external"
                 ><img src="../assets/icons/search.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="./Cart.html"rel="external"
+              <a href="./Cart.html" rel="external"
                 ><img src="../assets/icons/cart.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href="./Account.html"rel="external"
+              <a href="./Account.html" rel="external"
                 ><img src="../assets/icons/person.svg" alt=""
               /></a>
             </li>
@@ -145,4 +148,13 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        loadCheckoutDetails();
+      },
+      false
+    );
+  </script>
 </html>

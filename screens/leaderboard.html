@@ -1,33 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <script src="game.js"></script>
     <link rel="stylesheet" href="game.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
+  </head>
 
-</head>
-
-<body style="font-family: 'Poppins', sans-serif;">
-
-
-
+  <body style="font-family: 'Poppins', sans-serif">
     <div data-role="page" id="game-home">
-
-        <div class="container-fluid">
-            <div
+      <div class="container-fluid">
+        <div
           data-role="header"
           data-position="fixed"
           data-grid="d"
@@ -58,58 +57,86 @@
           </div>
         </div>
 
-            <div class="row">
-                <div class="col" style="font-size: 16px; font-weight: 700; text-align: center;  color: #585858;">
-                    <span>Rank</span>
-                </div>
-                <div class="col" style="font-size: 16px; font-weight: 700; text-align: center;  color: #585858;">
-                    <span>Name</span>
-                </div>
-                <div class="col" style="font-size: 16px; font-weight: 700; text-align: center;  color: #585858;">
-                    <span>Level</span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col" id="leaderboard-view-ip">
-                            
-                </div>
-            </div>
-
-            <div class="row my-score" style="background-color: #048044;">
-                <div class="col-4">
-                    <div class="dp-2" style="background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');">
-                    </div>
-                    
-                </div>
-                <div class="col-7 mt-4 ml-2">
-                    <div class="row">
-                        <div class="col" style="font-size: 18px; font-weight: 700;">
-                            <span>Karen Gillan</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col" style="font-size: 18px; font-weight: 700;">
-                            <span>My Rank : 10</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col" style="font-size: 18px; font-weight: 700;">
-                            <span>Level : 20</span>
-                        </div>
-                    </div>
-                       
-                    
-                </div>
-            </div>
-
-
-
+        <div class="row">
+          <div
+            class="col"
+            style="
+              font-size: 16px;
+              font-weight: 700;
+              text-align: center;
+              color: #585858;
+            "
+          >
+            <span>Rank</span>
+          </div>
+          <div
+            class="col"
+            style="
+              font-size: 16px;
+              font-weight: 700;
+              text-align: center;
+              color: #585858;
+            "
+          >
+            <span>Name</span>
+          </div>
+          <div
+            class="col"
+            style="
+              font-size: 16px;
+              font-weight: 700;
+              text-align: center;
+              color: #585858;
+            "
+          >
+            <span>Level</span>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col" id="leaderboard-view-ip"></div>
+        </div>
+
+        <div class="row my-score" style="background-color: #048044">
+          <div class="col-4">
+            <div
+              class="dp-2"
+              style="
+                background-image: url('https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg');
+              "
+            ></div>
+          </div>
+          <div class="col-7 mt-4 ml-2">
+            <div class="row">
+              <div
+                class="col"
+                id="leader-selfName"
+                style="font-size: 18px; font-weight: 700"
+              >
+                Jane Doe
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col"
+                id="leader-selfRank"
+                style="font-size: 18px; font-weight: 700"
+              >
+                My Rank : 10
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col"
+                id="leader-selfLevel"
+                style="font-size: 18px; font-weight: 700"
+              >
+                Level : 20
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-</body>
-
+  </body>
 </html>

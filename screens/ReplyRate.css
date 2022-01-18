@@ -28,7 +28,6 @@ a:link {
 .p2,
 .p3,
 .header-title {
-  font-size: 14px;
   font-family: "Poppins", sans-serif;
   color: #585858 !important;
 }
@@ -47,6 +46,8 @@ img {
   font-size: 24px;
   color: var(--text-colour);
   font-style: var(--font-style);
+  /* left: -6%;
+  position: relative; */
 }
 
 .subheading1 {
@@ -59,6 +60,8 @@ img {
   font-size: 16px;
   color: var(--text-colour);
   font-style: var(--font-style);
+  /* left: 13%;
+  position: relative; */
 }
 
 .heading3 {
@@ -197,7 +200,7 @@ img {
 }
 
 .food-card-2 .card-img-top {
-  border-radius: 6px !important;
+  border-radius: 2px !important;
   top: -50px;
   background-color: none !important;
 }
@@ -379,7 +382,6 @@ img {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid lightgray;
-  outline-width: 0;
 }
 
 .fav-list {
@@ -429,7 +431,6 @@ img {
   background-color: transparent;
   border: none;
   width: 30px;
-  outline-width: 0;
 }
 
 /* Nav Bar */
@@ -449,7 +450,6 @@ img {
 
 .search-input {
   width: 100%;
-  outline-width: 0;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -516,7 +516,6 @@ img {
 
 .popup-img {
   display: inline-block;
-  width: 40%;
 }
 
 .popup-confirm {
@@ -586,33 +585,6 @@ img {
   height: 65px;
   width: 65px;
   margin: 10px;
-}
-
-.save-btn {
-  background-color: #069c54 !important;
-  color: white !important;
-  text-shadow: none !important;
-  border-radius: 16px !important;
-  font-size: 18px;
-  padding: 20px !important;
-  margin: auto;
-}
-
-.kitcy-tab {
-  background-color: white !important;
-  color: black !important;
-  text-shadow: none !important;
-  border-radius: 8px !important;
-  font-size: 18px;
-  padding: 10px !important;
-  margin: 5px;
-}
-
-.ui-btn-active {
-  background-color: var(--primary-colour) !important;
-  color: white !important;
-  outline-width: 0;
-  border-width: 0;
 }
 
 /* Land Scape */
@@ -875,19 +847,42 @@ img {
 @media screen and (orientation: landscape) {
   .reply-cmt-1 {
     margin-left: 101%;
-    left: -78%;
-    margin-top: 4%;
+    left: -101%;
+    margin-top: 1%;
     width: 200%;
   }
   .reply-star {
     height: 23px;
-    margin-left: 21%;
+    margin-left: -1%;
+  }
+  .kitcy-input-reply {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    left: 5%;
+    position: relative;
+    width: 37%;
+  }
+  .icon-green-reply {
+    background-color: var(--primary-colour);
+    border-radius: 9px;
+    padding: 8px;
+    position: relative;
+    margin-left: -367%;
+    margin-top: -14%;
+  }
+  .rating-container {
+    margin-left: 48%;
+    margin-top: -26%;
+  }
+  .bg-success {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: -11%;
   }
   .head-review {
     margin-left: 29%;
-  }
-  .rating-container {
-    margin-left: 12%;
   }
   .icon-green {
     margin-left: -78%;
@@ -899,6 +894,12 @@ img {
   .rate-product-name {
     width: 100%;
     left: 10%;
+  }
+  .bg-success {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 23%;
   }
 }
 
@@ -987,8 +988,8 @@ img {
     display: contents;
   }
   .rating-container {
-    margin-left: -19%;
-    margin-top: 20%;
+    margin-left: 2%;
+    margin-top: 6%;
     width: 93%;
   }
   .reply-cmt {
@@ -1014,9 +1015,8 @@ img {
     margin-left: -16%;
   }
   .kitcy-input-reply {
-    left: 200%;
-    width: 239%;
-    top: -300%;
+    width: 77%;
+    left: 8%;
   }
   .icon-green-rate {
     background-color: var(--primary-colour);
