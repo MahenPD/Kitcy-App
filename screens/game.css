@@ -110,6 +110,8 @@
 .my-score {
     text-shadow: none;
     color: white;
+    position: fixed;
+    width: 100%;
 }
 
 .lead-img {
@@ -453,9 +455,6 @@ hr .new1 {
     #game-sidebar-area {
         display: none;
     }
-
-
-
 }
 
 
@@ -489,6 +488,8 @@ hr .new1 {
 
     .my-score {
         padding: 30px;
+        bottom: 0;
+
     }
 
     .lead-item-self-ip {
@@ -546,6 +547,7 @@ hr .new1 {
 
     .my-score {
         padding: 30px;
+        bottom: 50px;
     }
 
     .lead-item-self-ip {

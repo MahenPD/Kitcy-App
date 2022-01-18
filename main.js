@@ -348,6 +348,7 @@ function addToCart() {
     price: parseInt(itemPrice[1]),
     totalPrice: parseInt(itemPrice[1]) * parseInt(itemQuantity),
     quantity: itemQuantity,
+    category: "Dessert"
   };
 
   if (cartItems) {
