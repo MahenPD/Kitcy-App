@@ -1,100 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Checkout</title>
-    <link rel="stylesheet" href="style-initial.css" />
-    <link rel="stylesheet" href="../theme/theme.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
-    />
-    <script src="../main.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://unpkg.com/akar-icons-fonts"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div data-role="page" class="ui-checkout">
-      <div data-role="main" class="ui-checkout-content h-100">
-        <div class="container p-4 h-100">
-          <div class="row">
-            <div class="col" onclick="history.back()">
-              <img src="images/arrow-circle.png" class="img" width="30" />
-            </div>
-            <div class="col">
-              <h3 class="checkout-title pt-5">Checkout</h3>
-            </div>
-            <div class="col"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style-initial.css" />
+  <link rel="stylesheet" href="../theme/theme.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="../main.js"></script>
+  <script src="popups.css"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div data-role="page" class="ui-checkout">
+    <div data-role="main" class="ui-checkout-content h-100">
+      <div class="container p-4 h-100">
+        <div class="row">
+          <div class="col" onclick="history.back()">
+            <img src="images/arrow-circle.png" class="img" width="30" />
           </div>
-          <div class="row py-4">
-            <br />
+          <div class="col">
+            <h3 class="checkout-title pt-5">Checkout</h3>
           </div>
-          <!-- Delivery Address Start -->
-          <div class="row check-address">
-            <h3 class="check-h3">Address</h3>
-            <div class="col-3 d-flex flex-column align-items-center">
-              <img src="images/map.png" class="img" width="70" />
-            </div>
-            <div class="col d-flex flex-column justify-content-center">
-              <h3 class="del-h3">Deliver to: Home</h3>
-              <p class="del-p">
-                No. 6, Hemasinghe Mawatha, Koswatte Rd, Nawala
-              </p>
-            </div>
-            <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="DeliveryLocation.html" class="a del-link my-auto"
-                >Change</a
-              >
-            </div>
+          <div class="col"></div>
+        </div>
+        <div class="row py-4">
+          <br />
+        </div>
+        <!-- Delivery Address Start -->
+        <div class="row check-address">
+          <h3 class="check-h3">Address</h3>
+          <div class="col-3 d-flex flex-column align-items-center">
+            <img src="images/map.png" class="img" width="70" />
           </div>
-          <!-- Delivery Address End -->
-          <div class="row">
-            <br />
+          <div class="col d-flex flex-column justify-content-center">
+            <h3 class="del-h3">Deliver to: Home</h3>
+            <p class="del-p">
+              No. 6, Hemasinghe Mawatha, Koswatte Rd, Nawala
+            </p>
           </div>
-          <!-- Payment Method Start -->
-          <div class="row">
-            <h3 class="check-h3">Payment Method</h3>
-            <div
-              class="col-2 d-flex flex-column align-items-start justify-content-start"
-            >
-              <img src="images/credit-card.png" class="img" width="50" />
-            </div>
-            <div class="col px-3 d-flex flex-column justify-content-center">
-              <h3 class="del-h3">MasterCard</h3>
-              <p class="del-p">*****2678</p>
-            </div>
-            <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="Payment.html" class="a del-link my-auto">Change</a>
-            </div>
+          <div class="col-3 ml-0 d-flex flex-column align-items-center">
+            <a href="DeliveryLocation.html" class="a del-link my-auto">Change</a>
           </div>
-          <!-- Payment Method End -->
-          <div class="row pt-2"></div>
-          <!-- Promo Code Start -->
-          <div class="row">
-            <div class="col">
-              <h3 class="check-h4">Add Promo Code</h3>
-            </div>
-            <div
-              class="col d-flex flex-column align-items-end justify-content-start"
-            >
-              <i class="ai-chevron-right"></i>
-            </div>
+        </div>
+        <!-- Delivery Address End -->
+        <div class="row">
+          <br />
+        </div>
+        <!-- Payment Method Start -->
+        <div class="row">
+          <h3 class="check-h3">Payment Method</h3>
+          <div class="col-2 d-flex flex-column align-items-start justify-content-start">
+            <img src="images/credit-card.png" class="img" width="50" />
           </div>
-          <!-- Promo Code End -->
-          <div class="row pt-2"></div>
-          <!-- Pricing Start -->
-          <div class="row" id="checkout-section">
-            <!-- <div class="col">
+          <div class="col px-3 d-flex flex-column justify-content-center">
+            <h3 class="del-h3">MasterCard</h3>
+            <p class="del-p">*****2678</p>
+          </div>
+          <div class="col-3 ml-0 d-flex flex-column align-items-center">
+            <a href="Payment.html" class="a del-link my-auto">Change</a>
+          </div>
+        </div>
+        <!-- Payment Method End -->
+        <div class="row pt-2"></div>
+        <!-- Promo Code Start -->
+        <div class="row">
+          <div class="col">
+            <h3 class="check-h4">Add Promo Code</h3>
+          </div>
+          <div class="col d-flex flex-column align-items-end justify-content-start">
+            <i class="ai-chevron-right"></i>
+          </div>
+        </div>
+        <!-- Promo Code End -->
+        <div class="row pt-2"></div>
+        <!-- Pricing Start -->
+        <div class="row" id="checkout-section">
+          <!-- <div class="col">
               <h3 class="check-h4">Delivery Cost</h3>
               <h3 class="check-h4">Subtotal</h3>
             </div>
@@ -102,59 +92,125 @@
               <h3 class="check-h4">LKR 90</h3>
               <h3 class="check-h4">LKR 1800</h3>
             </div> -->
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col">
-              <h3 class="check-h4">Total</h3>
-            </div>
-            <div class="col d-flex flex-column align-items-end">
-              <h3 class="check-h4" id="totalAmount">LKR 1890</h3>
-            </div>
-          </div>
-          <!-- Pricing End -->
-          <a href="OrderProcess.html" rel="external">
-            <button type="submit" class="login-btn p-3">Place Order</button>
-          </a>
         </div>
-      </div>
 
-      <!-- Footer -->
-      <div data-role="footer" data-position="fixed">
-        <div data-role="navbar" data-grid="d">
-          <ul>
-            <li>
-              <a href="./Home.html" rel="external"
-                ><img src="../assets/icons/home.svg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="./Search.html" rel="external"
-                ><img src="../assets/icons/search.svg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="./Cart.html" rel="external"
-                ><img src="../assets/icons/cart.svg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="./Account.html" rel="external"
-                ><img src="../assets/icons/person.svg" alt=""
-              /></a>
-            </li>
-          </ul>
+        <div class="row">
+          <fieldset data-role="controlgroup" data-iconpos="right">
+
+            <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a" onclick="confirmRedeem()">
+            <label for="checkbox-h-6a">Redeem 100 coins (get 10% discount)</label>
+          </fieldset>
         </div>
+
+        <div data-role="popup" id="popup-redeem-confirm"
+          style="width: 240px; padding-top: 20px; background-color: white !important" data-overlay-theme="b"
+          class="rectangle ui-content" data-position-to="window">
+          <img src="../assets/images/coins-pile.jpg" alt="" class="popup-img" style="width: 50%;" />
+          <span class="popup-confirm" style="font-weight: 700; font-size: 16px;">You will lose 100 coins from your total
+            coins. Are you sure you want to redeem 100 coins?</span>
+          <a href="#" data-rel="button" class="popup-confirm-btn ui-btn" onclick="popupConfirm()">Confirm</a>
+          <a href="#" data-rel="button" data-role="button" class="popup-cancel-btn" onclick="cancelRedeem()">Cancel</a>
+        </div>
+
+        <hr />
+        <div class="row" id="discount" style="display:none;">
+          <div class="col">
+            <h3 class="check-h4" style="color: green;">Discount</h3>
+          </div>
+          <div class="col d-flex flex-column align-items-end">
+            <h3 class="check-h4" id="discount-amount" style="color: green;">200</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3 class="check-h4">Total</h3>
+          </div>
+          <div class="col d-flex flex-column align-items-end">
+            <h3 class="check-h4" id="totalAmount">LKR 1890</h3>
+          </div>
+        </div>
+        <!-- Pricing End -->
+        <a href="OrderProcess.html" rel="external">
+          <button type="submit" class="filter-submit-btn p-3">Place Order</button>
+        </a>
       </div>
     </div>
-  </body>
-  <script>
-    window.addEventListener(
-      "load",
-      function () {
-        loadCheckoutDetails();
-      },
-      false
-    );
-  </script>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed">
+      <div data-role="navbar" data-grid="d">
+        <ul>
+          <li>
+            <a href="./Home.html" rel="external"><img src="../assets/icons/home.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="./Search.html" rel="external"><img src="../assets/icons/search.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="./Cart.html" rel="external"><img src="../assets/icons/cart.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="./Account.html" rel="external"><img src="../assets/icons/person.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  window.addEventListener(
+    "load",
+    function () {
+      loadCheckoutDetails();
+    },
+    false
+  );
+
+
+  function check() {
+    $('#checkbox-h-6a').prop('checked', true).checkboxradio('refresh');
+  }
+
+  function uncheck() {
+    $('#checkbox-h-6a').prop('checked', false).checkboxradio('refresh');
+  }
+
+  function confirmRedeem() {
+    uncheck();
+    var checkboxstatus = $('#checkbox-h-6a').prop('checked');
+    if (!checkboxstatus) {
+      $("#popup-redeem-confirm").popup("open", { transition: "pop" });
+    } else {
+      uncheck();
+      $("#discount").css('display', 'none');
+    }
+  }
+
+  var distotal;
+  var disAdded = false;
+  var discountAmnt;
+  function cancelRedeem() {
+    $("#popup-redeem-confirm").popup("close", { transition: "pop" });
+    $("#discount").css('display', 'none');
+    $("#totalAmount").text("LKR " + (distotal));
+    disAdded =false;
+  }
+
+  function popupConfirm() {
+    $("#popup-redeem-confirm").popup("close", { transition: "pop" });
+    check();
+
+    if (!disAdded) {
+      distotal = parseInt($("#totalAmount").text().split(" ")[1]);
+      discountAmnt = distotal * 10 / 100
+      $("#totalAmount").text("LKR " + (distotal - discountAmnt));
+    }
+      $("#discount").css('display', 'flex');
+      $("#discount-amount").text("- LKR " + discountAmnt);
+      disAdded = true;
+    
+  }
+
+</script>
+
 </html>
