@@ -187,6 +187,11 @@ function handleRegister() {
   window.location.href = "./VerifyEmail.html";
 }
 
+function handleLogout() {
+  sessionStorage.setItem("firstLogin", JSON.stringify(false));
+  window.location.href = "./Login.html";
+}
+
 function handleLogin() {
   var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
   var email = document.getElementById("email").value;
@@ -248,6 +253,8 @@ function handleLogin() {
     localStorage.removeItem("gameUser");
 
     localStorage.gameUser = JSON.stringify(gameUser);
+
+    sessionStorage.setItem("firstLogin", JSON.stringify("true"));
 
     window.location.href = "./Home.html";
   } else {

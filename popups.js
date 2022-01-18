@@ -18,7 +18,7 @@ function nextslide1() {
   $("#popup-slide-content").text(
     "We maintain safety and keep clean while making your food"
   );
-  $("#popup-slide-img").attr("src", "assets/review.png");
+  $("#popup-slide-img").attr("src", "../assets/images/cooking-intro.png");
   $("#popup-slide-btn").attr("onClick", "nextslide2()");
 }
 
@@ -27,7 +27,10 @@ function nextslide2() {
   $("#popup-slide-content").text(
     "Bringing you your favorite foods at the quickest time possible"
   );
-  $("#popup-slide-img").attr("src", "assets/food-delivery.png");
+  $("#popup-slide-img").attr(
+    "src",
+    "../assets/images/delivery-process-intro.png"
+  );
   $("#popup-slide-btn").attr("onClick", "nextslide3()");
 }
 
