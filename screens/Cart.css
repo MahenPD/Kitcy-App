@@ -1,0 +1,44 @@
+.total-amount {
+    font-size: 16px;
+    color: var(--text-colour);
+    font-style: var(--font-style);
+    margin-left: 1%;
+}
+  .Amount-1 {
+    font-size: 16px;
+    color: var(--text-colour);
+    font-style: var(--font-style);
+    margin-left: -60%;
+    font-weight: bold;
+}
+   /* iphone landscape */ 
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .total-amount {
+        margin-left: 2%;
+      }
+
+      .Amount-1 {
+        margin-left: -81%;
+    }
+}
+
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .total-amount {
+        margin-left: 0%;
+      }
+      .Amount-1 {
+        margin-left: -81%;
+    }
+}
+/* Ipad version-2 */
+@media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .total-amount {
+        margin-left: -2%;
+        margin-top: -7%;
+    }
+    .Amount-1 {
+        margin-left: -86%;
+        margin-top: -7%;
+    }
+}
