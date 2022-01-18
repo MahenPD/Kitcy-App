@@ -1142,14 +1142,13 @@
   .fav-list {
     width: 8rem !important;
   }
-  
+/*   
   .list-group-item .p1 {
     margin-left: -65%;
   }
   .list-group-item .p2 {
     margin-left: -65%;
-
-  }
+  } */
   .trash{
     margin-left: -65%;
   }
