@@ -10,7 +10,7 @@ function popupConfirm() {
 function popupConfirmEmail() {
   $("#popup-remove").popup("close", { transition: "pop" });
   $("#popup-redeem-confirm").popup("close", { transition: "pop" });
-  window.location.href = "./GetStarted";
+  window.location.href = "./GetStarted.html";
 }
 
 function nextslide1() {

@@ -313,12 +313,12 @@ function addToCart() {
   var itemName = document.getElementById("item-name").textContent;
   var itemPrice = document.getElementById("item-price").textContent.split(" ");
   var itemQuantity = document.getElementById("itemQuantity").value;
-
   var cartItemObj = {
     name: itemName,
     price: parseInt(itemPrice[1]),
     totalPrice: parseInt(itemPrice[1]) * parseInt(itemQuantity),
     quantity: itemQuantity,
+    category: "Dessert",
   };
 
   if (cartItems) {
@@ -328,7 +328,7 @@ function addToCart() {
     cartItems.push(cartItemObj);
   }
   sessionStorage.setItem("cart", JSON.stringify(cartItems));
-  openToastiPhone("Item added to cart successfully");
+  openToast("Item Added to cart successfully");
 }
 
 function loadCart() {
@@ -354,7 +354,7 @@ function loadCart() {
                     <img src="images/blueberry.jpg" class="fav-list rounded" />
                   </div>
                   <div class="col text-left p-0">
-                    <p class="p1">${item.name}</p>
+                    <p class="p1" id="item-name">${item.name}</p>
                     <p class="p2">Desserts</p>
                     <p class="p3">LKR ${item.totalPrice}</p>
                     <div class="d-flex">
@@ -362,7 +362,7 @@ function loadCart() {
                         <button
                           data-role="none"
                           id="minus"
-                          class="incerement-button"
+                          class="incerement-button minus-btn"
                         >
                           -
                         </button>
@@ -370,12 +370,12 @@ function loadCart() {
                           type="text"
                           id="quantity"
                           data-role="none"
-                          class="kitcy-input-2 text-center"
+                          class="kitcy-input-2 text-center quantity-btn"
                           value="${item.quantity}"
                         />
                         <button
                           data-role="none"
-                          class="incerement-button"
+                          class="incerement-button plus-btn"
                           id="plus"
                         >
                           +
@@ -407,37 +407,126 @@ function loadCheckoutDetails() {
   var cartItems = JSON.parse(sessionStorage.getItem("cart"));
 
   var output = "";
+  var totalAmount = 0;
 
   $.each(cartItems, function (index, item) {
     output += `
+    <div class="row">
         <div class="col">
               <h3 class="check-h4">${item.name} X ${item.quantity}</h3>
-              <h3 class="check-h4">Delivery Cost</h3>
-              <h3 class="check-h4">Subtotal</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
               <h3 class="check-h4">LKR ${item.totalPrice}</h3>
-              <h3 class="check-h4">LKR 90</h3>
-              <h3 class="check-h4">LKR 1800</h3>
+        </div>
         </div>
     `;
   });
 
+  if (cartItems) {
+    cartItems.map((item) => (totalAmount += item.totalPrice));
+  }
+
+  totalAmount += 90;
+
   document.getElementById("checkout-section").innerHTML = output;
+  document.getElementById("totalAmount").innerHTML = parseInt(totalAmount);
 }
 
-// function listChallenges() {
-//   let output = '';
-// $.each(tasks, function (index, task) {
-//     if (!(user.completedTaskIds.includes(task.id))) {
-//         output += `
-//         <li class="chal-item list-group-item-action">
-//             <span class="chal-name">${task.name}</span>
-//             <span class="chal-points">${task.points} coins</span>
-//         </li>
-//     `;
-//     }
-// });
+function handleSendReply() {
+  var allReplies = JSON.parse(sessionStorage.getItem("replies"));
 
-//   $('#challenges').html(output).listview('refresh');
-// }
+  var reply = document.getElementById("reply-message-input").value;
+  var message = document.getElementById("message-reply-input").textContent;
+  debugger;
+
+  var replyObj = {
+    reply: reply,
+    message: message,
+  };
+
+  if (allReplies) {
+    allReplies.push(replyObj);
+  } else {
+    allReplies = [];
+    allReplies.push(replyObj);
+  }
+
+  sessionStorage.setItem("replies", JSON.stringify(allReplies));
+  loadReplies();
+}
+
+function loadReplies() {
+  var replies = JSON.parse(sessionStorage.getItem("replies"));
+
+  var output = "";
+  var messageOutput = "";
+
+  if (replies) {
+    $.each(replies, function (index, reply) {
+      output += `
+    <div class="row">
+    <div class="col-2">
+      <img
+        src="../assets/icons/person-yellow.svg"
+        alt=""
+        class="bg-success"
+        height="50px"
+      />
+    </div>
+    <div class="col-8">
+      <div class="reply-cmt-1">${reply.message}</div>
+      <div class="d-flex align-items-center">
+        <img
+          src="../assets/icons/star-filled.svg"
+          alt=""
+          class="reply-star"
+        />
+        <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
+        <p class="mx-4 text-success" style="margin-bottom: 0">Reply</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-nowrap mx-3 mt-3">
+    <img
+      src="../assets/icons/reply-handlesvg.svg"
+      alt=""
+      class=""
+      height="20px"
+      width="20px"
+    />
+    <div class="mx-3">${reply.reply}</div>
+  </div>
+  <hr />
+    `;
+    });
+  } else {
+    output += `
+    <div class="row">
+  </div>
+    `;
+  }
+
+  messageOutput += `
+  <div class="col-2">
+  <img
+    src="../assets/icons/person-yellow.svg"
+    alt=""
+    class="bg-success"
+  />
+</div>
+<div class="col-8">
+  <div class="reply-cmt-1" id="message-reply-input">So soft and creamy! Loved it.</div>
+  <div class="d-flex align-items-center">
+    <img
+      src="../assets/icons/star-filled.svg"
+      alt=""
+      class="reply-star"
+    />
+    <p class="mx-1" style="margin-bottom: 0; color: gray">4.0</p>
+  </div>
+</div>
+    `;
+
+  document.getElementById("reply-container").innerHTML = output;
+  document.getElementById("message-to-reply").innerHTML = messageOutput;
+}

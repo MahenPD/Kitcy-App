@@ -323,8 +323,7 @@ a:link {
 /* Register Page End*/
 
 /* Checkout Page Start */
-.ui-checkout,
-.ui-checkout-content {
+.ui-checkout {
   background-repeat: no-repeat;
   background-image: url("images/bg-checkout.png") !important;
   background-size: cover;

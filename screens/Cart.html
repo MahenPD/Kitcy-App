@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Restaurant</title>
     <link rel="stylesheet" href="../theme/theme.css" />
+    <link rel="stylesheet" href="./Cart.css" />
     <script src="../main.js"></script>
     <link
       rel="stylesheet"
@@ -46,7 +47,7 @@
               <path d="M4 12h16" />
             </svg>
           </div>
-          <div>
+          <div onclick="clearCart()">
             <img
               src="../assets/icons/trash.svg"
               alt=""
@@ -81,8 +82,8 @@
 
           <div class="d-flex flex-column" style="flex: 4">
             <div class="d-flex align-items-center space-around-container">
-              <div class="heading2">Total Amount</div>
-              <div class="heading1 bold" id="cart-total">LKR 0</div>
+              <div class="total-amount">Total Amount</div>
+              <div class="Amount-1" id="cart-total">LKR 0</div>
             </div>
             <br />
             <a href="Checkout.html" rel="external">
@@ -131,5 +132,32 @@
       },
       false
     );
+
+    function clearCart() {
+      sessionStorage.removeItem("cart");
+      loadCart();
+    }
+
+    $(document).ready(function () {
+      const minus = $(".minus-btn");
+      const plus = $(".plus-btn");
+      const input = $(".quantity-btn");
+      minus.click(function (e) {
+        e.preventDefault();
+        var value = input.val();
+        debugger;
+        if (value >= 1) {
+          value--;
+        }
+        input.val(value);
+      });
+
+      plus.click(function (e) {
+        e.preventDefault();
+        var value = input.val();
+        value++;
+        input.val(value);
+      });
+    });
   </script>
 </html>

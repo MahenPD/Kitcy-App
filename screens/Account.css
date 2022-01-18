@@ -1,0 +1,23 @@
+.edit-account-account{
+    /* style="font-size: 13px; color: #069c54" */
+    font-size: 13px;
+    color: #069c54;
+    font-family: 'Poppins';
+    width: 100%;
+  }
+
+  /* iphone landscape */ 
+@media screen and (min-device-width: 844px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+/* Ipad version-1 */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .edit-account-account {
+        margin-left: -87%;
+    }
+}
+/* Ipad version-2 */
+@media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .edit-account-account {
+        margin-left: -92%;
+    }
+}

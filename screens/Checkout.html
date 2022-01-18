@@ -7,7 +7,9 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="style-initial.css" />
     <link rel="stylesheet" href="../theme/theme.css" />
+    <link rel="stylesheet" href="./Checkout.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <link
       rel="stylesheet"
       href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
@@ -95,15 +97,14 @@
           <!-- Promo Code End -->
           <div class="row pt-2"></div>
           <!-- Pricing Start -->
-          <div class="row" id="checkout-section">
-            <!-- <div class="col">
+          <div class="row" id="checkout-section"></div>
+          <div class="row">
+            <div class="col">
               <h3 class="check-h4">Delivery Cost</h3>
-              <h3 class="check-h4">Subtotal</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
               <h3 class="check-h4">LKR 90</h3>
-              <h3 class="check-h4">LKR 1800</h3>
-            </div> -->
+            </div>
           </div>
 
           <div class="row">
@@ -161,6 +162,71 @@
             >
           </div>
 
+          <div
+            data-role="popup"
+            id="popup-task-complete"
+            style="
+              width: 240px;
+              padding-top: 20px;
+              background-color: white !important;
+            "
+            data-overlay-theme="b"
+            class="rectangle ui-content"
+            data-position-to="window"
+          >
+            <span
+              class="popup-confirm"
+              style="
+                font-weight: 400;
+                font-size: 24px;
+                padding: 0;
+                margin-top: 0;
+                height: 20px;
+              "
+              >Awesome !</span
+            >
+            <span
+              class="popup-confirm"
+              style="
+                font-weight: 400;
+                padding: 0;
+                padding-top: 20px;
+                padding-bottom: 10px;
+              "
+              >You earned 100 coins</span
+            >
+            <div
+              style="
+                background-color: rgba(0, 0, 0, 0.116);
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+              "
+            >
+              <span
+                >Order a dessert
+                <img src="assets/icons8-ok.svg" alt="" style="width: 30px"
+              /></span>
+            </div>
+            <div class="progress" style="width: 80%; height: 8px; margin: auto">
+              <div
+                class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                role="progressbar"
+                style="width: 60%"
+                aria-valuenow="100"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <button
+              style="width: 100px; margin: auto; margin-top: 20px"
+              class="popup-submit-btn"
+              onclick="redirectToOrderProcess()"
+            >
+              Okay
+            </button>
+          </div>
+
           <hr />
           <div class="row" id="discount" style="display: none">
             <div class="col">
@@ -181,13 +247,28 @@
             </div>
           </div>
           <!-- Pricing End -->
-          <a href="OrderProcess.html" rel="external">
-            <button type="submit" class="filter-submit-btn p-3">
-              Place Order
-            </button>
-          </a>
+          <!-- <a href="OrderProcess.html" rel="external"> -->
+          <button
+            type="submit"
+            id="confirm-checkout-btn"
+            class="filter-submit-btn p-3"
+          >
+            Place Order
+          </button>
+          <!-- </a> -->
         </div>
+        <!-- Pricing End -->
+        <button
+          type="submit"
+          onclick="checkRewardsAndOrder()"
+          class="filter-submit-btn p-3"
+        >
+          Place Order
+        </button>
+        <!--  var cartItems = JSON.parse(sessionStorage.getItem("cart"));-->
       </div>
+
+      <form id="stripe-form" name="checkout_form" action="_self"></form>
 
       <!-- Footer -->
       <div data-role="footer" data-position="fixed">
@@ -226,6 +307,33 @@
       },
       false
     );
+
+    jQuery(function ($) {
+      var $stripe = $("#stripe-form");
+      var handler = StripeCheckout.configure({
+        key: "pk_test_cp21BcECf4kMMUbSlRlZlsMo",
+        token: function (token) {
+          if (token.id) {
+            window.location.href = "./OrderProcess.html";
+          }
+        },
+      });
+
+      $("#confirm-checkout-btn").on("click", function (e) {
+        handler.open({
+          name: "Purchase",
+          currency: "LKR",
+          description: $("#item-name").val(),
+          amount: $("#cart-total").val() * 100,
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on("popstate", function () {
+        handler.close();
+      });
+    });
 
     function check() {
       $("#checkbox-h-6a").prop("checked", true).checkboxradio("refresh");
@@ -268,6 +376,15 @@
       $("#discount").css("display", "flex");
       $("#discount-amount").text("- LKR " + discountAmnt);
       disAdded = true;
+    }
+
+    function checkRewardsAndOrder() {
+      $("#popup-task-complete").popup("open", { transition: "pop" });
+    }
+
+    function redirectToOrderProcess() {
+      $("#popup-task-complete").popup("close");
+      document.location.href = "OrderProcess.html";
     }
   </script>
 </html>

@@ -1,0 +1,55 @@
+/* Checkout Page Start */
+.ui-checkout,
+.ui-checkout-content {
+  background-repeat: no-repeat;
+  background-image: url("images/bg-checkout.png") !important;
+  background-size: cover;
+  background-position: center top;
+}
+.checkout-title {
+  font-style: normal;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600 !important;
+  font-size: 24px;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.check-h3,
+.check-h4,
+.del-h3,
+.del-p,
+.del-link {
+  font-style: normal;
+  color: #585858;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+.check-h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.check-h4 {
+  font-size: 14px;
+  line-height: 24px;
+}
+.del-h3 {
+  font-size: 14px;
+  line-height: 21px;
+}
+.del-p {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+  color: rgba(128, 128, 128, 0.8);
+  letter-spacing: 0.5px;
+}
+
+.del-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #069c54 !important;
+}

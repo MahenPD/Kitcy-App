@@ -113,4 +113,17 @@
       </div>
     </div>
   </body>
+  <script>
+    window.addEventListener(
+      "load",
+      function () {
+        var user = JSON.parse(sessionStorage.getItem("loggedInUser"));
+
+        document.getElementById("firstname-edit").innerHTML = user.firstName;
+        document.getElementById("surname-edit").innerHTML = user.lastName;
+        document.getElementById("email-edit").innerHTML = user.email;
+      },
+      false
+    );
+  </script>
 </html>

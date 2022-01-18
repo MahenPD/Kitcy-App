@@ -1,0 +1,28 @@
+.toast:not(.show) {
+    display: inline-block !important;
+}
+
+.toast-close {
+    color: #FFCF27 !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    float: right;
+}
+
+.toast {
+    background: #585858 !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    float: left !important;
+    bottom: 50px !important;
+}
+
+#toast-area {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+
