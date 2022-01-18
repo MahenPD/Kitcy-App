@@ -429,7 +429,7 @@ function loadCheckoutDetails() {
   totalAmount += 90;
 
   document.getElementById("checkout-section").innerHTML = output;
-  document.getElementById("totalAmount").innerHTML = "LKR" + totalAmount;
+  document.getElementById("totalAmount").innerHTML = parseInt(totalAmount);
 }
 
 // function listChallenges() {

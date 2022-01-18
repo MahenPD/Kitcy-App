@@ -46,7 +46,7 @@
               <path d="M4 12h16" />
             </svg>
           </div>
-          <div>
+          <div onclick="clearCart()">
             <img
               src="../assets/icons/trash.svg"
               alt=""
@@ -131,6 +131,11 @@
       },
       false
     );
+
+    function clearCart() {
+      sessionStorage.removeItem("cart");
+      loadCart();
+    }
 
     $(document).ready(function () {
       const minus = $(".minus-btn");
