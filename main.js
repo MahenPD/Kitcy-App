@@ -104,7 +104,7 @@ function addFavourite() {
 }
 
 function handleRemoveFav(favName = "Blueberry Cheesecake") {
-  $( "#popup-remove" ).popup( "close", {transition: "pop"});
+  $("#popup-remove").popup("close", { transition: "pop" });
   var favourites = JSON.parse(sessionStorage.getItem("foodFavList"));
   var filteredFavs = favourites.filter((f) => f.name !== favName);
   sessionStorage.setItem("foodFavList", JSON.stringify(filteredFavs));
@@ -168,7 +168,7 @@ function handleRegister() {
   }
 
   var gameUser = new Object();
-    
+
   gameUser.id = 12;
   gameUser.name = "Jane Doe";
   gameUser.totalWinnings = 520;
@@ -176,11 +176,12 @@ function handleRegister() {
   gameUser.completedTaskIds = [];
   gameUser.score = 2640;
   gameUser.level = 26;
-  gameUser.img = "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
+  gameUser.img =
+    "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
 
   localStorage.removeItem("gameUser");
 
-  localStorage.gameUser= JSON.stringify(gameUser);
+  localStorage.gameUser = JSON.stringify(gameUser);
 
   sessionStorage.setItem("listOfUsers", JSON.stringify(users));
   window.location.href = "./VerifyEmail.html";
@@ -233,7 +234,7 @@ function handleLogin() {
     );
 
     var gameUser = new Object();
-    
+
     gameUser.id = 12;
     gameUser.name = "Jane Doe";
     gameUser.totalWinnings = 520;
@@ -241,13 +242,12 @@ function handleLogin() {
     gameUser.completedTaskIds = [];
     gameUser.score = 2640;
     gameUser.level = 26;
-    gameUser.img = "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
+    gameUser.img =
+      "https://i.pinimg.com/736x/9c/91/e0/9c91e06b6538e8bb941314a25207835f.jpg";
 
     localStorage.removeItem("gameUser");
 
-    localStorage.gameUser= JSON.stringify(gameUser);
-
-  
+    localStorage.gameUser = JSON.stringify(gameUser);
 
     window.location.href = "./Home.html";
   } else {
@@ -304,7 +304,7 @@ function loadReviews() {
       />
     </div>
     <div class="col-8">
-      <div class="reply-cmt-1">${review.review}</div>
+      <div class="reply-cmt-1" id="review-name">${review.review}</div>
       <div class="d-flex align-items-center">
       <img
       src="../assets/icons/star-filled.svg"
@@ -312,11 +312,9 @@ function loadReviews() {
       class="reply-star"
       />
       <p class="mx-1" style="margin-bottom: 0; color: gray">${review.rating}</p>
-      <a href="./ReplyToRating.html"
-        <p class="mx-4 text-success" style="margin-bottom: 0">
+        <p class="mx-4 text-success" style="margin-bottom: 0" onclick="goToReplyRating()">
           Reply
         </p>
-        </a>
       </div>
     </div>
   </div>
@@ -524,6 +522,8 @@ function loadReplies() {
     `;
   }
 
+  var selectedReview = JSON.parse(sessionStorage.getItem("selectedReview"));
+
   messageOutput += `
   <div class="col-2">
   <img
@@ -533,7 +533,7 @@ function loadReplies() {
   />
 </div>
 <div class="col-8">
-  <div class="reply-cmt-1" id="message-reply-input">So soft and creamy! Loved it.</div>
+  <div class="reply-cmt-1" id="message-reply-input">${selectedReview}</div>
   <div class="d-flex align-items-center">
     <img
       src="../assets/icons/star-filled.svg"
@@ -547,4 +547,10 @@ function loadReplies() {
 
   document.getElementById("reply-container").innerHTML = output;
   document.getElementById("message-to-reply").innerHTML = messageOutput;
+}
+
+function goToReplyRating() {
+  var review = document.getElementById("review-name").textContent;
+  sessionStorage.setItem("selectedReview", JSON.stringify(review));
+  window.location.href = "./ReplyToRating.html";
 }
