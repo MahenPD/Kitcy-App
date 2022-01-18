@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  
-    
-    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,156 +8,271 @@
       crossorigin="anonymous"
     />
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filters</title>
+    <link rel="stylesheet" href="../theme/theme.css" />
+    <link rel="stylesheet" href="filter.css" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Filters</title>
-  <link rel="stylesheet" href="../theme/theme.css" />
-  <link rel="stylesheet" href="filter.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <script src="filter.js"></script>
-
   </head>
-  
+
   <body>
     <!-- partial:index.partial.html -->
     <div data-role="page" id="game-home">
-  
       <div
-          data-role="header"
-          data-position="fixed"
-          data-grid="d"
-          class="px-3 py-2 bg-white header"
-        >
-          <div class="row py-2">
-            <div class="col-4" onclick="history.back()">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#585858"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="ai ai-ArrowLeft"
-              >
-                <path d="M11 5l-7 7 7 7" />
-                <path d="M4 12h16" />
-              </svg>
-            </div>
-            <div class="col-4 d-flex justify-content-center align-items-center">
-              <h3 class="header-title">Filters</h3>
-            </div>
-            <div class="col-4"></div>
+        data-role="header"
+        data-position="fixed"
+        data-grid="d"
+        class="px-3 py-2 bg-white header"
+      >
+        <div class="row py-2">
+          <div class="col-4" onclick="history.back()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#585858"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ai ai-ArrowLeft"
+            >
+              <path d="M11 5l-7 7 7 7" />
+              <path d="M4 12h16" />
+            </svg>
           </div>
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <h3 class="header-title">Filters</h3>
+          </div>
+          <div class="col-4"></div>
         </div>
-  
-        <div class="container">
-          <div class="row">
-            <div class="col ml-3 mr-3">
-              <form>
-  
-                <fieldset data-role="controlgroup" data-iconpos="right" class="mb-3">
-                  <legend style="font-size: 18px; font-weight: 700;">Sort:</legend>
-                  <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6a" value="favs" checked="checked">
-                  <label for="radio-choice-w-6a"> <img src="../assets/icons/achievement.svg" alt="" height="26px"
-                      style="margin-right: 10px;" />My Favorites</label>
-                  <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6b" value="popular">
-                  <label for="radio-choice-w-6b"> <img src="../assets/icons/fire.svg" alt="" height="24px"
-                      style="margin-right: 12px;" />Most popular</label>
-                  <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6c" value="rating">
-                  <label for="radio-choice-w-6c"> <img src="../assets/icons/star.svg" alt="" height="25px"
-                      style="margin-right: 11px;" />Price</label>
-                  <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6d" value="delivery">
-                  <label for="radio-choice-w-6d"> <img src="../assets/icons/time.svg" alt="" height="24px"
-                      style="margin-right: 12px;" />Delivery time</label>
-                </fieldset>
-  
-                <fieldset data-role="controlgroup" data-type="horizontal" class="mb-3 p-0">
-                  <legend style="font-size: 18px; font-weight: 700;">Price Range:</legend>
-                  <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value=100>
-                  <label for="radio-choice-h-2a">100-500</label>
-                  <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value=500>
-                  <label for="radio-choice-h-2b">500-1000</label>
-                  <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value=1000>
-                  <label for="radio-choice-h-2c">1000-1500</label>
-                  <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value=1500>
-                  <label for="radio-choice-h-2d">1500-2000</label>
-                  <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2e" value=2000>
-                  <label for="radio-choice-h-2e">2000-5000</label>
-                </fieldset>
-  
-                <fieldset data-role="controlgroup" data-type="horizontal" class="mb-3">
-                  <legend style="font-size: 18px; font-weight: 700;">Delivery Fee:</legend>
-                  <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3a" value="free">
-                  <label for="radio-choice-h-3a">Free</label>
-                  <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3b" value=90>
-                  <label for="radio-choice-h-3b">LKR 90</label>
-                </fieldset>
-  
-                <fieldset data-role="controlgroup" data-type="horizontal" class="mb-3">
-                  <legend style="font-size: 18px; font-weight: 700;">Dietary:</legend>
-                  <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4a" value="vegetarian">
-                  <label for="radio-choice-h-4a">Vegetarian</label>
-                  <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4b" value="vegan">
-                  <label for="radio-choice-h-4b">Vegan</label>
-                  <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4c" value="gluten-free">
-                  <label for="radio-choice-h-4c">Glutan-free</label>
-                </fieldset>
-  
-        
+      </div>
 
-                <button onclick="saveFilterValues()" class="filter-submit-btn p-3">
-                  Apply Filters
-                </button>
-  
-              </form>
-            </div>
-          </div>
-        </div>
-        
-  
-         <!-- Footer -->
-         <div data-role="footer" data-position="fixed">
-          <div data-role="navbar" data-grid="d">
-            <ul>
-              <li>
-                <a href="./Home.html"rel="external"
-                  ><img src="../assets/icons/home.svg" alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="./Search.html"rel="external"
-                  ><img src="../assets/icons/search.svg" alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="./Cart.html"rel="external"
-                  ><img src="../assets/icons/cart.svg" alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="./Account.html"rel="external"
-                  ><img src="../assets/icons/person.svg" alt=""
-                /></a>
-              </li>
-            </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col ml-3 mr-3">
+            <form>
+              <fieldset
+                data-role="controlgroup"
+                data-iconpos="right"
+                class="mb-3"
+              >
+                <legend style="font-size: 18px; font-weight: 700">Sort:</legend>
+                <input
+                  type="radio"
+                  name="radio-choice-w-6"
+                  id="radio-choice-w-6a"
+                  value="favs"
+                  checked="checked"
+                />
+                <label for="radio-choice-w-6a">
+                  <img
+                    src="../assets/icons/achievement.svg"
+                    alt=""
+                    height="26px"
+                    style="margin-right: 10px"
+                  />My Favorites</label
+                >
+                <input
+                  type="radio"
+                  name="radio-choice-w-6"
+                  id="radio-choice-w-6b"
+                  value="popular"
+                />
+                <label for="radio-choice-w-6b">
+                  <img
+                    src="../assets/icons/fire.svg"
+                    alt=""
+                    height="24px"
+                    style="margin-right: 12px"
+                  />Most popular</label
+                >
+                <input
+                  type="radio"
+                  name="radio-choice-w-6"
+                  id="radio-choice-w-6c"
+                  value="rating"
+                />
+                <label for="radio-choice-w-6c">
+                  <img
+                    src="../assets/icons/star.svg"
+                    alt=""
+                    height="25px"
+                    style="margin-right: 11px"
+                  />Price</label
+                >
+                <input
+                  type="radio"
+                  name="radio-choice-w-6"
+                  id="radio-choice-w-6d"
+                  value="delivery"
+                />
+                <label for="radio-choice-w-6d">
+                  <img
+                    src="../assets/icons/time.svg"
+                    alt=""
+                    height="24px"
+                    style="margin-right: 12px"
+                  />Delivery time</label
+                >
+              </fieldset>
+
+              <fieldset
+                data-role="controlgroup"
+                data-type="horizontal"
+                class="mb-3 p-0"
+              >
+                <legend style="font-size: 18px; font-weight: 700">
+                  Price Range:
+                </legend>
+                <input
+                  type="radio"
+                  name="radio-choice-h-2"
+                  id="radio-choice-h-2a"
+                  value="100"
+                />
+                <label for="radio-choice-h-2a">100-500</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-2"
+                  id="radio-choice-h-2b"
+                  value="500"
+                />
+                <label for="radio-choice-h-2b">500-1000</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-2"
+                  id="radio-choice-h-2c"
+                  value="1000"
+                />
+                <label for="radio-choice-h-2c">1000-1500</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-2"
+                  id="radio-choice-h-2d"
+                  value="1500"
+                />
+                <label for="radio-choice-h-2d">1500-2000</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-2"
+                  id="radio-choice-h-2e"
+                  value="2000"
+                />
+                <label for="radio-choice-h-2e">2000-5000</label>
+              </fieldset>
+
+              <fieldset
+                data-role="controlgroup"
+                data-type="horizontal"
+                class="mb-3"
+              >
+                <legend style="font-size: 18px; font-weight: 700">
+                  Delivery Fee:
+                </legend>
+                <input
+                  type="radio"
+                  name="radio-choice-h-3"
+                  id="radio-choice-h-3a"
+                  value="free"
+                />
+                <label for="radio-choice-h-3a">Free</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-3"
+                  id="radio-choice-h-3b"
+                  value="90"
+                />
+                <label for="radio-choice-h-3b">LKR 90</label>
+              </fieldset>
+
+              <fieldset
+                data-role="controlgroup"
+                data-type="horizontal"
+                class="mb-3"
+              >
+                <legend style="font-size: 18px; font-weight: 700">
+                  Dietary:
+                </legend>
+                <input
+                  type="radio"
+                  name="radio-choice-h-4"
+                  id="radio-choice-h-4a"
+                  value="vegetarian"
+                />
+                <label for="radio-choice-h-4a">Vegetarian</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-4"
+                  id="radio-choice-h-4b"
+                  value="vegan"
+                />
+                <label for="radio-choice-h-4b">Vegan</label>
+                <input
+                  type="radio"
+                  name="radio-choice-h-4"
+                  id="radio-choice-h-4c"
+                  value="gluten-free"
+                />
+                <label for="radio-choice-h-4c">Glutan-free</label>
+              </fieldset>
+
+              <button
+                onclick="saveFilterValues()"
+                class="filter-submit-btn p-3"
+              >
+                Apply Filters
+              </button>
+            </form>
           </div>
         </div>
       </div>
-  
-  </body>
 
+      <!-- Footer -->
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-grid="d">
+          <ul>
+            <li>
+              <a href="./Home.html" rel="external"
+                ><img src="../assets/icons/home.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="./Search.html" rel="external"
+                ><img src="../assets/icons/search.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="./Cart.html" rel="external"
+                ><img src="../assets/icons/cart.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="./Account.html" rel="external"
+                ><img src="../assets/icons/person.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
