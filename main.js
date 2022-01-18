@@ -362,7 +362,7 @@ function loadCart() {
                         <button
                           data-role="none"
                           id="minus"
-                          class="incerement-button"
+                          class="incerement-button minus-btn"
                         >
                           -
                         </button>
@@ -370,12 +370,12 @@ function loadCart() {
                           type="text"
                           id="quantity"
                           data-role="none"
-                          class="kitcy-input-2 text-center"
+                          class="kitcy-input-2 text-center quantity-btn"
                           value="${item.quantity}"
                         />
                         <button
                           data-role="none"
-                          class="incerement-button"
+                          class="incerement-button plus-btn"
                           id="plus"
                         >
                           +
@@ -407,23 +407,29 @@ function loadCheckoutDetails() {
   var cartItems = JSON.parse(sessionStorage.getItem("cart"));
 
   var output = "";
+  var totalAmount = 0;
 
   $.each(cartItems, function (index, item) {
     output += `
+    <div class="row">
         <div class="col">
               <h3 class="check-h4">${item.name} X ${item.quantity}</h3>
-              <h3 class="check-h4">Delivery Cost</h3>
-              <h3 class="check-h4">Subtotal</h3>
             </div>
             <div class="col d-flex flex-column align-items-end">
               <h3 class="check-h4">LKR ${item.totalPrice}</h3>
-              <h3 class="check-h4">LKR 90</h3>
-              <h3 class="check-h4">LKR 1800</h3>
+        </div>
         </div>
     `;
   });
 
+  if (cartItems) {
+    cartItems.map((item) => (totalAmount += item.totalPrice));
+  }
+
+  totalAmount += 90;
+
   document.getElementById("checkout-section").innerHTML = output;
+  document.getElementById("totalAmount").innerHTML = parseInt(totalAmount);
 }
 
 // function listChallenges() {
@@ -441,3 +447,10 @@ function loadCheckoutDetails() {
 
 //   $('#challenges').html(output).listview('refresh');
 // }
+
+// <h3 class="check-h4">Delivery Cost</h3>
+// <h3 class="check-h4">Subtotal</h3>
+{
+  /* <h3 class="check-h4">LKR 90</h3>
+<h3 class="check-h4">LKR 1800</h3> */
+}
