@@ -155,10 +155,10 @@ a:link {
 /* Landing Page End*/
 
 /* Get Started Page Start*/
-.ui-started,
-.ui-start-content {
+.ui-started {
   background-image: url("images/bg-started.png") !important;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
 }
 
