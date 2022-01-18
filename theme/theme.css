@@ -266,6 +266,19 @@ img {
 .icon {
   font-size: 40px;
 }
+.akar-icon{
+  font-size:24px;
+  border-radius:50%;
+  color:#585858;
+  padding: 0.4rem 0.8rem;
+  font-family: "Poppins";
+  -webkit-text-stroke-width: 1px;
+}
+
+.akar-icon:hover{
+  background-color: #069c54;
+  color:#069c54;
+}
 
 .quantity {
   display: flex;

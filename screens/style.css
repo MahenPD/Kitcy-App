@@ -412,6 +412,12 @@
     margin-bottom: 73px;
     max-width: 960px;
   }
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
 }
 /* Ipad version-1 */
 @media screen and (min-device-width: 1355px) and (max-device-width: 1355px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
@@ -648,6 +654,12 @@
   .food-card-filter .p2 {
     font-size: 12px;
   }
+  .iphone-land{
+    display:flex !important;
+  }
+  .iphone-port{
+    display: none !important;
+  }
   
 
 }
@@ -713,6 +725,7 @@
     font-size: 25px;
     margin: 3px;
   }
+  
 }
 
 
