@@ -343,7 +343,6 @@ function addToCart() {
   var itemName = document.getElementById("item-name").textContent;
   var itemPrice = document.getElementById("item-price").textContent.split(" ");
   var itemQuantity = document.getElementById("itemQuantity").value;
-  debugger;
   var cartItemObj = {
     name: itemName,
     price: parseInt(itemPrice[1]),
@@ -357,8 +356,8 @@ function addToCart() {
     cartItems = [];
     cartItems.push(cartItemObj);
   }
-  debugger;
   sessionStorage.setItem("cart", JSON.stringify(cartItems));
+  openToast('Item Added to cart successfully');
 }
 
 function loadCart() {
