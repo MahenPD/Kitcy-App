@@ -23,7 +23,17 @@ function openToastiPhone(message) {
 }
 
 function sendFavList(email) {
-  var Flist = JSON.parse(sessionStorage.getItem("itemList"));
+  var list = JSON.parse(sessionStorage.getItem("foodFavList"));
+
+  var listTemp = "";
+
+  $.each(list, function (index, item) {
+    listTemp += `
+    ${item.name} -
+    ${item.restaurant} <br/> 
+    `;
+  });
+
   mailBody =
     "<html> " +
     "  <body>" +
@@ -34,32 +44,7 @@ function sendFavList(email) {
     "        <div>" +
     '         <p class="category-name" style="' +
     '">' +
-    // Flist[0].name +
-    "Blueberry Cheesecake" +
-    " By " +
-    // Flist[0].restaurant +
-    "Cathys Dessert" +
-    " <br /> " +
-    "Cheese Raviolli" +
-    " By " +
-    // Flist[0].restaurant +
-    "Mummys Delight" +
-    " <br /> " +
-    "Ramen Miso" +
-    " By " +
-    // Flist[0].restaurant +
-    "Sushi Kai" +
-    " <br /> " +
-    "Beef Burger" +
-    " By " +
-    // Flist[0].restaurant +
-    "Street Burger" +
-    " <br /> " +
-    "Cordon Bleu" +
-    " By " +
-    // Flist[0].restaurant +
-    "Diners Lounge" +
-    " <br /> " +
+    listTemp +
     "</p>" +
     "        </div>" +
     "     </div>" +
