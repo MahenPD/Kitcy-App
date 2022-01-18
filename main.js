@@ -437,7 +437,6 @@ function handleSendReply() {
 
   var reply = document.getElementById("reply-message-input").value;
   var message = document.getElementById("message-reply-input").textContent;
-  debugger;
 
   var replyObj = {
     reply: reply,
