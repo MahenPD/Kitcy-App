@@ -258,7 +258,7 @@ function handleLogin() {
 
     window.location.href = "./Home.html";
   } else {
-    openToastiPhone("Wrong Credentials Please Try Again");
+    openToast("Wrong Credentials Please Try Again");
   }
 }
 
@@ -291,7 +291,7 @@ function sendReview() {
   sessionStorage.setItem("reviewList", JSON.stringify(reviews));
   document.getElementById("review").innerHTML = "";
   loadReviews();
-  openToastiPhone("Rating and review added successfully");
+  openToast("Rating and review added successfully");
 }
 
 function loadReviews() {

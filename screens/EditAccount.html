@@ -118,10 +118,9 @@
       "load",
       function () {
         var user = JSON.parse(sessionStorage.getItem("loggedInUser"));
-
-        document.getElementById("firstname-edit").innerHTML = user.firstName;
-        document.getElementById("surname-edit").innerHTML = user.lastName;
-        document.getElementById("email-edit").innerHTML = user.email;
+        document.getElementById("firstname-edit").value = user.firstName;
+        document.getElementById("surname-edit").value = user.lastName;
+        document.getElementById("email-edit").value = user.email;
       },
       false
     );
