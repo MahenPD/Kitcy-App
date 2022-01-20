@@ -18,6 +18,7 @@ let user = {
 
 
 };
+var gameUser = user;
 
 
 let tasks = [
@@ -160,32 +161,36 @@ let users = [
 ];
 
 function loadData(){
-    
+
     if(localStorage.gameUser != undefined){
-        var gameUser = JSON.parse(localStorage.gameUser);
+        gameUser = JSON.parse(localStorage.gameUser);
     }
-    console.log(gameUser)
-
-
-    
-
+    console.log(gameUser);
     $("#game-userName").text(gameUser.name);
-    $("#game-userLevel").text("LEVEL "+gameUser.level);
     $("#game-userWinnings").text(gameUser.totalWinnings);
     $("#game-userRank").text(myrank);
-    let progress = user.score%100;
+    let progress = gameUser.score%100;
+    gameUser.level = Math.round((gameUser.score / 100),0);
+    $("#game-userLevel").text("LEVEL "+gameUser.level);
     $("#game-userProgress").text(progress+ "/100");
     $("#game-progress").css('width', progress+'%');
     $("#leader-selfName").text(gameUser.name);
     $("#leader-selfRank").text("My Rank : " +myrank);
     $("#leader-selfLevel").text("Level : " +gameUser.level);
+    localStorage.removeItem("gameUser");
+    localStorage.gameUser= JSON.stringify(gameUser);
 
 };
 
 function listChallengesip() {
+    if(localStorage.gameUser != undefined){
+        gameUser = JSON.parse(localStorage.gameUser);
+    }
     let output = '';
     $.each(tasks, function (index, task) {
-        if (!(user.completedTaskIds.includes(task.id))) {
+        console.log(gameUser.completedTaskIds.includes(task.id));
+        console.log(gameUser.completedTaskIds)
+        if (!(gameUser.completedTaskIds.includes(task.id))) {
             output += `
             <a href="#popup-task-description" data-rel="popup" data-transition="pop">
             <li class="chal-item list-group-item-action">
@@ -203,6 +208,9 @@ function listChallengesip() {
 
 
 function listLeaderboardip() {
+    if(localStorage.gameUser != undefined){
+        gameUser = JSON.parse(localStorage.gameUser);
+    }
 
     users.sort(function(a,b){
         return b.level-a.level
@@ -225,10 +233,10 @@ function listLeaderboardip() {
         ${rank}
         </div>
         <div class="col-5">
-            <span>${player.name}</span>
+            <span>${gameUser.name}</span>
         </div>
         <div class="col-3" style="text-align:center">
-            <span >${player.level}</span>
+            <span >${gameUser.level}</span>
         </div>
     </div>
         `;
