@@ -101,20 +101,43 @@
                   />
                 </div>
               </div>
-              <button
+              <a
                 type="submit"
+                data-role="button"
                 class="payment-btn p-3 mt-5"
                 style="
                   background-color: #069c54 !important;
                   border-radius: 10px;
                 "
+                onclick="paymentCheck()"
               >
                 Save
-              </button>
+            </a>
             </form>
           </div>
         </div>
       </div>
+
+      <div
+          data-role="popup"
+          id="popup-payment"
+          data-overlay-theme="b"
+          class="rectangle ui-content"
+          data-position-to="window"
+          style="background-color: white !important;"
+        >
+          <span class="popup-title">Thank you !</span>
+          <span class="popup-content"
+            >New Payment method has been added successfully</span
+          >
+          <a
+            rel="external"
+            data-role="button"
+            class="popup-submit-btn"
+            onclick="moveToHome()"
+            >Okay</a
+          >
+        </div>
 
       <!-- Footer -->
       <div data-role="footer" data-position="fixed">
@@ -144,5 +167,14 @@
         </div>
       </div>
     </div>
+    <script>
+      function moveToHome() {
+      window.location.href = "./Home.html";
+    };
+
+    function paymentCheck() {
+      $("#popup-payment").popup("open",{ transition: "pop" });
+    }
+    </script>
   </body>
 </html>

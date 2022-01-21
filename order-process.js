@@ -1,6 +1,7 @@
 window.addEventListener(
   "load",
   function () {
+
     document.getElementById("stage-one").style.display = "block";
     document.getElementById("stage-two").style.display = "none";
     document.getElementById("stage-three").style.display = "none";
@@ -13,6 +14,8 @@ window.addEventListener(
     document.getElementById("stage-four-image").style.display = "none";
     document.getElementById("stage-five-image").style.display = "none";
 
+    
+
     setTimeout(() => {
       document.getElementById("stage-one").style.display = "none";
       document.getElementById("stage-two").style.display = "block";
@@ -22,12 +25,17 @@ window.addEventListener(
     }, 3000);
 
     setTimeout(() => {
+      popupTaskSuccess();
+    }, 4000);
+
+    setTimeout(() => {
       document.getElementById("stage-two").style.display = "none";
       document.getElementById("stage-three").style.display = "block";
 
       document.getElementById("stage-two-image").style.display = "none";
       document.getElementById("stage-three-image").style.display = "block";
-    }, 6000);
+      
+    }, 7000);
 
     setTimeout(() => {
       document.getElementById("stage-three").style.display = "none";
@@ -35,7 +43,7 @@ window.addEventListener(
 
       document.getElementById("stage-three-image").style.display = "none";
       document.getElementById("stage-four-image").style.display = "block";
-    }, 9000);
+    }, 10000);
 
     setTimeout(() => {
       document.getElementById("stage-four").style.display = "none";
@@ -43,7 +51,21 @@ window.addEventListener(
 
       document.getElementById("stage-four-image").style.display = "none";
       document.getElementById("stage-five-image").style.display = "block";
-    }, 12000);
+    }, 13000);
   },
   false
 );
+
+
+function popupTaskSuccess(){
+    completedTask = JSON.parse(localStorage.task);
+    if(completedTask != undefined){
+      $(`#popup-task-complete-${completedTask}`).popup("open", { transition: "pop" });
+      localStorage.task = undefined;
+    }
+
+}
+
+function popupOk() {
+  $("#popup-task-complete-1").popup("close");
+}

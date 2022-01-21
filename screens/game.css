@@ -236,6 +236,7 @@ hr {
     background-size: cover;
     border: 10px solid #065f34 !important;
     margin: 10px;
+    
 }
 
 .dp-ip {
@@ -455,6 +456,7 @@ hr .new1 {
     #game-sidebar-area {
         display: none;
     }
+    
 }
 
 
@@ -522,6 +524,17 @@ hr .new1 {
         left:auto;
     }
 
+    .dp-2 {
+        width: 150px;
+        height: 150px;
+        margin: 0px;
+        float: right;
+    }
+
+    #leader-selfName{
+        font-size: 25px !important;
+    }
+
 
 
 }
@@ -574,6 +587,18 @@ hr .new1 {
         width: 100%;
         right: 0;
         left:0;
+    }
+
+    .dp-2 {
+        width: 150px;
+        height: 150px;
+        margin: 0px;
+        margin-bottom: 10px;
+        float: right;
+    }
+
+    #leader-selfName{
+        font-size: 25px !important;
     }
 
 

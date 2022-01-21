@@ -74,10 +74,21 @@ label.ui-btn {
   #filter {
     width: 1000px;
   }
+
+  fieldset {
+    margin-top:55px !important;
+    margin-bottom:55px !important;    
+  }
+
 }
 
 @media screen and (min-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   #filter {
     width: 1330px;
+  }
+
+  fieldset {
+    margin-top:55px !important;
+    margin-bottom:55px !important;    
   }
 }

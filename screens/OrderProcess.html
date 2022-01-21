@@ -387,6 +387,71 @@
           </div>
         </div>
 
+        <div
+        data-role="popup"
+        id="popup-task-complete-1"
+        style="
+          width: 240px;
+          padding-top: 20px;
+          background-color: white !important;
+        "
+        data-overlay-theme="b"
+        class="rectangle ui-content"
+        data-position-to="window"
+      >
+        <span
+          class="popup-confirm"
+          style="
+            font-weight: 400;
+            font-size: 24px;
+            padding: 0;
+            margin-top: 0;
+            height: 20px;
+          "
+          >Awesome !</span
+        >
+        <span
+          class="popup-confirm"
+          style="
+            font-weight: 400;
+            padding: 0;
+            padding-top: 20px;
+            padding-bottom: 10px;
+          "
+          >You earned 100 coins</span
+        >
+        <div
+          style="
+            background-color: rgba(0, 0, 0, 0.116);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <span
+            >Order a dessert
+            <img src="../assets/icons/icons8-ok.svg" alt="" style="width: 30px"
+          /></span>
+        </div>
+        <div class="progress" style="width: 80%; height: 8px; margin: auto">
+          <div
+            class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            style="width: 60%"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <button
+          style="width: 100px; margin: auto; margin-top: 20px"
+          class="popup-submit-btn"
+          onclick="popupOk()"
+        >
+          Okay
+        </button>
+      </div>
+
         <!-- Footer -->
         <div data-role="footer" data-position="fixed">
           <div data-role="navbar" data-grid="d">

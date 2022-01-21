@@ -56,7 +56,7 @@
               </p>
             </div>
             <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="DeliveryLocation.html" class="a del-link my-auto"
+              <a href="DeliveryLocation.html" rel="external" class="a del-link my-auto"
                 >Change</a
               >
             </div>
@@ -78,7 +78,7 @@
               <p class="del-p">*****2678</p>
             </div>
             <div class="col-3 ml-0 d-flex flex-column align-items-center">
-              <a href="Payment.html" class="a del-link my-auto">Change</a>
+              <a href="Payment.html" rel="external" class="a del-link my-auto">Change</a>
             </div>
           </div>
           <!-- Payment Method End -->
@@ -160,71 +160,6 @@
               onclick="cancelRedeem()"
               >Cancel</a
             >
-          </div>
-
-          <div
-            data-role="popup"
-            id="popup-task-complete"
-            style="
-              width: 240px;
-              padding-top: 20px;
-              background-color: white !important;
-            "
-            data-overlay-theme="b"
-            class="rectangle ui-content"
-            data-position-to="window"
-          >
-            <span
-              class="popup-confirm"
-              style="
-                font-weight: 400;
-                font-size: 24px;
-                padding: 0;
-                margin-top: 0;
-                height: 20px;
-              "
-              >Awesome !</span
-            >
-            <span
-              class="popup-confirm"
-              style="
-                font-weight: 400;
-                padding: 0;
-                padding-top: 20px;
-                padding-bottom: 10px;
-              "
-              >You earned 100 coins</span
-            >
-            <div
-              style="
-                background-color: rgba(0, 0, 0, 0.116);
-                padding: 10px;
-                border-radius: 10px;
-                margin-bottom: 10px;
-              "
-            >
-              <span
-                >Order a dessert
-                <img src="assets/icons8-ok.svg" alt="" style="width: 30px"
-              /></span>
-            </div>
-            <div class="progress" style="width: 80%; height: 8px; margin: auto">
-              <div
-                class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
-                role="progressbar"
-                style="width: 60%"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <button
-              style="width: 100px; margin: auto; margin-top: 20px"
-              class="popup-submit-btn"
-              onclick="redirectToOrderProcess()"
-            >
-              Okay
-            </button>
           </div>
 
           <hr />
@@ -309,6 +244,7 @@
         key: "pk_test_cp21BcECf4kMMUbSlRlZlsMo",
         token: function (token) {
           if (token.id) {
+            checkRewardsAndOrder(1);
             window.location.href = "./OrderProcess.html";
           }
         },
@@ -333,7 +269,7 @@
         function checkDiscountAvailability(){
           var gameUser = JSON.parse(localStorage.gameUser);
           if (gameUser.totalWinnings <100){
-          $("#discount-option").css("display", "none");
+          $(".discount-option").css("display", "none");
           
         } 
 
@@ -390,12 +326,16 @@
         localStorage.gameUser= JSON.stringify(gameUser);
     }
 
-    function checkRewardsAndOrder() {
+    function checkRewardsAndOrder(taskId) {
       var gameUser = JSON.parse(localStorage.gameUser);
-      gameUser.completedTaskIds = [1];
+      if(!(gameUser.completedTaskIds.includes(taskId))){
+      gameUser.completedTaskIds = [taskId];
       gameUser.totalWinnings += 20;
+      gameUser.score += 20;
       localStorage.removeItem("gameUser");
       localStorage.gameUser= JSON.stringify(gameUser);
+      localStorage.task = taskId;
+      }
     }
 
     function redirectToOrderProcess() {

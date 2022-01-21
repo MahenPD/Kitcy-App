@@ -170,7 +170,7 @@ function handleRegister() {
   var gameUser = new Object();
 
   gameUser.id = 12;
-  gameUser.name = "Jane Doe";
+  gameUser.name = firstName+ " "+ lastName;
   gameUser.totalWinnings = 520;
   gameUser.completedTasksNos = 5;
   gameUser.completedTaskIds = [];
@@ -241,7 +241,7 @@ function handleLogin() {
     var gameUser = new Object();
 
     gameUser.id = 12;
-    gameUser.name = "Jane Doe";
+    gameUser.name =  loggedInUser.firstName+ " "+ loggedInUser.lastName;
     gameUser.totalWinnings = 520;
     gameUser.completedTasksNos = 5;
     gameUser.completedTaskIds = [];
