@@ -73,6 +73,7 @@
         id="favFood"
         class="favFood-input px-3"
         placeholder="Search for your fav food"
+        onclick="openSearch()"
       />
     </i>
     <!-- <img class="search-img" src="search.png" alt="search" /> -->
@@ -189,4 +190,9 @@
       </div>
     </div>
   </body>
+  <script>
+    function openSearch() {
+      window.location.href = "./FoodSearch.html";
+    }
+  </script>
 </html>

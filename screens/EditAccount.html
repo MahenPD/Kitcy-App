@@ -16,7 +16,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
+    <script src="../main.js"></script>
     <link rel="stylesheet" href="../theme/theme.css" />
   </head>
 
@@ -107,7 +107,13 @@
             />
           </div>
           <a href="#">
-            <button type="submit" class="save-btn p-3">Save Details</button>
+            <button
+              type="submit"
+              onclick="handleAccountUpdate()"
+              class="save-btn p-3"
+            >
+              Save Details
+            </button>
           </a>
         </form>
       </div>

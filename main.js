@@ -560,3 +560,19 @@ function goToReplyRating(review = "So Soft and creamy. Loved It!") {
   sessionStorage.setItem("selectedReview", JSON.stringify(review));
   window.location.href = "./ReplyToRating.html";
 }
+
+function handleAccountUpdate() {
+  var users = JSON.parse(sessionStorage.getItem("listOfUsers"));
+  var email = document.getElementById("email-edit").value;
+  var loggedInUser = users.find((x) => x.email === email);
+
+  var newFirstName = document.getElementById("firstname-edit").value;
+  var newLastName = document.getElementById("surname-edit").value;
+  var newEmail = document.getElementById("email-edit").value;
+
+  loggedInUser.firstName = newFirstName;
+  loggedInUser.lastName = newLastName;
+  loggedInUser.email = newEmail;
+
+  sessionStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+}
